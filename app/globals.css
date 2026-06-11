@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ─── Eschen 11 Design Tokens (Tailwind v4 @theme) ─── */
+@theme {
+  /* Colours */
+  --color-page:         #f6f5f2;
+  --color-card:         #ffffff;
+  --color-text-core:    #2d2a27;
+  --color-text-light:   #4c4742;
+  --color-secondary:    #d9d5cc;
+  --color-accent:       #998f48;
+  --color-accent-hover: #81783c;
+  --color-contrast:     #989898;
+  --color-goldsand:     #CCBB95;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --spacing-section:    8rem;
+  --spacing-section-sm: 5rem;
+
+  /* Shadows */
+  --shadow-soft:   0 10px 30px rgba(35,29,25,0.04);
+  --shadow-medium: 0 20px 45px rgba(35,29,25,0.07);
+  --shadow-strong: 0 30px 60px rgba(35,29,25,0.10);
+
+  /* Border radius */
+  --radius: 8px;
+}
+
+/* ─── Base ─── */
+:root {
+  color-scheme: light;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-page);
+  color: var(--color-text-core);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--color-text-core);
+  line-height: 1.15;
+}
+
+p {
+  color: var(--color-text-light);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-text-core);
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-medium);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--color-text-core);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-secondary:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-secondary);
+  color: var(--color-text-core);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+.btn-accent:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* ─── Label / Badge ─── */
+.label-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-accent);
+}
+
+.accent-line {
+  display: block;
+  width: 3rem;
+  height: 1px;
+  background-color: var(--color-accent);
+  margin: 1rem 0;
+}
+
+/* ─── Scroll-reveal ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Status badges (Angebotsliste) ─── */
+.status-frei       { display: inline-block; padding: 0.2rem 0.65rem; font-size: 0.7rem; font-weight: 600; border-radius: 4px; background: #ecfdf5; color: #065f46; }
+.status-reserviert { display: inline-block; padding: 0.2rem 0.65rem; font-size: 0.7rem; font-weight: 600; border-radius: 4px; background: #fffbeb; color: #92400e; }
+.status-verkauft   { display: inline-block; padding: 0.2rem 0.65rem; font-size: 0.7rem; font-weight: 600; border-radius: 4px; background: #f3f4f6; color: #6b7280; }
+
+/* ─── Nav scroll blur ─── */
+.nav-scrolled {
+  background: rgba(246, 245, 242, 0.92) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(82,68,52,0.08);
+}
+

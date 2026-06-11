@@ -74,13 +74,13 @@ export default function Gallery() {
                  style={{ background: 'rgba(45,42,39,0.15)' }} />
           </button>
 
-          {/* Right column */}
+          {/* Right column — fills exact height of feature image */}
           <div className="flex flex-col gap-3">
             {images.slice(1, 3).map((img, i) => (
               <button
                 key={img.src}
                 className="relative overflow-hidden rounded-lg group cursor-pointer flex-1"
-                style={{ aspectRatio: '4/3', minHeight: '12rem' }}
+                style={{ minHeight: '10rem' }}
                 onClick={() => setLightbox(i + 1)}
                 aria-label={img.alt}
               >

@@ -60,7 +60,7 @@ export default function LagePage() {
             <div className="max-w-3xl">
               <span className="label-tag">Standort</span>
               <div className="accent-line" />
-              <p className="text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
+              <p className="gold-left text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
                 Eschenbach zählt heute über 10'000 Einwohnerinnen und Einwohner und liegt im
                 Kanton St. Gallen, eingebettet in die vielfältige Landschaft der Region
                 Zürichsee-Linth. Das Dorf verbindet ländliche Qualität mit einer ausgezeichneten
@@ -115,29 +115,24 @@ export default function LagePage() {
               {/* Transport grid */}
               <div className="mt-8 flex flex-col gap-3">
                 {[
-                  { mode: 'Bus',     dest: 'Rapperswil-Jona',  time: 'direkt, mehrmals stündlich' },
-                  { mode: 'Bus',     dest: 'Uznach & Rüti ZH', time: 'direkt' },
-                  { mode: 'S-Bahn',  dest: 'Zürich HB',        time: 'ca. 40 Min. ab Rapperswil' },
-                  { mode: 'Auto',    dest: 'Autobahn A15',      time: 'Anschlüsse Neuhaus & Jona' },
+                  { Icon: Bus,   dest: 'Rapperswil-Jona',  time: 'direkt, mehrmals stündlich' },
+                  { Icon: Bus,   dest: 'Uznach & Rüti ZH', time: 'direkt' },
+                  { Icon: Train, dest: 'Zürich HB',        time: 'ca. 40 Min. ab Rapperswil' },
+                  { Icon: Route, dest: 'Autobahn A15',     time: 'Anschlüsse Neuhaus & Jona' },
                 ].map(t => (
                   <div
-                    key={`${t.mode}-${t.dest}`}
-                    className="flex items-center gap-4 px-4 py-3 rounded"
+                    key={t.dest}
+                    className="card-interactive flex items-center gap-4 px-4 py-3 rounded"
                     style={{
                       background: 'var(--color-page)',
                       border: '1px solid rgba(82,68,52,0.08)',
                     }}
                   >
                     <div
-                      className="shrink-0 text-xs font-semibold uppercase tracking-widest px-2 py-1 rounded"
-                      style={{
-                        background: 'rgba(153,143,72,0.1)',
-                        color: 'var(--color-accent)',
-                        minWidth: '2.5rem',
-                        textAlign: 'center',
-                      }}
+                      className="icon-badge shrink-0 w-9 h-9 rounded flex items-center justify-center"
+                      style={{ background: 'rgba(153,143,72,0.1)' }}
                     >
-                      {t.mode}
+                      <t.Icon size={16} style={{ color: 'var(--color-accent)' }} />
                     </div>
                     <div>
                       <div className="text-sm font-medium" style={{ color: 'var(--color-text-core)' }}>{t.dest}</div>
@@ -184,14 +179,14 @@ export default function LagePage() {
                 ].map(item => (
                   <div
                     key={item.label}
-                    className="flex items-center gap-3 p-3 rounded"
+                    className="card-interactive flex items-center gap-3 p-3 rounded"
                     style={{
                       background: 'var(--color-page)',
                       border: '1px solid rgba(82,68,52,0.08)',
                     }}
                   >
                     <div
-                      className="shrink-0 w-8 h-8 rounded flex items-center justify-center"
+                      className="icon-badge shrink-0 w-8 h-8 rounded flex items-center justify-center"
                       style={{ background: 'rgba(153,143,72,0.08)' }}
                     >
                       <item.Icon size={14} style={{ color: 'var(--color-accent)' }} />

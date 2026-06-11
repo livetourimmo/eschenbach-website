@@ -168,6 +168,62 @@ p {
 .status-reserviert { display: inline-block; padding: 0.2rem 0.65rem; font-size: 0.7rem; font-weight: 600; border-radius: 4px; background: #fffbeb; color: #92400e; }
 .status-verkauft   { display: inline-block; padding: 0.2rem 0.65rem; font-size: 0.7rem; font-weight: 600; border-radius: 4px; background: #f3f4f6; color: #6b7280; }
 
+/* ─── Interactive card hover ─── */
+.card-interactive {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: default;
+}
+.card-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(35,29,25,0.10);
+  border-color: rgba(153,143,72,0.3) !important;
+}
+.card-interactive:hover .icon-badge {
+  background-color: rgba(153,143,72,0.18) !important;
+  transition: background-color 0.25s ease;
+}
+.card-interactive:hover .icon-badge svg {
+  transform: scale(1.15);
+  transition: transform 0.2s ease;
+}
+
+/* ─── Nav link underline slide ─── */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-accent);
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* ─── Image zoom on hover ─── */
+.img-zoom {
+  overflow: hidden;
+}
+.img-zoom img {
+  transition: transform 0.6s ease;
+}
+.img-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* ─── Signature gold-left accent line ─── */
+.gold-left {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.25rem;
+}
+
 /* ─── Nav scroll blur ─── */
 .nav-scrolled {
   background: rgba(246, 245, 242, 0.92) !important;

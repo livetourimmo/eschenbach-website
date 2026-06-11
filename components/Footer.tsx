@@ -34,19 +34,19 @@ export default function Footer() {
 
           {/* Links */}
           <nav className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm">
-            <Link href="/angebot" className="hover:text-white transition-colors" style={{ color: 'rgba(246,245,242,0.6)' }}>
+            <Link href="/angebot" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
               Angebot
             </Link>
-            <Link href="/lage" className="hover:text-white transition-colors" style={{ color: 'rgba(246,245,242,0.6)' }}>
+            <Link href="/lage" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
               Lage
             </Link>
-            <Link href="/#kontakt" className="hover:text-white transition-colors" style={{ color: 'rgba(246,245,242,0.6)' }}>
+            <Link href="/#kontakt" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
               Kontakt
             </Link>
-            <Link href="/impressum" className="hover:text-white transition-colors" style={{ color: 'rgba(246,245,242,0.6)' }}>
+            <Link href="/impressum" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
               Impressum
             </Link>
-            <Link href="/datenschutz" className="hover:text-white transition-colors" style={{ color: 'rgba(246,245,242,0.6)' }}>
+            <Link href="/datenschutz" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
               Datenschutz
             </Link>
           </nav>

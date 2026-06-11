@@ -71,7 +71,7 @@ export default function AngebotPage() {
             <div className="max-w-3xl">
               <span className="label-tag">Überblick</span>
               <div className="accent-line" />
-              <p className="text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
+              <p className="gold-left text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
                 Das Mehrfamilienhaus an der Rapperswilerstrasse 11 in Eschenbach umfasst acht
                 Eigentumswohnungen mit je 4.5 Zimmern und Wohnflächen zwischen 117 und 119 m².
                 Die klar gegliederten Grundrisse überzeugen mit einem grosszügigen Wohn-/Ess- und
@@ -85,7 +85,7 @@ export default function AngebotPage() {
           <ScrollReveal delay={100}>
             <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl">
               <div
-                className="p-6 rounded-lg"
+                className="card-interactive p-6 rounded-lg"
                 style={{ background: '#ffffff', border: '1px solid rgba(82,68,52,0.08)', boxShadow: 'var(--shadow-soft)' }}
               >
                 <div className="label-tag mb-3">Erdgeschoss</div>
@@ -94,12 +94,12 @@ export default function AngebotPage() {
                 </p>
               </div>
               <div
-                className="p-6 rounded-lg"
+                className="card-interactive p-6 rounded-lg"
                 style={{ background: '#ffffff', border: '1px solid rgba(82,68,52,0.08)', boxShadow: 'var(--shadow-soft)' }}
               >
                 <div className="label-tag mb-3">Ober- & Dachgeschoss</div>
                 <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Umlaufende Balkone zwischen 23 und 24 m², die Wohnen und Aussenraum verbinden.
+                  Umlaufende Balkone zwischen 23 und{' '}<span style={{ whiteSpace: 'nowrap' }}>24 m²</span>, die Wohnen und Aussenraum verbinden.
                 </p>
               </div>
             </div>
@@ -310,56 +310,65 @@ export default function AngebotPage() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                category: 'Fassade & Dach',
-                items: [
-                  ['Aussenputz grob',   'Warmgrau'],
-                  ['Sockel',            'Dunkel warmgrau'],
-                  ['Aussenputz glatt',  'Sand'],
-                  ['Dach & Metall',     'Dunkelgrau / Kupfer'],
-                  ['Fenster & Eingang', 'Messingfarben'],
-                  ['Balkongitter',      'Bronzeton'],
-                ],
-              },
-              {
-                category: 'Innenausbau',
-                items: [
-                  ['Wände & Decken',      'Weiss'],
-                  ['Böden Wohnen',        'Parkett Eiche natur'],
-                  ['Böden Bad & WC',      'Platten Beige'],
-                  ['Decke & Pfetten DG',  'Holz weiss lasiert'],
-                  ['Fenster innen',       'Holz/Metall weiss'],
-                ],
-              },
-            ].map((group, gi) => (
-              <ScrollReveal key={group.category} delay={gi * 100}>
-                <div
-                  className="p-8 rounded-lg"
-                  style={{
-                    background: '#ffffff',
-                    border: '1px solid rgba(82,68,52,0.08)',
-                    boxShadow: 'var(--shadow-soft)',
-                  }}
-                >
-                  <div className="label-tag mb-4">{group.category}</div>
-                  <div className="flex flex-col">
-                    {group.items.map(([k, v]) => (
-                      <div
-                        key={k}
-                        className="flex items-center justify-between py-3"
-                        style={{ borderBottom: '1px solid rgba(82,68,52,0.06)' }}
-                      >
-                        <span className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>{k}</span>
-                        <span className="text-sm font-medium" style={{ color: 'var(--color-text-core)' }}>{v}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+          {[
+            {
+              category: 'Fassade & Dach',
+              materials: [
+                { name: 'Aussenputz grob',  tone: 'Warmgrau',            gradient: 'linear-gradient(135deg, #9e968d 0%, #8a8178 40%, #7e7670 70%, #918980 100%)' },
+                { name: 'Sockel',            tone: 'Dunkel warmgrau',     gradient: 'linear-gradient(135deg, #585450 0%, #4a4642 45%, #3e3a36 80%, #504c48 100%)' },
+                { name: 'Aussenputz glatt',  tone: 'Sand',                gradient: 'linear-gradient(135deg, #d6ccb2 0%, #c4b99a 40%, #b8ae90 70%, #cec3a8 100%)' },
+                { name: 'Dach & Metall',     tone: 'Dunkelgrau / Kupfer', gradient: 'linear-gradient(150deg, #3d3b38 0%, #3d3b38 50%, #b87848 52%, #a06838 100%)' },
+                { name: 'Fenster & Eingang', tone: 'Messingfarben',       gradient: 'linear-gradient(135deg, #c2b262 0%, #a89848 30%, #988840 55%, #b8a852 80%, #8a7a36 100%)' },
+                { name: 'Balkongitter',      tone: 'Bronzeton',           gradient: 'linear-gradient(135deg, #927252 0%, #7a6040 40%, #6a5035 65%, #846448 100%)' },
+              ],
+            },
+            {
+              category: 'Innenausbau',
+              materials: [
+                { name: 'Wände & Decken',     tone: 'Weiss',               gradient: 'linear-gradient(135deg, #faf9f6 0%, #f5f3ef 50%, #eceae6 100%)' },
+                { name: 'Böden Wohnen',       tone: 'Parkett Eiche natur', gradient: 'linear-gradient(135deg, #d0a87a 0%, #b88a62 40%, #a07050 65%, #c49870 100%)' },
+                { name: 'Böden Bad & WC',     tone: 'Platten Beige',       gradient: 'repeating-conic-gradient(#d4c4a8 0% 25%, #c4b498 0% 50%) 0 0 / 52px 52px' },
+                { name: 'Decke & Pfetten DG', tone: 'Holz weiss lasiert',  gradient: 'linear-gradient(175deg, #f0ece4 0%, #e8e2d8 25%, #f2eee6 45%, #eae4da 65%, #f0ece4 100%)' },
+                { name: 'Fenster innen',      tone: 'Holz / Metall weiss', gradient: 'linear-gradient(135deg, #e2ddd6 0%, #d0c8c0 40%, #dcd6ce 70%, #c8c0b8 100%)' },
+              ],
+            },
+          ].map((group, gi) => (
+            <div key={group.category} className={gi === 0 ? 'mb-14' : ''}>
+              <ScrollReveal delay={gi * 60}>
+                <div className="label-tag mb-6">{group.category}</div>
               </ScrollReveal>
-            ))}
-          </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+                {group.materials.map((m, i) => (
+                  <ScrollReveal key={m.name} delay={i * 50}>
+                    <div
+                      className="card-interactive rounded-lg overflow-hidden"
+                      style={{
+                        background: '#ffffff',
+                        border: '1px solid rgba(82,68,52,0.08)',
+                        boxShadow: 'var(--shadow-soft)',
+                      }}
+                    >
+                      <div style={{ height: '7rem', background: m.gradient }} />
+                      <div className="px-3 py-3">
+                        <div
+                          className="text-xs font-medium leading-tight mb-0.5"
+                          style={{ color: 'var(--color-text-core)' }}
+                        >
+                          {m.name}
+                        </div>
+                        <div
+                          className="text-xs font-light"
+                          style={{ color: 'var(--color-contrast)' }}
+                        >
+                          {m.tone}
+                        </div>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

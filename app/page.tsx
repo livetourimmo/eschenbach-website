@@ -216,7 +216,7 @@ export default function HomePage() {
                 ].map(m => (
                   <div
                     key={m.label}
-                    className="p-4 rounded flex flex-col gap-3"
+                    className="card-interactive p-4 rounded flex flex-col gap-3"
                     style={{
                       background: 'var(--color-page)',
                       border: '1px solid rgba(82,68,52,0.08)',
@@ -274,10 +274,11 @@ export default function HomePage() {
               >
                 Ein Standort mit Qualität.
               </h2>
-              <p style={{ color: 'rgba(246,245,242,0.7)', marginBottom: '2rem' }}>
+              <p className="gold-left" style={{ color: 'rgba(246,245,242,0.7)', marginBottom: '2rem', borderColor: 'var(--color-goldsand)' }}>
                 Eschenbach liegt in der Region Zürichsee-Linth und verbindet ländliche Ruhe mit
                 guter Erreichbarkeit. Rapperswil-Jona, das Dienstleistungszentrum der Region, ist
-                per Bus direkt erreichbar, Zürich mit der S-Bahn in rund 40 Minuten.
+                per Bus direkt erreichbar. Ab Rapperswil-Jona erreicht man Zürich mit der S-Bahn
+                in rund 40 Minuten.
               </p>
               <Link
                 href="/lage"
@@ -293,20 +294,20 @@ export default function HomePage() {
               <div className="flex flex-col gap-4">
                 {[
                   { Icon: Bus,           label: 'Rapperswil-Jona', detail: 'direkt per Bus' },
-                  { Icon: Train,         label: 'Zürich HB',       detail: 'ca. 40 Min. mit der S-Bahn' },
+                  { Icon: Train,         label: 'Zürich HB',       detail: 'ca. 40 Min. ab Rapperswil-Jona' },
                   { Icon: Route,         label: 'Autobahn A15',    detail: 'Anschlüsse Neuhaus & Jona' },
                   { Icon: GraduationCap, label: 'Schulen',          detail: 'alle Stufen vor Ort' },
                 ].map(item => (
                   <div
                     key={item.label}
-                    className="flex items-center gap-4 px-5 py-4 rounded-lg"
+                    className="card-interactive flex items-center gap-4 px-5 py-4 rounded-lg"
                     style={{
                       background: 'rgba(255,255,255,0.04)',
                       border: '1px solid rgba(255,255,255,0.06)',
                     }}
                   >
                     <div
-                      className="shrink-0 w-9 h-9 rounded flex items-center justify-center"
+                      className="icon-badge shrink-0 w-9 h-9 rounded flex items-center justify-center"
                       style={{ background: 'rgba(255,255,255,0.07)' }}
                     >
                       <item.Icon size={16} style={{ color: 'var(--color-goldsand)' }} />
@@ -354,29 +355,31 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
 
-          {/* Summary cards */}
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+          {/* Summary stats -- editorial layout */}
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-4" style={{ borderTop: '1px solid rgba(153,143,72,0.2)', borderBottom: '1px solid rgba(153,143,72,0.2)' }}>
             {[
-              { value: '8',          label: 'Eigentumswohnungen' },
-              { value: '4.5',        label: 'Zimmer' },
-              { value: '117 bis 119 m²', label: 'Wohnfläche' },
-              { value: '4',          label: 'Geschosse' },
+              { value: '8',      label: 'Eigentumswohnungen' },
+              { value: '4.5',    label: 'Zimmer' },
+              { value: '119',    label: 'm² Wohnfläche' },
+              { value: '4',      label: 'Geschosse' },
             ].map((item, i) => (
               <ScrollReveal key={item.label} delay={i * 80}>
                 <div
-                  className="p-6 rounded-lg text-center"
+                  className="flex flex-col items-center justify-center text-center py-12 px-6"
                   style={{
-                    background: '#ffffff',
-                    border: '1px solid rgba(82,68,52,0.08)',
-                    boxShadow: 'var(--shadow-soft)',
+                    borderRight: i < 3 ? '1px solid rgba(153,143,72,0.2)' : 'none',
+                    minHeight: '10rem',
                   }}
                 >
                   <div
                     style={{
                       fontFamily: 'var(--font-serif)',
-                      fontSize: '2rem',
+                      fontSize: 'clamp(3rem, 5vw, 4.5rem)',
                       color: 'var(--color-accent)',
-                      marginBottom: '0.25rem',
+                      lineHeight: 1,
+                      letterSpacing: '-0.01em',
+                      marginBottom: '0.6rem',
+                      whiteSpace: 'nowrap',
                     }}
                   >
                     {item.value}
@@ -391,10 +394,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── GALERIE ── */}
+      {/* -- GALERIE */}
       <Gallery />
 
-      {/* ── KONTAKT ── */}
+      {/* -- KONTAKT */}
       <ContactSection />
     </>
   )

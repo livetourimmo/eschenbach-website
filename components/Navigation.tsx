@@ -47,7 +47,7 @@ export default function Navigation() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm font-medium tracking-wide text-[var(--color-text-core)] hover:text-[var(--color-accent)] transition-colors duration-200"
+              className="nav-link text-sm font-medium tracking-wide text-[var(--color-text-core)] hover:text-[var(--color-accent)] transition-colors duration-200"
             >
               {l.label}
             </Link>

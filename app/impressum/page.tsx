@@ -82,6 +82,25 @@ export default function ImpressumPage() {
               Darstellungen. Abweichungen zum fertigen Objekt sind möglich.
             </p>
           </section>
+
+          <section>
+            <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', color: 'var(--color-text-core)', marginBottom: '1rem' }}>
+              Technische Umsetzung
+            </h2>
+            <div className="text-sm font-light leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              <strong style={{ color: 'var(--color-text-core)', fontWeight: 500 }}>liveTour Immobilienmarketing GmbH</strong><br />
+              Maurerstrasse 8<br />
+              8500 Frauenfeld<br />
+              Schweiz<br />
+              <br />
+              Telefon:{' '}
+              <a href="tel:+41715752317" style={{ color: 'var(--color-accent)' }}>071 575 23 17</a><br />
+              E-Mail:{' '}
+              <a href="mailto:info@livetour.ch" style={{ color: 'var(--color-accent)' }}>info@livetour.ch</a><br />
+              Web:{' '}
+              <a href="https://www.livetour.ch" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent)' }}>www.livetour.ch</a>
+            </div>
+          </section>
         </div>
       </div>
     </div>

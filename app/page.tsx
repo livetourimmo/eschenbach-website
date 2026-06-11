@@ -67,7 +67,7 @@ export default function HomePage() {
                 marginBottom: '2.5rem',
               }}
             >
-              Vier Geschosse mit je zwei 4.5-Zimmer-Eigentumswohnungen, sorgfältig geplant, klar gegliedert und auf nachhaltiges Wohnen ausgerichtet.
+              Ruhige Architektur, warme Materialien, grosszügige Räume. Ein Mehrfamilienhaus in Eschenbach SG.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/angebot" className="btn-primary">

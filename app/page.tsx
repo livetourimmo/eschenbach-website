@@ -191,25 +191,55 @@ export default function HomePage() {
               </p>
 
               {/* Material highlights */}
-              <div
-                className="mt-8 grid grid-cols-2 gap-3"
-              >
+              <div className="mt-8 grid grid-cols-2 gap-3">
                 {[
-                  { label: 'Aussenputz', value: 'Warmgrau & Sand' },
-                  { label: 'Fenster',    value: 'Holz-Metall, Messingfarben' },
-                  { label: 'Böden',      value: 'Parkett Eiche natur' },
-                  { label: 'Dach',       value: 'Ziegel & Metall Dunkelgrau' },
+                  {
+                    label:   'Aussenputz',
+                    value:   'Warmgrau & Sand',
+                    swatches: ['#8a8178', '#c4b99a'],
+                  },
+                  {
+                    label:   'Fenster',
+                    value:   'Holz-Metall, Messingfarben',
+                    swatches: ['#7a5c3e', '#998f48'],
+                  },
+                  {
+                    label:   'Böden',
+                    value:   'Parkett Eiche natur',
+                    swatches: ['#b8936a', '#d4b48c'],
+                  },
+                  {
+                    label:   'Dach',
+                    value:   'Dunkelgrau & Kupfer',
+                    swatches: ['#3d3b38', '#b07040'],
+                  },
                 ].map(m => (
                   <div
                     key={m.label}
-                    className="p-4 rounded"
+                    className="p-4 rounded flex flex-col gap-3"
                     style={{
                       background: 'var(--color-page)',
                       border: '1px solid rgba(82,68,52,0.08)',
                     }}
                   >
-                    <div className="text-xs font-semibold uppercase tracking-widest mb-1" style={{ color: 'var(--color-accent)' }}>
+                    <div className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--color-accent)' }}>
                       {m.label}
+                    </div>
+                    <div className="flex gap-1.5">
+                      {m.swatches.map(c => (
+                        <div
+                          key={c}
+                          title={c}
+                          style={{
+                            width: '1.4rem',
+                            height: '1.4rem',
+                            borderRadius: '50%',
+                            background: c,
+                            border: '1px solid rgba(82,68,52,0.12)',
+                            flexShrink: 0,
+                          }}
+                        />
+                      ))}
                     </div>
                     <div className="text-sm font-light" style={{ color: 'var(--color-text-core)' }}>
                       {m.value}

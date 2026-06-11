@@ -196,34 +196,22 @@ export default function HomePage() {
                   {
                     label:   'Aussenputz',
                     value:   'Warmgrau & Sand',
-                    swatches: [
-                      { hex: '#989898', name: 'Neutrales Mittelgrau' },
-                      { hex: '#D9D5CC', name: 'Sandiges Warmbeige' },
-                    ],
+                    swatches: ['#8a8178', '#c4b99a'],
                   },
                   {
                     label:   'Fenster',
                     value:   'Holz-Metall, Messingfarben',
-                    swatches: [
-                      { hex: '#CCBB95', name: 'Sanftes Goldsand' },
-                      { hex: '#998F48', name: 'Gedecktes Messinggold' },
-                    ],
+                    swatches: ['#7a5c3e', '#998f48'],
                   },
                   {
                     label:   'Böden',
                     value:   'Parkett Eiche natur',
-                    swatches: [
-                      { hex: '#CCBB95', name: 'Sanftes Goldsand' },
-                      { hex: '#D9D5CC', name: 'Sandiges Warmbeige' },
-                    ],
+                    swatches: ['#b8936a', '#d4b48c'],
                   },
                   {
                     label:   'Dach',
                     value:   'Dunkelgrau & Kupfer',
-                    swatches: [
-                      { hex: '#2d2a27', name: 'Tiefes Basaltgrau' },
-                      { hex: '#998F48', name: 'Gedecktes Messinggold' },
-                    ],
+                    swatches: ['#3d3b38', '#b07040'],
                   },
                 ].map(m => (
                   <div
@@ -238,16 +226,16 @@ export default function HomePage() {
                       {m.label}
                     </div>
                     <div className="flex gap-1.5">
-                      {m.swatches.map(s => (
+                      {m.swatches.map(c => (
                         <div
-                          key={s.hex}
-                          title={s.name}
+                          key={c}
+                          title={c}
                           style={{
                             width: '1.4rem',
                             height: '1.4rem',
                             borderRadius: '50%',
-                            background: s.hex,
-                            border: '1px solid rgba(82,68,52,0.14)',
+                            background: c,
+                            border: '1px solid rgba(82,68,52,0.12)',
                             flexShrink: 0,
                           }}
                         />

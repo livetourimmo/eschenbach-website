@@ -6,13 +6,13 @@ import Footer from '@/components/Footer'
 export const metadata: Metadata = {
   metadataBase: new URL('https://eschen11.ch'),
   title: {
-    template: '%s | Eschen 11 — Eschenbach',
-    default:  'Eschen 11 — Eigentumswohnungen in Eschenbach',
+    template: '%s | Eschen 11 | Eschenbach',
+    default:  'Eschen 11 | Eigentumswohnungen in Eschenbach',
   },
   description:
     'Acht sorgfältig geplante 4.5-Zimmer-Eigentumswohnungen an der Rapperswilerstrasse 11 in Eschenbach SG. Zwischen Voralpen und Zürichsee.',
   openGraph: {
-    title:       'Eschen 11 — Eigentumswohnungen in Eschenbach',
+    title:       'Eschen 11 | Eigentumswohnungen in Eschenbach',
     description: 'Acht sorgfältig geplante 4.5-Zimmer-Eigentumswohnungen in Eschenbach SG.',
     url:         'https://eschen11.ch',
     siteName:    'Eschen 11',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url:    '/images/E1.png',
         width:  1200,
         height: 630,
-        alt:    'Eschen 11 — Mehrfamilienhaus in Eschenbach',
+        alt:    'Eschen 11 | Mehrfamilienhaus in Eschenbach',
       },
     ],
   },

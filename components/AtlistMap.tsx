@@ -20,12 +20,12 @@ export default function AtlistMap() {
         scrolling="no"
         allowFullScreen
         id="atlist-embed"
-        title="Lage Eschen 11 — Rapperswilerstrasse 11, Eschenbach"
+        title="Lage Eschen 11, Rapperswilerstrasse 11, Eschenbach"
         style={{
           width: '100%',
           height: '100%',
           border: 'none',
-          // greedy gesture handling via CSS — prevents accidental map zoom on scroll
+          // greedy gesture handling via CSS, prevents accidental map zoom on scroll
           touchAction: 'pan-x pan-y',
         }}
       />

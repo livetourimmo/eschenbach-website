@@ -66,8 +66,8 @@ export default function ImpressumPage() {
               Urheberrecht
             </h2>
             <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              Die auf dieser Website veröffentlichten Inhalte — insbesondere Texte, Bilder,
-              Visualisierungen und Pläne — sind urheberrechtlich geschützt. Jede Verwendung
+              Die auf dieser Website veröffentlichten Inhalte (insbesondere Texte, Bilder,
+              Visualisierungen und Pläne) sind urheberrechtlich geschützt. Jede Verwendung
               ausserhalb der engen Grenzen des Urheberrechtsgesetzes bedarf der vorherigen
               schriftlichen Zustimmung der MO Architektur GmbH.
             </p>

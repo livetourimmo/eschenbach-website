@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, MapPin } from 'lucide-react'
+import { ArrowRight, MapPin, Bus, Train, Route, GraduationCap } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import Gallery from '@/components/Gallery'
 import ContactSection from '@/components/ContactSection'
 
 export const metadata: Metadata = {
-  title: 'Eschen 11 — Eigentumswohnungen in Eschenbach',
+  title: 'Eschen 11 | Eigentumswohnungen in Eschenbach',
 }
 
 export default function HomePage() {
@@ -20,7 +20,7 @@ export default function HomePage() {
       >
         <Image
           src="/images/E1.png"
-          alt="Eschen 11 — Mehrfamilienhaus Rapperswilerstrasse 11"
+          alt="Eschen 11, Mehrfamilienhaus Rapperswilerstrasse 11"
           fill
           priority
           className="object-cover"
@@ -28,7 +28,7 @@ export default function HomePage() {
           sizes="100vw"
         />
 
-        {/* Subtle bottom gradient for text legibility — no heavy dark overlay */}
+        {/* Subtle bottom gradient for text legibility */}
         <div
           className="absolute inset-x-0 bottom-0"
           style={{
@@ -43,7 +43,7 @@ export default function HomePage() {
               className="label-tag block mb-4"
               style={{ color: 'rgba(246,245,242,0.7)' }}
             >
-              Eschenbach SG — Rapperswilerstrasse 11
+              Eschenbach SG · Rapperswilerstrasse 11
             </span>
             <h1
               style={{
@@ -67,7 +67,7 @@ export default function HomePage() {
                 marginBottom: '2.5rem',
               }}
             >
-              Vier Geschosse mit je zwei 4.5-Zimmer-Eigentumswohnungen — sorgfältig geplant, klar gegliedert und auf nachhaltiges Wohnen ausgerichtet.
+              Vier Geschosse mit je zwei 4.5-Zimmer-Eigentumswohnungen, sorgfältig geplant, klar gegliedert und auf nachhaltiges Wohnen ausgerichtet.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/angebot" className="btn-primary">
@@ -125,7 +125,7 @@ export default function HomePage() {
               >
                 <Image
                   src="/images/E2.png"
-                  alt="Eschen 11 — Gebäude"
+                  alt="Eschen 11, Gebäude"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -149,7 +149,7 @@ export default function HomePage() {
               >
                 <Image
                   src="/images/Interior1.png"
-                  alt="Eschen 11 — Innenraum"
+                  alt="Eschen 11, Innenraum"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -176,7 +176,7 @@ export default function HomePage() {
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
                 Das Gebäude überzeugt mit einer ruhigen, handwerklich durchdachten Architektur.
-                Die Fassaden verbinden groben Aussenputz in Warmgrau mit glattem Sandputz — ein
+                Die Fassaden verbinden groben Aussenputz in Warmgrau mit glattem Sandputz: ein
                 Wechselspiel aus Textur und Ton, das dem Haus Tiefe und Wärme verleiht.
               </p>
               <p style={{ marginBottom: '1.25rem' }}>
@@ -262,10 +262,10 @@ export default function HomePage() {
             <ScrollReveal delay={150}>
               <div className="flex flex-col gap-4">
                 {[
-                  { icon: '🚌', label: 'Rapperswil-Jona', detail: 'direkt per Bus' },
-                  { icon: '🚂', label: 'Zürich HB',        detail: 'ca. 40 Min. mit der S-Bahn' },
-                  { icon: '🛣️',  label: 'Autobahn A15',    detail: 'Anschlüsse Neuhaus & Jona' },
-                  { icon: '🏫', label: 'Schulen',           detail: 'alle Stufen vor Ort' },
+                  { Icon: Bus,           label: 'Rapperswil-Jona', detail: 'direkt per Bus' },
+                  { Icon: Train,         label: 'Zürich HB',       detail: 'ca. 40 Min. mit der S-Bahn' },
+                  { Icon: Route,         label: 'Autobahn A15',    detail: 'Anschlüsse Neuhaus & Jona' },
+                  { Icon: GraduationCap, label: 'Schulen',          detail: 'alle Stufen vor Ort' },
                 ].map(item => (
                   <div
                     key={item.label}
@@ -275,7 +275,12 @@ export default function HomePage() {
                       border: '1px solid rgba(255,255,255,0.06)',
                     }}
                   >
-                    <span style={{ fontSize: '1.25rem' }}>{item.icon}</span>
+                    <div
+                      className="shrink-0 w-9 h-9 rounded flex items-center justify-center"
+                      style={{ background: 'rgba(255,255,255,0.07)' }}
+                    >
+                      <item.Icon size={16} style={{ color: 'var(--color-goldsand)' }} />
+                    </div>
                     <div>
                       <div className="text-sm font-medium" style={{ color: '#f6f5f2' }}>{item.label}</div>
                       <div className="text-xs font-light" style={{ color: 'rgba(246,245,242,0.5)' }}>{item.detail}</div>
@@ -324,7 +329,7 @@ export default function HomePage() {
             {[
               { value: '8',          label: 'Eigentumswohnungen' },
               { value: '4.5',        label: 'Zimmer' },
-              { value: '117–119 m²', label: 'Wohnfläche' },
+              { value: '117 bis 119 m²', label: 'Wohnfläche' },
               { value: '4',          label: 'Geschosse' },
             ].map((item, i) => (
               <ScrollReveal key={item.label} delay={i * 80}>

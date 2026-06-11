@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Logo + address */}
           <div className="flex flex-col gap-3">
             <Image
-              src="/logos/Logo_1.svg"
+              src="/logos/Logo_3.svg"
               alt="Eschen 11"
               width={100}
               height={32}
@@ -59,7 +59,7 @@ export default function Footer() {
             color: 'rgba(246,245,242,0.35)',
           }}
         >
-          <span>© {new Date().getFullYear()} Eschen 11 — MO Architektur GmbH. Alle Rechte vorbehalten.</span>
+          <span>© {new Date().getFullYear()} Eschen 11 | MO Architektur GmbH. Alle Rechte vorbehalten.</span>
           <span>Eschenbach SG</span>
         </div>
       </div>

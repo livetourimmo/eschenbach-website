@@ -32,7 +32,7 @@ export default function AngebotPage() {
       >
         <Image
           src="/images/Interior2.png"
-          alt="Eschen 11 — Wohnraum"
+          alt="Eschen 11, Wohnraum"
           fill
           priority
           className="object-cover"
@@ -90,7 +90,7 @@ export default function AngebotPage() {
               >
                 <div className="label-tag mb-3">Erdgeschoss</div>
                 <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Private Sitzplätze mit je 25 m² Aussenfläche — direkt vom Wohnraum zugänglich.
+                  Private Sitzplätze mit je 25 m² Aussenfläche, direkt vom Wohnraum zugänglich.
                 </p>
               </div>
               <div
@@ -175,7 +175,7 @@ export default function AngebotPage() {
                     />
                     <div>
                       <span className="text-sm font-medium" style={{ color: 'var(--color-text-core)' }}>{room}</span>
-                      <span className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}> — {desc}</span>
+                      <span className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}> · {desc}</span>
                     </div>
                   </li>
                 ))}
@@ -189,7 +189,7 @@ export default function AngebotPage() {
               >
                 <Image
                   src="/images/Interior3.png"
-                  alt="Eschen 11 — Innenraum Detail"
+                  alt="Eschen 11, Innenraum Detail"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

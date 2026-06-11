@@ -132,7 +132,7 @@ export default function UnitTable() {
                       PDF
                     </a>
                   ) : (
-                    <span className="text-xs" style={{ color: 'var(--color-contrast)' }}>—</span>
+                    <span className="text-xs" style={{ color: 'var(--color-contrast)' }}>·</span>
                   )}
                 </td>
               </tr>

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { Bus, Train, Route, GraduationCap, Music, TreePine, Waves, ShoppingBag, Leaf } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import AtlistMap from '@/components/AtlistMap'
 import ContactSection from '@/components/ContactSection'
@@ -20,7 +21,7 @@ export default function LagePage() {
       >
         <Image
           src="/images/E2.png"
-          alt="Eschenbach — Aussenansicht"
+          alt="Eschenbach, Aussenansicht"
           fill
           priority
           className="object-cover"
@@ -88,7 +89,7 @@ export default function LagePage() {
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal>
-              <span className="label-tag">Makroebene — Die Region</span>
+              <span className="label-tag">Makroebene: Die Region</span>
               <div className="accent-line" />
               <h2
                 style={{
@@ -149,7 +150,7 @@ export default function LagePage() {
 
             {/* ── MIKROEBENE (unmittelbare Umgebung) ── */}
             <ScrollReveal delay={100}>
-              <span className="label-tag">Mikroebene — Unmittelbare Umgebung</span>
+              <span className="label-tag">Mikroebene: Unmittelbare Umgebung</span>
               <div className="accent-line" />
               <h2
                 style={{
@@ -174,12 +175,12 @@ export default function LagePage() {
 
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {[
-                  { icon: '🏫', label: 'Schule',      detail: 'Alle Stufen vor Ort' },
-                  { icon: '🎵', label: 'Musikschule',  detail: 'Zwei Musikschulen' },
-                  { icon: '🥾', label: 'Wanderwege',   detail: 'Direkt ab Haustür' },
-                  { icon: '🌊', label: 'Zürichsee',    detail: 'In der Nähe' },
-                  { icon: '🛒', label: 'Einkaufen',    detail: 'Im Dorf' },
-                  { icon: '🌿', label: 'Neuhüsler-Tobel', detail: 'Naherholung' },
+                  { Icon: GraduationCap, label: 'Schule',          detail: 'Alle Stufen vor Ort' },
+                  { Icon: Music,         label: 'Musikschule',      detail: 'Zwei Musikschulen' },
+                  { Icon: TreePine,      label: 'Wanderwege',       detail: 'Direkt ab Haustür' },
+                  { Icon: Waves,         label: 'Zürichsee',        detail: 'In der Nähe' },
+                  { Icon: ShoppingBag,   label: 'Einkaufen',        detail: 'Im Dorf' },
+                  { Icon: Leaf,          label: 'Neuhüsler-Tobel',  detail: 'Naherholung' },
                 ].map(item => (
                   <div
                     key={item.label}
@@ -189,7 +190,12 @@ export default function LagePage() {
                       border: '1px solid rgba(82,68,52,0.08)',
                     }}
                   >
-                    <span>{item.icon}</span>
+                    <div
+                      className="shrink-0 w-8 h-8 rounded flex items-center justify-center"
+                      style={{ background: 'rgba(153,143,72,0.08)' }}
+                    >
+                      <item.Icon size={14} style={{ color: 'var(--color-accent)' }} />
+                    </div>
                     <div>
                       <div className="text-sm font-medium" style={{ color: 'var(--color-text-core)' }}>{item.label}</div>
                       <div className="text-xs font-light" style={{ color: 'var(--color-text-light)' }}>{item.detail}</div>

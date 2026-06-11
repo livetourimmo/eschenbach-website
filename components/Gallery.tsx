@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
-  { src: '/images/E1.png',        alt: 'Eschen 11 — Aussenansicht',    aspect: 'landscape' },
-  { src: '/images/E2.png',        alt: 'Eschen 11 — Gebäudeansicht',   aspect: 'landscape' },
-  { src: '/images/Interior1.png', alt: 'Eschen 11 — Innenraum',        aspect: 'landscape' },
-  { src: '/images/Interior2.png', alt: 'Eschen 11 — Wohnbereich',      aspect: 'landscape' },
-  { src: '/images/Interior3.png', alt: 'Eschen 11 — Küche',            aspect: 'landscape' },
-  { src: '/images/Interior4.png', alt: 'Eschen 11 — Detail',           aspect: 'landscape' },
+  { src: '/images/E1.png',        alt: 'Eschen 11 , Aussenansicht',    aspect: 'landscape' },
+  { src: '/images/E2.png',        alt: 'Eschen 11 , Gebäudeansicht',   aspect: 'landscape' },
+  { src: '/images/Interior1.png', alt: 'Eschen 11 , Innenraum',        aspect: 'landscape' },
+  { src: '/images/Interior2.png', alt: 'Eschen 11 , Wohnbereich',      aspect: 'landscape' },
+  { src: '/images/Interior3.png', alt: 'Eschen 11 , Küche',            aspect: 'landscape' },
+  { src: '/images/Interior4.png', alt: 'Eschen 11 , Detail',           aspect: 'landscape' },
 ]
 
 export default function Gallery() {
@@ -55,7 +55,7 @@ export default function Gallery() {
 
         {/* Asymmetric gallery grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-          {/* Feature image — spans 2 cols */}
+          {/* Feature image , spans 2 cols */}
           <button
             className="md:col-span-2 relative overflow-hidden rounded-lg group cursor-pointer"
             style={{ aspectRatio: '16/10' }}

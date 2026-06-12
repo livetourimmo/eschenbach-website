@@ -12,7 +12,7 @@ export default function Footer() {
       className="py-12"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8">
 
           {/* Logo + address */}
           <div className="flex flex-col gap-3">

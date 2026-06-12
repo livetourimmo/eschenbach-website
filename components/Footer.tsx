@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
 
           {/* Logo + address */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 items-start">
             <Image
               src="/logos/Logo_3.svg"
               alt="Eschen 11"

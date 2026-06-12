@@ -310,36 +310,45 @@ export default function AngebotPage() {
             </p>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { name: 'Wände & Decken',     tone: 'Weiss',               gradient: 'linear-gradient(135deg, #faf9f6 0%, #f5f3ef 50%, #eceae6 100%)' },
-              { name: 'Böden Wohnen',       tone: 'Parkett Eiche natur', gradient: 'linear-gradient(135deg, #d0a87a 0%, #b88a62 40%, #a07050 65%, #c49870 100%)' },
-              { name: 'Böden Bad & WC',     tone: 'Platten Beige',       gradient: 'repeating-conic-gradient(#d4c4a8 0% 25%, #c4b498 0% 50%) 0 0 / 52px 52px' },
-              { name: 'Decke & Pfetten DG', tone: 'Holz weiss lasiert',  gradient: 'linear-gradient(175deg, #f0ece4 0%, #e8e2d8 25%, #f2eee6 45%, #eae4da 65%, #f0ece4 100%)' },
-              { name: 'Fenster innen',      tone: 'Holz / Metall weiss', gradient: 'linear-gradient(135deg, #e2ddd6 0%, #d0c8c0 40%, #dcd6ce 70%, #c8c0b8 100%)' },
+              { label: 'WOHN- UND SCHLAFRÄUME', name: 'Böden Wohnen',       detail: 'Parkett Eiche natur',   photo: '/bilder/boden.jpg'   },
+              { label: 'KÜCHE · BAD · ENTRÉE',  name: 'Böden Bad & WC',     detail: 'Platten Beige · matt',          photo: '/bilder/platten.jpg' },
+              { label: 'DACHGESCHOSS',           name: 'Decke & Pfetten DG', detail: 'Holz weiss lasiert',            photo: '/bilder/decke.jpg'   },
+              { label: 'FENSTER INNEN',          name: 'Fenster innen',      detail: 'Holz · Metall weiss',           photo: '/bilder/fenster.jpg' },
+              { label: 'WÄNDE & DECKEN',         name: 'Wände & Decken',     detail: 'Weiss · gestrichen',            photo: '/bilder/wand.jpg'    },
             ].map((m, i) => (
-              <ScrollReveal key={m.name} delay={i * 50}>
+              <ScrollReveal key={m.name} delay={i * 60}>
                 <div
-                  className="card-interactive rounded-lg overflow-hidden"
-                  style={{
-                    background: '#ffffff',
-                    border: '1px solid rgba(82,68,52,0.08)',
-                    boxShadow: 'var(--shadow-soft)',
-                  }}
+                  className="relative overflow-hidden rounded-lg group"
+                  style={{ aspectRatio: '4/3' }}
                 >
-                  <div style={{ height: '7rem', background: m.gradient }} />
-                  <div className="px-3 py-3">
+                  <Image
+                    src={m.photo}
+                    alt={m.name}
+                    fill
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{ background: 'linear-gradient(to top, rgba(20,18,16,0.85) 0%, rgba(20,18,16,0.2) 50%, transparent 100%)' }}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
                     <div
-                      className="text-xs font-medium leading-tight mb-0.5"
-                      style={{ color: 'var(--color-text-core)' }}
+                      style={{
+                        fontFamily: 'var(--font-serif)',
+                        fontSize: 'clamp(1.15rem, 2vw, 1.5rem)',
+                        color: '#f6f5f2',
+                        lineHeight: 1.2,
+                        marginBottom: '0.3rem',
+                      }}
                     >
                       {m.name}
                     </div>
-                    <div
-                      className="text-xs font-light"
-                      style={{ color: 'var(--color-contrast)' }}
-                    >
-                      {m.tone}
+                    <div className="text-sm font-light" style={{ color: 'rgba(246,245,242,0.55)' }}>
+                      {m.detail}
                     </div>
                   </div>
                 </div>

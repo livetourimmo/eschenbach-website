@@ -3,17 +3,17 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { supabase, type Unit } from '@/lib/supabase'
-import { FileText, SlidersHorizontal } from 'lucide-react'
+import { SlidersHorizontal } from 'lucide-react'
 
 const staticUnits: Unit[] = [
-  { id: 1, bezeichnung: 'Whg A', geschoss: 'EG',    zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 25, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_A.pdf' },
-  { id: 2, bezeichnung: 'Whg B', geschoss: 'EG',    zimmer: 4.5, wohnflaeche: 118, sitzplatz_balkon: 25, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_B.pdf' },
-  { id: 3, bezeichnung: 'Whg C', geschoss: '1. OG', zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 23, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_C.pdf' },
-  { id: 4, bezeichnung: 'Whg D', geschoss: '1. OG', zimmer: 4.5, wohnflaeche: 118, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_D.pdf' },
-  { id: 5, bezeichnung: 'Whg E', geschoss: '2. OG', zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_E.pdf' },
-  { id: 6, bezeichnung: 'Whg F', geschoss: '2. OG', zimmer: 4.5, wohnflaeche: 118, sitzplatz_balkon: 23, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_F.pdf' },
-  { id: 7, bezeichnung: 'Whg G', geschoss: 'DG',    zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_G.pdf' },
-  { id: 8, bezeichnung: 'Whg H', geschoss: 'DG',    zimmer: 4.5, wohnflaeche: 117, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: '/downloads/Wohnung_H.pdf' },
+  { id: 1, bezeichnung: 'Whg A', geschoss: 'EG',    zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 25, preis: null, status: 'frei', grundriss_pdf_url: null },
+  { id: 2, bezeichnung: 'Whg B', geschoss: 'EG',    zimmer: 4.5, wohnflaeche: 118, sitzplatz_balkon: 25, preis: null, status: 'frei', grundriss_pdf_url: null },
+  { id: 3, bezeichnung: 'Whg C', geschoss: '1. OG', zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 23, preis: null, status: 'frei', grundriss_pdf_url: null },
+  { id: 4, bezeichnung: 'Whg D', geschoss: '1. OG', zimmer: 4.5, wohnflaeche: 118, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: null },
+  { id: 5, bezeichnung: 'Whg E', geschoss: '2. OG', zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: null },
+  { id: 6, bezeichnung: 'Whg F', geschoss: '2. OG', zimmer: 4.5, wohnflaeche: 118, sitzplatz_balkon: 23, preis: null, status: 'frei', grundriss_pdf_url: null },
+  { id: 7, bezeichnung: 'Whg G', geschoss: 'DG',    zimmer: 4.5, wohnflaeche: 119, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: null },
+  { id: 8, bezeichnung: 'Whg H', geschoss: 'DG',    zimmer: 4.5, wohnflaeche: 117, sitzplatz_balkon: 24, preis: null, status: 'frei', grundriss_pdf_url: null },
 ]
 
 const geschossOrder: Record<string, number> = { 'EG': 0, '1. OG': 1, '2. OG': 2, 'DG': 3 }
@@ -76,7 +76,7 @@ export default function UnitTable() {
         <table className="w-full" style={{ borderCollapse: 'separate', borderSpacing: 0 }}>
           <thead>
             <tr style={{ borderBottom: '2px solid rgba(82,68,52,0.10)' }}>
-              {['Wohnung', 'Geschoss', 'Zimmer', 'Wohnfläche', 'Sitzplatz / Balkon', 'Kaufpreis', 'Status', 'Grundriss'].map(h => (
+              {['Wohnung', 'Geschoss', 'Zimmer', 'Wohnfläche', 'Sitzplatz / Balkon', 'Kaufpreis', 'Status'].map(h => (
                 <th
                   key={h}
                   className="pb-4 text-left text-xs font-semibold uppercase tracking-widest pr-6"
@@ -118,22 +118,6 @@ export default function UnitTable() {
                   <span className={`status-${u.status}`}>
                     {statusLabel[u.status]}
                   </span>
-                </td>
-                <td className="py-4">
-                  {u.grundriss_pdf_url ? (
-                    <a
-                      href={u.grundriss_pdf_url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs font-medium transition-colors hover:text-[var(--color-accent-hover)]"
-                      style={{ color: 'var(--color-accent)' }}
-                    >
-                      <FileText size={13} />
-                      PDF
-                    </a>
-                  ) : (
-                    <span className="text-xs" style={{ color: 'var(--color-contrast)' }}>·</span>
-                  )}
                 </td>
               </tr>
             ))}
@@ -179,17 +163,6 @@ export default function UnitTable() {
                 </div>
               ))}
             </div>
-            {u.grundriss_pdf_url && (
-              <a
-                href={u.grundriss_pdf_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary text-xs py-2 px-4 w-full justify-center"
-              >
-                <FileText size={14} />
-                Grundriss herunterladen
-              </a>
-            )}
           </div>
         ))}
       </div>

@@ -31,7 +31,7 @@ export default function ContactSection() {
             </div>
 
             <p style={{ color: 'var(--color-text-light)', maxWidth: '34rem', lineHeight: 1.75 }}>
-              Wir beantworten Ihre Fragen persönlich und begleiten Sie durch den gesamten Kaufprozess, von der Besichtigung bis zur Beurkundung.
+              Wir beantworten Ihre Fragen persönlich und begleiten Sie durch den gesamten Kaufprozess.
             </p>
 
             {/* Contact card */}

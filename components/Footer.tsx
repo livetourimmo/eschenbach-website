@@ -17,11 +17,11 @@ export default function Footer() {
           {/* Logo + address */}
           <div className="flex flex-col gap-3 items-start">
             <Image
-              src="/logos/Logo_3.svg"
+              src="/logos/Logo_1.svg"
               alt="Eschen 11"
-              width={100}
-              height={32}
-              className="h-8 w-auto object-contain brightness-0 invert opacity-70"
+              width={140}
+              height={46}
+              className="h-12 w-auto object-contain brightness-0 invert opacity-70"
             />
             <p
               className="text-xs leading-relaxed"

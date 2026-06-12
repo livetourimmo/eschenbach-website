@@ -19,7 +19,7 @@ export default function HomePage() {
         style={{ background: '#1e1c19' }}
       >
         <Image
-          src="/images/E1.png"
+          src="/images/Aussen1.png"
           alt="Eschen 11, Mehrfamilienhaus Rapperswilerstrasse 11"
           fill
           priority
@@ -124,7 +124,7 @@ export default function HomePage() {
                 style={{ aspectRatio: '4/3' }}
               >
                 <Image
-                  src="/images/E2.png"
+                  src="/images/Aussen2.png"
                   alt="Eschen 11, Gebäude"
                   fill
                   className="object-cover"
@@ -148,7 +148,7 @@ export default function HomePage() {
                 style={{ aspectRatio: '3/4' }}
               >
                 <Image
-                  src="/images/Interior1.png"
+                  src="/images/Innen1.png"
                   alt="Eschen 11, Innenraum"
                   fill
                   className="object-cover"
@@ -189,64 +189,6 @@ export default function HomePage() {
                 im Dachgeschoss weiss lasierte Holzdecken schaffen Räume, die Wärme und Offenheit
                 gleichermassen ausstrahlen.
               </p>
-
-              {/* Material highlights */}
-              <div className="mt-8 grid grid-cols-2 gap-3">
-                {[
-                  {
-                    label:   'Aussenputz',
-                    value:   'Warmgrau & Sand',
-                    swatches: ['#8a8178', '#c4b99a'],
-                  },
-                  {
-                    label:   'Fenster',
-                    value:   'Holz-Metall, Messingfarben',
-                    swatches: ['#7a5c3e', '#998f48'],
-                  },
-                  {
-                    label:   'Böden',
-                    value:   'Parkett Eiche natur',
-                    swatches: ['#b8936a', '#d4b48c'],
-                  },
-                  {
-                    label:   'Dach',
-                    value:   'Dunkelgrau & Kupfer',
-                    swatches: ['#3d3b38', '#b07040'],
-                  },
-                ].map(m => (
-                  <div
-                    key={m.label}
-                    className="card-interactive p-4 rounded flex flex-col gap-3"
-                    style={{
-                      background: 'var(--color-page)',
-                      border: '1px solid rgba(82,68,52,0.08)',
-                    }}
-                  >
-                    <div className="text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--color-accent)' }}>
-                      {m.label}
-                    </div>
-                    <div className="flex gap-1.5">
-                      {m.swatches.map(c => (
-                        <div
-                          key={c}
-                          title={c}
-                          style={{
-                            width: '1.4rem',
-                            height: '1.4rem',
-                            borderRadius: '50%',
-                            background: c,
-                            border: '1px solid rgba(82,68,52,0.12)',
-                            flexShrink: 0,
-                          }}
-                        />
-                      ))}
-                    </div>
-                    <div className="text-sm font-light" style={{ color: 'var(--color-text-core)' }}>
-                      {m.value}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </ScrollReveal>
           </div>
         </div>

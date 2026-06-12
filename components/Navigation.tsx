@@ -32,11 +32,11 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <Image
-            src="/logos/Logo_3.svg"
+            src="/logos/Logo_1.svg"
             alt="Eschen 11"
-            width={120}
-            height={40}
-            className="h-10 w-auto object-contain"
+            width={160}
+            height={54}
+            className="h-14 w-auto object-contain"
             priority
           />
         </Link>

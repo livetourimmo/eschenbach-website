@@ -20,7 +20,7 @@ export default function LagePage() {
         style={{ minHeight: '65vh', background: '#1a1917' }}
       >
         <Image
-          src="/images/Aussen2.png"
+          src="/images/v2_Eschen11_A2.png"
           alt="Eschenbach, Aussenansicht"
           fill
           priority

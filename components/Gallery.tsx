@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
-  { src: '/images/Aussen1.png', alt: 'Eschen 11 , Aussenansicht',    aspect: 'landscape' },
-  { src: '/images/Aussen2.png', alt: 'Eschen 11 , Gebäudeansicht',   aspect: 'landscape' },
-  { src: '/images/Innen1.png',  alt: 'Eschen 11 , Innenraum',        aspect: 'landscape' },
-  { src: '/images/Innen2.png',  alt: 'Eschen 11 , Wohnbereich',      aspect: 'landscape' },
-  { src: '/images/Innen3.png',  alt: 'Eschen 11 , Küche',            aspect: 'landscape' },
-  { src: '/images/Innen4.png',  alt: 'Eschen 11 , Detail',           aspect: 'landscape' },
+  { src: '/images/v2_Eschen11_A1.png', alt: 'Eschen 11 , Aussenansicht',    aspect: 'landscape' },
+  { src: '/images/v2_Eschen11_A2.png', alt: 'Eschen 11 , Gebäudeansicht',   aspect: 'landscape' },
+  { src: '/images/v2_Eschen11_i1.png', alt: 'Eschen 11 , Innenraum',        aspect: 'landscape' },
+  { src: '/images/v2_Eschen11_i2.png', alt: 'Eschen 11 , Wohnbereich',      aspect: 'landscape' },
+  { src: '/images/v2_Eschen11_i3.png', alt: 'Eschen 11 , Küche',            aspect: 'landscape' },
+  { src: '/images/v2_Eschen11_i4.png', alt: 'Eschen 11 , Detail',           aspect: 'landscape' },
 ]
 
 export default function Gallery() {

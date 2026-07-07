@@ -31,7 +31,7 @@ export default function AngebotPage() {
         style={{ minHeight: '60vh', background: '#1a1917' }}
       >
         <Image
-          src="/images/Innen2.png"
+          src="/images/v2_Eschen11_i2.png"
           alt="Eschen 11, Wohnraum"
           fill
           priority
@@ -188,7 +188,7 @@ export default function AngebotPage() {
                 style={{ aspectRatio: '4/5' }}
               >
                 <Image
-                  src="/images/Innen3.png"
+                  src="/images/v2_Eschen11_i3.png"
                   alt="Eschen 11, Innenraum Detail"
                   fill
                   className="object-cover"

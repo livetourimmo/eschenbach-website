@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Download, FileText } from 'lucide-react'
-import UnitTable from '@/components/UnitTable'
 import ScrollReveal from '@/components/ScrollReveal'
 import ContactSection from '@/components/ContactSection'
 
@@ -107,7 +106,7 @@ export default function AngebotPage() {
         </div>
       </section>
 
-      {/* ── WOHNUNGSÜBERSICHT / NAVIGATOR ── */}
+      {/* ── NAVIGATOR (PLATZHALTER) ── */}
       <section className="py-16 md:py-24" style={{ background: '#ffffff' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <ScrollReveal>
@@ -122,14 +121,25 @@ export default function AngebotPage() {
                   letterSpacing: '0.02em',
                 }}
               >
-                Alle verfügbaren Wohnungen
+                Wohnungsnavigator
               </h2>
             </div>
           </ScrollReveal>
-          <UnitTable />
-          <p className="text-xs mt-6" style={{ color: 'var(--color-contrast)' }}>
-            Alle Flächen in m² gemäss Flächenauszug (gerundet). Angaben ohne Gewähr.
-          </p>
+          <div
+            className="flex items-center justify-center rounded-xl border-2 border-dashed"
+            style={{
+              minHeight: '320px',
+              borderColor: 'var(--color-accent)',
+              background: 'rgba(var(--color-accent-rgb, 130,120,80), 0.04)',
+            }}
+          >
+            <p
+              className="text-center"
+              style={{ color: 'var(--color-contrast)', fontSize: '1rem', letterSpacing: '0.04em' }}
+            >
+              Navigator folgt
+            </p>
+          </div>
         </div>
       </section>
 

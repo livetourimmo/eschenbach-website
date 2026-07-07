@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
@@ -9,25 +9,13 @@ const links = [
   { href: '/',        label: 'Start'   },
   { href: '/angebot', label: 'Angebot' },
   { href: '/lage',    label: 'Lage'    },
-  { href: '/#kontakt',label: 'Kontakt' },
 ]
 
 export default function Navigation() {
-  const [scrolled, setScrolled] = useState(false)
-  const [open, setOpen]         = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const [open, setOpen] = useState(false)
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? 'nav-scrolled' : 'bg-transparent'
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 nav-scrolled">
       <div className="max-w-6xl mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">

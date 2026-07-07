@@ -38,7 +38,7 @@ export default function HomePage() {
         />
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pb-20 md:pb-28 w-full">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <span
               className="label-tag block mb-4"
               style={{ color: 'rgba(246,245,242,0.7)' }}
@@ -48,14 +48,14 @@ export default function HomePage() {
             <h1
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontSize: 'clamp(2.6rem, 6vw, 4.5rem)',
+                fontSize: 'clamp(2.2rem, 5vw, 3.8rem)',
                 lineHeight: 1.08,
                 letterSpacing: '0.02em',
                 color: '#f6f5f2',
                 marginBottom: '1.5rem',
               }}
             >
-              Acht Wohnungen,<br />ein Zuhause.
+              Ihr Wohlfühlort im<br />Herzen von Eschenbach
             </h1>
             <p
               style={{
@@ -102,10 +102,7 @@ export default function HomePage() {
                 Warm, präzise, zeitlos.
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                An der Rapperswilerstrasse 11 in Eschenbach entsteht ein Mehrfamilienhaus mit acht
-                Eigentumswohnungen, sorgfältig geplant, klar gegliedert und auf nachhaltiges Wohnen
-                ausgerichtet. Vier Geschosse mit je zwei identisch strukturierten 4.5-Zimmer-Wohnungen
-                bilden ein kompaktes, eigenständiges Gebäude.
+                An der Rapperswilerstrasse 11 in Eschenbach entsteht ein Mehrfamilienhaus mit acht Eigentumswohnungen, die klar gegliedert und auf nachhaltiges Wohnen ausgerichtet sind.
               </p>
               <p style={{ marginBottom: '1.25rem' }}>
                 Ein Personenlift erschliesst alle Etagen barrierefrei und die Tiefgarage bietet

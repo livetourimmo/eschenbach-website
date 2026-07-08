@@ -4,14 +4,15 @@
 /* ─── Eschen 11 Design Tokens (Tailwind v4 @theme) ─── */
 @theme {
   /* Colours */
-  --color-page:         #f6f5f2;
+  --color-page:         #f6f5f2;   /* Klares Kalkweiss — Hintergrund */
   --color-card:         #ffffff;
-  --color-text-core:    #2d2a27;
+  --color-primary:      #615243;   /* Warmes Bronzebraun — Hauptfarbe */
+  --color-text-core:    #2d2a27;   /* Tiefes Basaltgrau — Texte */
   --color-text-light:   #4c4742;
-  --color-secondary:    #d9d5cc;
-  --color-accent:       #998f48;
+  --color-secondary:    #d9d5cc;   /* Sandiges Warmbeige — Sekundärfarbe */
+  --color-accent:       #998f48;   /* Gedecktes Messinggold — Akzentfarbe */
   --color-accent-hover: #81783c;
-  --color-contrast:     #989898;
+  --color-contrast:     #989898;   /* Neutrales Mittelgrau — Kontrastelemente */
   --color-goldsand:     #CCBB95;
 
   /* Typography */

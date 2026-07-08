@@ -19,6 +19,13 @@ const downloads = [
     size:     '2.4 MB',
     icon:     'plan',
   },
+  {
+    title:    'Umgebungsplan',
+    subtitle: 'Lageplan und Umgebung',
+    file:     '/downloads/Umgebungsplan.pdf',
+    size:     '',
+    icon:     'plan',
+  },
 ]
 
 export default function AngebotPage() {
@@ -70,13 +77,14 @@ export default function AngebotPage() {
             <div className="max-w-3xl">
               <span className="label-tag">Überblick</span>
               <div className="accent-line" />
-              <p className="gold-left text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
-                Das Mehrfamilienhaus an der Rapperswilerstrasse 11 in Eschenbach umfasst acht
-                Eigentumswohnungen mit je 4.5 Zimmern und Wohnflächen zwischen 117 und 119 m².
-                Die klar gegliederten Grundrisse überzeugen mit einem grosszügigen Wohn-/Ess- und
-                Kochbereich, drei Zimmern sowie einem vollständigen Bad und einem separaten
-                Dusche/WC. Ein Reduit und ein Vorraum schaffen zusätzlichen Stauraum und Komfort
-                im Alltag.
+              <p className="gold-left text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75, marginBottom: '1.25rem' }}>
+                Das Mehrfamilienhaus Eschen 11 umfasst acht 4.5-Zimmer-Eigentumswohnungen, verteilt auf vier Geschosse. Die Wohnungen bieten Nettowohnflächen zwischen 117 und 119 m².
+              </p>
+              <p style={{ color: 'var(--color-text-light)', lineHeight: 1.75, marginBottom: '1.25rem' }}>
+                Herzstück ist der 47.5 bis 48 m² grosse Wohn-, Ess- und Kochbereich. Drei Zimmer mit Flächen zwischen 15 und 18.5 m² lassen sich als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzen. Hinzu kommen ein Bad mit Badewanne, eine separate Dusche mit WC, ein Reduit sowie ein zusätzlicher Vorraum.
+              </p>
+              <p style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
+                Die Raumaufteilung trennt den offenen Wohnbereich klar von den privaten Zimmern. Gleichzeitig bleiben die Wege innerhalb der Wohnung kurz und übersichtlich.
               </p>
             </div>
           </ScrollReveal>
@@ -87,18 +95,18 @@ export default function AngebotPage() {
                 className="card-interactive p-6 rounded-lg"
                 style={{ background: '#ffffff', border: '1px solid rgba(82,68,52,0.08)', boxShadow: 'var(--shadow-soft)' }}
               >
-                <div className="label-tag mb-3">Erdgeschoss</div>
+                <div className="label-tag mb-3">Zwei private Sitzplätze</div>
                 <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Private Sitzplätze mit je 25 m² Aussenfläche, direkt vom Wohnraum zugänglich.
+                  Die beiden Erdgeschosswohnungen verfügen über zwei Sitzplätze auf unterschiedlichen Gebäudeseiten. Zusammen bieten sie je Wohnung 25 m² private Aussenfläche.
                 </p>
               </div>
               <div
                 className="card-interactive p-6 rounded-lg"
                 style={{ background: '#ffffff', border: '1px solid rgba(82,68,52,0.08)', boxShadow: 'var(--shadow-soft)' }}
               >
-                <div className="label-tag mb-3">Ober- & Dachgeschoss</div>
+                <div className="label-tag mb-3">Aussenraum auf zwei Seiten</div>
                 <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Umlaufende Balkone zwischen 23 und{' '}<span style={{ whiteSpace: 'nowrap' }}>24 m²</span>, die Wohnen und Aussenraum verbinden.
+                  Die Wohnungen im ersten und zweiten Obergeschoss sowie im Dachgeschoss verfügen über zwei Balkonflächen mit insgesamt 23 bis 24 m².
                 </p>
               </div>
             </div>
@@ -162,17 +170,17 @@ export default function AngebotPage() {
                 Jede Wohnung im Detail
               </h2>
               <p style={{ marginBottom: '2rem' }}>
-                Jede der acht Wohnungen ist identisch strukturiert und bietet folgende Räume:
+                Alle acht Wohnungen sind gleich aufgeteilt. Folgende Räume stehen zur Verfügung:
               </p>
               <ul className="flex flex-col gap-3">
                 {[
-                  ['Entree',             'Direkter Zugang zu allen Zimmern'],
-                  ['Vorraum',            'Praktische Pufferzone'],
-                  ['3 Zimmer',           'Flexibel nutzbar als Schlafzimmer oder Arbeitsraum'],
-                  ['Wohnen / Essen / Kochen', 'Grosszügiger, offener Gemeinschaftsbereich'],
-                  ['Bad',                'Mit Wanne oder Dusche'],
-                  ['Dusche / WC',        'Separate Nasszelle'],
-                  ['Reduit',             'Für Stauraum und Haushalt'],
+                  ['Wohnen / Essen / Kochen', '47.5 bis 48 m², mit direktem Zugang zu beiden Aussenflächen'],
+                  ['Drei Zimmer',             '15 bis 18.5 m² — als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzbar'],
+                  ['Bad',                     'Mit Badewanne; Waschmaschine und Tumbler in der Wohnung vorgesehen'],
+                  ['Dusche / WC',             'Separate Nasszelle, zusätzlich zum Bad'],
+                  ['Entrée',                  'Zugang zum Wohnbereich und zum grossen Zimmer'],
+                  ['Vorraum',                 'Erschliessung der zwei weiteren Zimmer und des Bads'],
+                  ['Reduit',                  '2 m² für Vorräte, Haushaltsgeräte und Alltagsgegenstände'],
                 ].map(([room, desc]) => (
                   <li
                     key={room}
@@ -282,7 +290,7 @@ export default function AngebotPage() {
               >
                 <div className="label-tag">Weitere Unterlagen</div>
                 <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Kurzbaubeschrieb, Situationsplan und weitere Unterlagen erhalten Sie auf Anfrage.
+                  Kurzbaubeschrieb und weitere Unterlagen erhalten Sie auf Anfrage.
                 </p>
                 <Link
                   href="/#kontakt"
@@ -312,21 +320,23 @@ export default function AngebotPage() {
                 marginBottom: '0.75rem',
               }}
             >
-              Zeitloses Zusammenspiel.
+              Ruhige Basis, markante Details.
             </h2>
+            <p style={{ maxWidth: '40rem', marginBottom: '1.25rem' }}>
+              Eichenparkett, matte Platten in Beige und helle Wandflächen bilden die ruhige Grundlage der Innenräume. In den Dachwohnungen kommen weiss lasierte Holzdecken und sichtbare Pfetten hinzu.
+            </p>
             <p style={{ maxWidth: '40rem', marginBottom: '3rem' }}>
-              Ein zeitloses Zusammenspiel aus warmen Erdtönen, edlen Metallakzenten und hellen,
-              natürlichen Innenräumen.
+              Die zurückhaltenden Materialien im Innern werden durch die messing- und bronzefarbenen Details der Gebäudehülle ergänzt.
             </p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { label: 'WOHN- UND SCHLAFRÄUME', name: 'Böden Wohnen',       detail: 'Parkett Eiche natur',   photo: '/bilder/boden.jpg'   },
-              { label: 'KÜCHE · BAD · ENTRÉE',  name: 'Böden Bad & WC',     detail: 'Platten Beige · matt',          photo: '/bilder/platten.jpg' },
-              { label: 'DACHGESCHOSS',           name: 'Decke & Pfetten DG', detail: 'Holz weiss lasiert',            photo: '/bilder/decke.jpg'   },
-              { label: 'FENSTER INNEN',          name: 'Fenster innen',      detail: 'Holz · Metall weiss',           photo: '/bilder/fenster.jpg' },
-              { label: 'WÄNDE & DECKEN',         name: 'Wände & Decken',     detail: 'Weiss · gestrichen',            photo: '/bilder/wand.jpg'    },
+              { label: 'WOHNRÄUME',          name: 'Parkett, Eiche natur',         detail: '',                photo: '/bilder/boden.jpg'   },
+              { label: 'BAD UND DUSCHE / WC', name: 'Feinsteinzeugplatten',        detail: 'Beige matt',      photo: '/bilder/platten.jpg' },
+              { label: 'DACHGESCHOSS',        name: 'Holzdecke und Pfetten',       detail: 'weiss lasiert',   photo: '/bilder/decke.jpg'   },
+              { label: 'FENSTER INNENSEITE',  name: 'Holz-Metall',                 detail: 'Weiss',           photo: '/bilder/fenster.jpg' },
+              { label: 'WÄNDE UND DECKEN',    name: 'Weiss gestrichen',            detail: '',                photo: '/bilder/wand.jpg'    },
             ].map((m, i) => (
               <ScrollReveal key={m.name} delay={i * 60}>
                 <div

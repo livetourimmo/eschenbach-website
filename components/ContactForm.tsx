@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { supabase } from '@/lib/supabase'
 import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 type FormState = 'idle' | 'sending' | 'success' | 'error'
@@ -33,15 +32,19 @@ export default function ContactForm() {
 
     setState('sending')
 
-    const { error } = await supabase.from('contact_requests').insert({
-      name:      form.name,
-      email:     form.email,
-      telefon:   form.telefon || null,
-      nachricht: form.nachricht,
-      interesse: form.interesse || null,
+    const res = await fetch('/api/contact', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:      form.name,
+        email:     form.email,
+        telefon:   form.telefon   || null,
+        nachricht: form.nachricht,
+        interesse: form.interesse || null,
+      }),
     })
 
-    setState(error ? 'error' : 'success')
+    setState(res.ok ? 'success' : 'error')
   }
 
   if (state === 'success') {

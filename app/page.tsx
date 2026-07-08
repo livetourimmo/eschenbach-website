@@ -67,7 +67,7 @@ export default function HomePage() {
                 marginBottom: '2.5rem',
               }}
             >
-              Ruhige Architektur, warme Materialien, grosszügige Räume. Ein Mehrfamilienhaus in Eschenbach SG.
+              Acht 4.5-Zimmer-Eigentumswohnungen mit 117 bis 119 m² Wohnfläche, grossen Wohnbereichen und zwei privaten Aussenflächen.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/angebot" className="btn-primary">
@@ -99,19 +99,16 @@ export default function HomePage() {
                   marginBottom: '1.5rem',
                 }}
               >
-                Warm, präzise, zeitlos.
+                Zwei Wohnungen pro Etage. Viel Raum für den Alltag.
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                An der Rapperswilerstrasse 11 in Eschenbach entsteht ein Mehrfamilienhaus mit acht Eigentumswohnungen, die klar gegliedert und auf nachhaltiges Wohnen ausgerichtet sind.
+                An der Rapperswilerstrasse 11 entstehen acht 4.5-Zimmer-Eigentumswohnungen. Pro Geschoss befinden sich zwei Wohnungen, die bequem mit dem Personenlift erschlossen sind. Die Tiefgarage liegt direkt im Gebäude.
               </p>
               <p style={{ marginBottom: '1.25rem' }}>
-                Ein Personenlift erschliesst alle Etagen barrierefrei und die Tiefgarage bietet
-                komfortables Parkieren direkt im Haus. Die Erdgeschosswohnungen öffnen sich zu
-                grosszügigen, privaten Sitzplätzen. In den Ober- und Dachgeschossen treten an ihre
-                Stelle umlaufende Balkone, die Wohnen und Aussenraum miteinander verbinden.
+                Im Zentrum jeder Wohnung steht der rund 48 m² grosse Wohn-, Ess- und Kochbereich. Drei weitere Zimmer, zwei separate Nasszellen, ein Reduit und ein zusätzlicher Vorraum sorgen für eine klare Raumaufteilung und ausreichend Platz im Alltag.
               </p>
               <p>
-                Eine integrierte PV-Anlage unterstreicht den Anspruch an zukunftsgerichtetes Bauen.
+                Die Erdgeschosswohnungen verfügen über zwei private Sitzplätze mit insgesamt 25 m². In den Ober- und Dachgeschossen ergänzen zwei Balkonflächen mit insgesamt 23 bis 24 m² den Wohnraum. Eine in das Gebäude integrierte Photovoltaikanlage produziert Strom direkt vor Ort.
               </p>
             </ScrollReveal>
 
@@ -169,22 +166,16 @@ export default function HomePage() {
                   marginBottom: '1.5rem',
                 }}
               >
-                Handwerklich durchdacht.
+                Materialien mit eigener Handschrift.
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                Das Gebäude überzeugt mit einer ruhigen, handwerklich durchdachten Architektur.
-                Die Fassaden verbinden groben Aussenputz in Warmgrau mit glattem Sandputz: ein
-                Wechselspiel aus Textur und Ton, das dem Haus Tiefe und Wärme verleiht.
+                Die Architektur von Eschen 11 wird durch eine warme, zurückhaltende Farb- und Materialwelt geprägt. Grobe Putzflächen in Warmgrau treffen auf glatte Flächen in hellen und warmen Sandtönen. Messingfarbene Fensterrahmen und Geländer in einem bronzefarbenen Ton setzen gezielte Akzente.
               </p>
               <p style={{ marginBottom: '1.25rem' }}>
-                Messingfarbene Holz-Metall-Fenster und Balkongeländer in Bronzeton setzen präzise
-                Akzente und geben dem Gebäude einen unverwechselbaren Charakter. Das Dach aus Ziegel
-                und Metall in Dunkelgrau mit Kupferanteilen bildet einen eleganten Abschluss.
+                Das dunkelgraue Dach und die Metallteile mit Kupferton bilden einen ruhigen Kontrast zur helleren Fassade. So entsteht ein harmonisches Gesamtbild aus erdigen Farben, natürlichen Materialien und fein eingesetzten Metallakzenten.
               </p>
               <p>
-                Im Innern setzt sich die Haltung fort: helle Wände, Parkettböden in Eiche natur und
-                im Dachgeschoss weiss lasierte Holzdecken schaffen Räume, die Wärme und Offenheit
-                gleichermassen ausstrahlen.
+                Im Innern sorgen weisse Wände, Parkett in Eiche natur und beige Platten für eine helle und ruhige Atmosphäre. In den Dachwohnungen ergänzen weiss lasierte Holzdecken und sichtbare Pfetten das Materialkonzept.
               </p>
             </ScrollReveal>
           </div>
@@ -211,13 +202,10 @@ export default function HomePage() {
                   marginBottom: '1.5rem',
                 }}
               >
-                Ein Standort mit Qualität.
+                Im Dorf zu Hause, in der Region gut verbunden.
               </h2>
               <p className="gold-left" style={{ color: 'rgba(246,245,242,0.7)', marginBottom: '2rem', borderColor: 'var(--color-goldsand)' }}>
-                Eschenbach liegt in der Region Zürichsee-Linth und verbindet ländliche Ruhe mit
-                guter Erreichbarkeit. Rapperswil-Jona, das Dienstleistungszentrum der Region, ist
-                per Bus direkt erreichbar. Ab Rapperswil-Jona erreicht man Zürich mit der S-Bahn
-                in rund 40 Minuten.
+                Eschenbach bietet einen gut organisierten Alltag in ländlicher Umgebung. Einkaufsmöglichkeiten und Schulen befinden sich im Ort, während direkte Busverbindungen nach Rapperswil-Jona, Uznach und Rüti ZH führen. Ab Rapperswil-Jona ist Zürich HB mit der S-Bahn in rund 40 Minuten erreichbar. Für den Individualverkehr liegen die Anschlüsse an die A15 in Neuhaus und Jona.
               </p>
               <Link
                 href="/lage"
@@ -282,10 +270,11 @@ export default function HomePage() {
               >
                 Die Wohnungen im Überblick.
               </h2>
+              <p style={{ marginBottom: '1.25rem' }}>
+                Acht Wohnungen, ein klar aufgebautes Raumkonzept: Sämtliche Einheiten verfügen über 4.5 Zimmer und Wohnflächen zwischen 117 und 119 m². Hinzu kommen zwei private Sitzplätze im Erdgeschoss beziehungsweise zwei Balkonflächen in den Ober- und Dachgeschossen.
+              </p>
               <p style={{ marginBottom: '2rem' }}>
-                Acht 4.5-Zimmer-Wohnungen mit Flächen zwischen 117 und 119 m², Sitzplätzen im
-                Erdgeschoss und Balkonen in den Obergeschossen. Alle Grundrisse, Flächen und
-                Verfügbarkeiten auf einen Blick.
+                Entdecken Sie die einzelnen Wohnungen mit Grundrissen, Flächen und aktueller Verfügbarkeit.
               </p>
               <Link href="/angebot" className="btn-primary">
                 Alle Wohnungen entdecken
@@ -299,7 +288,7 @@ export default function HomePage() {
             {[
               { value: '8',      label: 'Eigentumswohnungen' },
               { value: '4.5',    label: 'Zimmer' },
-              { value: '119',    label: 'm² Wohnfläche' },
+              { value: '117–119', label: 'm² Wohnfläche' },
               { value: '4',      label: 'Geschosse' },
             ].map((item, i) => (
               <ScrollReveal key={item.label} delay={i * 80}>

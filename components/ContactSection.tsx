@@ -40,18 +40,18 @@ export default function ContactSection() {
               <h2
                 style={{
                   fontFamily: 'var(--font-serif)',
-                  fontSize: 'clamp(2rem, 3.5vw, 2.8rem)',
+                  fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)',
                   color: 'var(--color-text-core)',
                   lineHeight: 1.15,
                   letterSpacing: '0.02em',
                 }}
               >
-                Sprechen wir miteinander.
+                Interesse an Eschen 11?
               </h2>
             </div>
 
             <p style={{ color: 'var(--color-text-light)', maxWidth: '34rem', lineHeight: 1.75 }}>
-              Wir beantworten Ihre Fragen persönlich und begleiten Sie durch den gesamten Kaufprozess.
+              Phillip Wiedmer beantwortet Ihre Fragen zu den Wohnungen, den Projektunterlagen und zum weiteren Kaufprozess persönlich.
             </p>
 
             {/* Contact card */}

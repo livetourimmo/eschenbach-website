@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Bus, Train, Route, GraduationCap, Music, TreePine, Waves, ShoppingBag, Leaf } from 'lucide-react'
+import { Bus, Train, Route, GraduationCap, TreePine, Waves, ShoppingBag, Leaf, MapPin } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import AtlistMap from '@/components/AtlistMap'
 import ContactSection from '@/components/ContactSection'
@@ -48,7 +48,7 @@ export default function LagePage() {
               letterSpacing: '0.02em',
             }}
           >
-            Zwischen Voralpen<br />und Zürichsee.
+            Zwischen Rapperswil-Jona,<br />Uznach und Rüti.
           </h1>
         </div>
       </section>
@@ -61,10 +61,7 @@ export default function LagePage() {
               <span className="label-tag">Standort</span>
               <div className="accent-line" />
               <p className="gold-left text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
-                Eschenbach zählt heute über 10'000 Einwohnerinnen und Einwohner und liegt im
-                Kanton St. Gallen, eingebettet in die vielfältige Landschaft der Region
-                Zürichsee-Linth. Das Dorf verbindet ländliche Qualität mit einer ausgezeichneten
-                Anbindung an die Zentren der Region.
+                Eschenbach liegt in der Region Zürichsee-Linth zwischen Rapperswil-Jona, Uznach und dem Zürcher Oberland. Der Ort verbindet eine überschaubare, ländlich geprägte Umgebung mit Schulen, Einkaufsmöglichkeiten und direkten Verbindungen in die umliegenden Zentren.
               </p>
             </div>
           </ScrollReveal>
@@ -100,25 +97,22 @@ export default function LagePage() {
                   marginBottom: '1.5rem',
                 }}
               >
-                Gut angebunden, ruhig gelegen.
+                Direkte Verbindungen in drei Richtungen.
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                Im Bus-Takt gelangt man direkt nach Rapperswil-Jona, dem Dienstleistungszentrum
-                der Region, sowie nach Uznach und Rüti ZH. Mit der S-Bahn ist Zürich ab
-                Rapperswil in rund 40 Minuten erreichbar.
+                Von Eschenbach bestehen direkte Busverbindungen nach Rapperswil-Jona, Uznach und Rüti ZH. Damit sind wichtige Arbeits-, Einkaufs- und Bildungsstandorte der Region ohne Umweg erreichbar.
               </p>
               <p>
-                Per Auto besteht über die A15-Anschlüsse in Neuhaus und Jona direkter Zugang zum
-                nationalen Hochleistungsstrassennetz.
+                Ab Rapperswil-Jona dauert die Fahrt mit der S-Bahn nach Zürich HB rund 40 Minuten. Mit dem Auto erfolgt der Anschluss an die A15 über Neuhaus oder Jona.
               </p>
 
               {/* Transport grid */}
               <div className="mt-8 flex flex-col gap-3">
                 {[
-                  { Icon: Bus,   dest: 'Rapperswil-Jona',  time: 'direkt, mehrmals stündlich' },
-                  { Icon: Bus,   dest: 'Uznach & Rüti ZH', time: 'direkt' },
-                  { Icon: Train, dest: 'Zürich HB',        time: 'ca. 40 Min. ab Rapperswil' },
-                  { Icon: Route, dest: 'Autobahn A15',     time: 'Anschlüsse Neuhaus & Jona' },
+                  { Icon: Bus,   dest: 'Rapperswil-Jona',   time: 'direkt mit dem Bus' },
+                  { Icon: Bus,   dest: 'Uznach und Rüti ZH', time: 'direkt mit dem Bus' },
+                  { Icon: Train, dest: 'Zürich HB',         time: 'rund 40 Minuten ab Rapperswil-Jona' },
+                  { Icon: Route, dest: 'A15',               time: 'Anschlüsse Neuhaus und Jona' },
                 ].map(t => (
                   <div
                     key={t.dest}
@@ -156,26 +150,23 @@ export default function LagePage() {
                   marginBottom: '1.5rem',
                 }}
               >
-                Leben in Eschenbach.
+                Alltag und Freizeit in Eschenbach.
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                Für Familien bietet Eschenbach alle Schulstufen vom Kindergarten bis zur Oberstufe
-                vor Ort, ergänzt durch zwei Musikschulen. Die Kantonsschule ist im nahen Wattwil.
+                Kindergarten, Primarschule und Oberstufe sind in der Gemeinde vorhanden. Auch Einkaufsmöglichkeiten und verschiedene Dienstleistungen stehen im Ort zur Verfügung.
               </p>
               <p>
-                Wanderwege, Velostrecken und Spaziergänge entlang des Zürichsees liegen direkt
-                vor der Haustür. Die wildromantische Schlucht des Neuhüsler-Tobels mit ihren
-                Nagelfluhwänden ist ein beliebtes Naherholungsgebiet der ganzen Region.
+                Für die Freizeit bietet die Umgebung Wege durch die Landschaft rund um Eschenbach und das Goldingertal. Das Neuhüsler-Tobel und der Zürichsee sind Ziele für Spaziergänge und Ausflüge in der näheren Region.
               </p>
 
               <div className="mt-8 grid grid-cols-2 gap-3">
                 {[
-                  { Icon: GraduationCap, label: 'Schule',          detail: 'Alle Stufen vor Ort' },
-                  { Icon: Music,         label: 'Musikschule',      detail: 'Zwei Musikschulen' },
-                  { Icon: TreePine,      label: 'Wanderwege',       detail: 'Direkt ab Haustür' },
-                  { Icon: Waves,         label: 'Zürichsee',        detail: 'In der Nähe' },
-                  { Icon: ShoppingBag,   label: 'Einkaufen',        detail: 'Im Dorf' },
-                  { Icon: Leaf,          label: 'Neuhüsler-Tobel',  detail: 'Naherholung' },
+                  { Icon: GraduationCap, label: 'Schulen',            detail: 'Kindergarten bis Oberstufe' },
+                  { Icon: ShoppingBag,   label: 'Einkaufen',         detail: 'Angebote im Ort' },
+                  { Icon: TreePine,      label: 'Natur',             detail: 'Wege rund um Eschenbach' },
+                  { Icon: Leaf,          label: 'Goldingertal',      detail: 'Freizeit und Naherholung' },
+                  { Icon: MapPin,        label: 'Neuhüsler-Tobel',   detail: 'Ausflugsziel in der Umgebung' },
+                  { Icon: Waves,         label: 'Zürichsee',         detail: 'Gut erreichbar' },
                 ].map(item => (
                   <div
                     key={item.label}

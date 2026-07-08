@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { Bus, Train, Route, GraduationCap, TreePine, Waves, ShoppingBag, Leaf, MapPin } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import AtlistMap from '@/components/AtlistMap'
@@ -17,17 +16,18 @@ export default function LagePage() {
       {/* ── HERO ── */}
       <section
         className="relative flex items-end"
-        style={{ minHeight: '65vh', background: '#1a1917' }}
+        style={{ minHeight: '85vh', background: '#1a1917' }}
       >
-        <Image
-          src="/images/v2_Eschen11_A2.png"
-          alt="Eschenbach, Aussenansicht"
-          fill
-          priority
-          className="object-cover"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
           style={{ opacity: 0.65 }}
-          sizes="100vw"
-        />
+        >
+          <source src="/bilder/drohnenvideo-eschenbach.mp4" type="video/mp4" />
+        </video>
         <div
           className="absolute inset-x-0 bottom-0"
           style={{

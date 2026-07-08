@@ -34,7 +34,7 @@ export default function AngebotPage() {
       {/* ── HERO ── */}
       <section
         className="relative flex items-end"
-        style={{ minHeight: '60vh', background: '#1a1917' }}
+        style={{ minHeight: '85vh', background: '#1a1917' }}
       >
         <Image
           src="/images/v2_Eschen11_i2.png"

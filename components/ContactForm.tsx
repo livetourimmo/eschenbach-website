@@ -44,8 +44,8 @@ export default function ContactForm() {
 
     if (error) { setState('error'); return }
 
-    // E-Mail via Resend (nicht blockierend)
-    fetch('/api/contact', {
+    // E-Mail via Resend
+    const res = await fetch('/api/contact', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -56,6 +56,8 @@ export default function ContactForm() {
         interesse: form.interesse || null,
       }),
     })
+
+    if (!res.ok) { setState('error'); return }
 
     setState('success')
   }

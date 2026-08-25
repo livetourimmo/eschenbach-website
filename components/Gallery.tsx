@@ -5,12 +5,13 @@ import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
-  { src: '/images/v2_Eschen11_A1.png', alt: 'Eschen 11 , Aussenansicht',    aspect: 'landscape' },
-  { src: '/images/v2_Eschen11_A2.png', alt: 'Eschen 11 , Gebäudeansicht',   aspect: 'landscape' },
-  { src: '/images/v2_Eschen11_i1.png', alt: 'Eschen 11 , Innenraum',        aspect: 'landscape' },
-  { src: '/images/v2_Eschen11_i2.png', alt: 'Eschen 11 , Wohnbereich',      aspect: 'landscape' },
-  { src: '/images/v2_Eschen11_i3.png', alt: 'Eschen 11 , Küche',            aspect: 'landscape' },
-  { src: '/images/v2_Eschen11_i4.png', alt: 'Eschen 11 , Detail',           aspect: 'landscape' },
+  { src: '/bilder/4K_Aussen1.png', alt: 'Eschen 11 , Aussenansicht',    aspect: 'landscape' },
+  { src: '/bilder/4K_Aussen2.png', alt: 'Eschen 11 , Gebäudeansicht',   aspect: 'landscape' },
+  { src: '/bilder/4K_Innen1.png',  alt: 'Eschen 11 , Innenraum',        aspect: 'landscape' },
+  { src: '/bilder/4K_Innen2.png',  alt: 'Eschen 11 , Wohnbereich',      aspect: 'landscape' },
+  { src: '/bilder/4K_Innen3.png',  alt: 'Eschen 11 , Küche',            aspect: 'landscape' },
+  { src: '/bilder/4K_Innen4.png',  alt: 'Eschen 11 , Detail',           aspect: 'landscape' },
+  { src: '/bilder/4K_Innen5.png',  alt: 'Eschen 11 , Wohnraum',         aspect: 'landscape' },
 ]
 
 export default function Gallery() {
@@ -99,7 +100,7 @@ export default function Gallery() {
           </div>
 
           {/* Bottom row */}
-          {images.slice(3).map((img, i) => (
+          {images.slice(3, 6).map((img, i) => (
             <button
               key={img.src}
               className="relative overflow-hidden rounded-lg group cursor-pointer"
@@ -119,6 +120,25 @@ export default function Gallery() {
                    style={{ background: 'rgba(45,42,39,0.15)' }} />
             </button>
           ))}
+
+          {/* Closing panoramic image — full width */}
+          <button
+            className="md:col-span-3 relative overflow-hidden rounded-lg group cursor-pointer"
+            style={{ aspectRatio: '21/9', minHeight: '12rem' }}
+            onClick={() => setLightbox(6)}
+            aria-label={images[6].alt}
+          >
+            <Image
+              src={images[6].src}
+              alt={images[6].alt}
+              fill
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              sizes="100vw"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                 style={{ background: 'rgba(45,42,39,0.15)' }} />
+          </button>
         </div>
       </div>
 

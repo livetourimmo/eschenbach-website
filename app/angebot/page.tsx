@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import { Download, FileText } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import ContactSection from '@/components/ContactSection'
@@ -37,7 +38,7 @@ export default function AngebotPage() {
         style={{ minHeight: '85vh', background: '#1a1917' }}
       >
         <Image
-          src="/images/v2_Eschen11_i2.png"
+          src="/bilder/4K_Innen2.png"
           alt="Eschen 11, Wohnraum"
           fill
           priority
@@ -81,7 +82,7 @@ export default function AngebotPage() {
                 Das Mehrfamilienhaus Eschen 11 umfasst acht 4.5-Zimmer-Eigentumswohnungen, verteilt auf vier Geschosse. Die Wohnungen bieten Nettowohnflächen zwischen 117 und 119 m².
               </p>
               <p style={{ color: 'var(--color-text-light)', lineHeight: 1.75, marginBottom: '1.25rem' }}>
-                Herzstück ist der 47.5 bis 48 m² grosse Wohn-, Ess- und Kochbereich. Drei Zimmer mit Flächen zwischen 15 und 18.5 m² lassen sich als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzen. Hinzu kommen ein Bad mit Badewanne, eine separate Dusche mit WC, ein Reduit sowie ein zusätzlicher Vorraum.
+                Herzstück ist der 47.5 bis 48 m² grosse Wohn-, Ess- und Kochbereich. Drei Zimmer mit Flächen zwischen 15 und 18.5 m² lassen sich als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzen. Hinzu kommen ein Bad mit WC und Badewanne, eine separate Dusche mit WC sowie Waschmaschine/Tumbler, ein Reduit sowie ein zusätzlicher Vorraum.
               </p>
               <p style={{ color: 'var(--color-text-light)', lineHeight: 1.75 }}>
                 Die Raumaufteilung trennt den offenen Wohnbereich klar von den privaten Zimmern. Gleichzeitig bleiben die Wege innerhalb der Wohnung kurz und übersichtlich.
@@ -133,23 +134,50 @@ export default function AngebotPage() {
               </h2>
             </div>
           </ScrollReveal>
-          <div
-            className="flex items-center justify-center rounded-xl border-2 border-dashed"
-            style={{
-              minHeight: '320px',
-              borderColor: 'var(--color-accent)',
-              background: 'rgba(var(--color-accent-rgb, 130,120,80), 0.04)',
-            }}
-          >
-            <p
-              className="text-center"
-              style={{ color: 'var(--color-contrast)', fontSize: '1rem', letterSpacing: '0.04em' }}
-            >
-              Navigator folgt
-            </p>
+          <div style={{ borderRadius: '0.75rem', overflow: 'hidden' }}>
+            <iframe
+              id="lvt-axo-rapperswilerstrasse-11"
+              src="https://lvt-gamma.vercel.app/embed/immobilie/rapperswilerstrasse-11?source=embed&embedMode=responsive"
+              title="Immobiliennavigator"
+              style={{ width: '100%', height: 'clamp(620px,86dvh,900px)', border: 0 }}
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
+
+      <Script id="lvt-axo-rapperswilerstrasse-11-resize" strategy="afterInteractive">
+        {`
+          (function () {
+            var iframe = document.getElementById("lvt-axo-rapperswilerstrasse-11");
+            if (!iframe) return;
+            var isMobile = function () {
+              return window.matchMedia("(max-width: 767px)").matches;
+            };
+            var syncMobileHeight = function () {
+              iframe.style.height = isMobile()
+                ? iframe.dataset.lvtHeight || "760px"
+                : "clamp(620px,86dvh,900px)";
+            };
+
+            window.addEventListener("message", function (event) {
+              if (
+                event.source !== iframe.contentWindow ||
+                !event.data ||
+                event.data.type !== "lvt-axo-resize" ||
+                typeof event.data.height !== "number" ||
+                !isMobile()
+              ) {
+                return;
+              }
+
+              iframe.dataset.lvtHeight = Math.ceil(event.data.height) + "px";
+              syncMobileHeight();
+            });
+            window.addEventListener("resize", syncMobileHeight);
+          })();
+        `}
+      </Script>
 
       {/* ── RAUMAUFTEILUNG ── */}
       <section className="py-24" style={{ background: 'var(--color-page)' }}>
@@ -176,8 +204,8 @@ export default function AngebotPage() {
                 {[
                   ['Wohnen / Essen / Kochen', '47.5 bis 48 m², mit direktem Zugang zu beiden Aussenflächen'],
                   ['Drei Zimmer',             '15 bis 18.5 m² — als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzbar'],
-                  ['Bad',                     'Mit Badewanne; Waschmaschine und Tumbler in der Wohnung vorgesehen'],
-                  ['Dusche / WC',             'Separate Nasszelle, zusätzlich zum Bad'],
+                  ['Bad',                     'Mit WC und Badewanne'],
+                  ['Dusche',                  'Mit WC sowie Waschmaschine/Tumbler'],
                   ['Entrée',                  'Zugang zum Wohnbereich und zum grossen Zimmer'],
                   ['Vorraum',                 'Erschliessung der zwei weiteren Zimmer und des Bads'],
                   ['Reduit',                  '2 m² für Vorräte, Haushaltsgeräte und Alltagsgegenstände'],
@@ -206,7 +234,7 @@ export default function AngebotPage() {
                 style={{ aspectRatio: '4/5' }}
               >
                 <Image
-                  src="/images/v2_Eschen11_i3.png"
+                  src="/bilder/4K_Innen3.png"
                   alt="Eschen 11, Innenraum Detail"
                   fill
                   className="object-cover"
@@ -325,8 +353,11 @@ export default function AngebotPage() {
             <p style={{ maxWidth: '40rem', marginBottom: '1.25rem' }}>
               Eichenparkett, matte Platten in Beige und helle Wandflächen bilden die ruhige Grundlage der Innenräume. In den Dachwohnungen kommen weiss lasierte Holzdecken und sichtbare Pfetten hinzu.
             </p>
-            <p style={{ maxWidth: '40rem', marginBottom: '3rem' }}>
+            <p style={{ maxWidth: '40rem', marginBottom: '1.25rem' }}>
               Die zurückhaltenden Materialien im Innern werden durch die messing- und bronzefarbenen Details der Gebäudehülle ergänzt.
+            </p>
+            <p style={{ maxWidth: '40rem', marginBottom: '3rem', fontStyle: 'italic', color: 'var(--color-text-light)' }}>
+              Die Materialisierung wird vom Architekten vorgeschlagen, ist aber individuell wählbar.
             </p>
           </ScrollReveal>
 

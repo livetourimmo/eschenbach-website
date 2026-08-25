@@ -19,7 +19,7 @@ export default function HomePage() {
         style={{ background: '#1e1c19' }}
       >
         <Image
-          src="/images/v2_Eschen11_A1.png"
+          src="/bilder/4K_Aussen1.png"
           alt="Eschen 11, Mehrfamilienhaus Rapperswilerstrasse 11"
           fill
           priority
@@ -118,7 +118,7 @@ export default function HomePage() {
                 style={{ aspectRatio: '4/3' }}
               >
                 <Image
-                  src="/images/v2_Eschen11_A2.png"
+                  src="/bilder/4K_Aussen2.png"
                   alt="Eschen 11, Gebäude"
                   fill
                   className="object-cover"
@@ -142,7 +142,7 @@ export default function HomePage() {
                 style={{ aspectRatio: '3/4' }}
               >
                 <Image
-                  src="/images/v2_Eschen11_i1.png"
+                  src="/bilder/4K_Innen1.png"
                   alt="Eschen 11, Innenraum"
                   fill
                   className="object-cover"

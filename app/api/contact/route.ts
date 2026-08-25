@@ -26,8 +26,8 @@ export async function POST(request: Request) {
       Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
     },
     body: JSON.stringify({
-      from:     'Eschen 11 <noreply@livetour.ch>',
-      to:       'info@livetour.ch',
+      from:     process.env.KONTAKT_MAIL_FROM!,
+      to:       process.env.KONTAKT_MAIL_TO!,
       reply_to: email,
       subject:  `Neue Anfrage von ${name}`,
       html,
@@ -37,6 +37,7 @@ export async function POST(request: Request) {
   if (!res.ok) {
     const err = await res.text()
     console.error('Resend Fehler:', err)
+    return NextResponse.json({ success: false }, { status: 502 })
   }
 
   return NextResponse.json({ success: true })

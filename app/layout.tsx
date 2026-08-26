@@ -1,7 +1,20 @@
 import type { Metadata } from 'next'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
+})
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-playfair',
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://eschen11.ch'),
@@ -42,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="de" className="h-full">
+    <html lang="de" className={`h-full ${inter.variable} ${playfairDisplay.variable}`}>
       <body className="min-h-full flex flex-col" style={{ background: 'var(--color-page)' }}>
         <Navigation />
         <main className="flex-1">{children}</main>

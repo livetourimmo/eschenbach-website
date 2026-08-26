@@ -67,7 +67,7 @@ export default function HomePage() {
                 marginBottom: '2.5rem',
               }}
             >
-              Acht 4.5-Zimmer-Eigentumswohnungen mit 117 bis 119 m² Wohnfläche, grossen Wohnbereichen und zwei privaten Aussenflächen.
+              Acht 4.5-Zimmer-Eigentumswohnungen mit 125.5 bis 128 m² Wohnfläche, grossen Wohnbereichen und zwei privaten Aussenflächen.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/angebot" className="btn-primary">
@@ -108,7 +108,7 @@ export default function HomePage() {
                 Im Zentrum jeder Wohnung steht der rund 48 m² grosse Wohn-, Ess- und Kochbereich. Drei weitere Zimmer, zwei separate Nasszellen, ein Reduit und ein zusätzlicher Vorraum sorgen für eine klare Raumaufteilung und ausreichend Platz im Alltag.
               </p>
               <p>
-                Die Erdgeschosswohnungen verfügen über zwei private Sitzplätze mit insgesamt 25 m². In den Ober- und Dachgeschossen ergänzen zwei Balkonflächen mit insgesamt 23 bis 24 m² den Wohnraum. Eine in das Gebäude integrierte Photovoltaikanlage produziert Strom direkt vor Ort.
+                Die Erdgeschosswohnungen verfügen über zwei private Sitzplätze mit insgesamt 25 m² sowie einen eigenen Garten. In den Ober- und Dachgeschossen ergänzen zwei Balkonflächen mit insgesamt 23 bis 24 m² den Wohnraum. Eine in das Gebäude integrierte Photovoltaikanlage produziert Strom direkt vor Ort.
               </p>
             </ScrollReveal>
 
@@ -271,7 +271,7 @@ export default function HomePage() {
                 Die Wohnungen im Überblick.
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                Acht Wohnungen, ein klar aufgebautes Raumkonzept: Sämtliche Einheiten verfügen über 4.5 Zimmer und Wohnflächen zwischen 117 und 119 m². Hinzu kommen zwei private Sitzplätze im Erdgeschoss beziehungsweise zwei Balkonflächen in den Ober- und Dachgeschossen.
+                Acht Wohnungen, ein klar aufgebautes Raumkonzept: Sämtliche Einheiten verfügen über 4.5 Zimmer und Wohnflächen zwischen 125.5 und 128 m². Hinzu kommen zwei private Sitzplätze im Erdgeschoss beziehungsweise zwei Balkonflächen in den Ober- und Dachgeschossen.
               </p>
               <p style={{ marginBottom: '2rem' }}>
                 Entdecken Sie die einzelnen Wohnungen mit Grundrissen, Flächen und aktueller Verfügbarkeit.
@@ -288,7 +288,7 @@ export default function HomePage() {
             {[
               { value: '8',      label: 'Eigentumswohnungen' },
               { value: '4.5',    label: 'Zimmer' },
-              { value: '117–119', label: 'm² Wohnfläche' },
+              { value: '125.5–128', label: 'm² Wohnfläche' },
               { value: '4',      label: 'Geschosse' },
             ].map((item, i) => (
               <ScrollReveal key={item.label} delay={i * 80}>
@@ -302,7 +302,7 @@ export default function HomePage() {
                   <div
                     style={{
                       fontFamily: 'var(--font-serif)',
-                      fontSize: 'clamp(3rem, 5vw, 4.5rem)',
+                      fontSize: item.value.length > 5 ? 'clamp(1.8rem, 3.4vw, 2.75rem)' : 'clamp(3rem, 5vw, 4.5rem)',
                       color: 'var(--color-accent)',
                       lineHeight: 1,
                       letterSpacing: '-0.01em',

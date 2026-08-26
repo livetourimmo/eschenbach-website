@@ -9,22 +9,22 @@ import ContactSection from '@/components/ContactSection'
 export const metadata: Metadata = {
   title: 'Angebot',
   description:
-    'Acht 4.5-Zimmer-Eigentumswohnungen mit Flächen zwischen 117 und 119 m². Grundrisse, Verfügbarkeiten und Downloads.',
+    'Acht 4.5-Zimmer-Eigentumswohnungen mit Flächen zwischen 125.5 und 128 m². Grundrisse, Verfügbarkeiten und Downloads.',
 }
 
 const downloads = [
   {
     title:    'Grundrisse Eschen 11',
     subtitle: 'Alle Wohnungsgrundrisse in einem Dokument',
-    file:     '/downloads/Grundrisse-Eschen11.pdf',
-    size:     '2.4 MB',
+    file:     '/downloads/Grundrisse_Eschen11.pdf',
+    size:     '11.0 MB',
     icon:     'plan',
   },
   {
-    title:    'Umgebungsplan',
+    title:    'Situationsplan',
     subtitle: 'Lageplan und Umgebung',
-    file:     '/downloads/Umgebungsplan.pdf',
-    size:     '',
+    file:     '/downloads/Situationsplan.pdf',
+    size:     '1.6 MB',
     icon:     'plan',
   },
 ]
@@ -79,7 +79,7 @@ export default function AngebotPage() {
               <span className="label-tag">Überblick</span>
               <div className="accent-line" />
               <p className="gold-left text-lg font-light" style={{ color: 'var(--color-text-light)', lineHeight: 1.75, marginBottom: '1.25rem' }}>
-                Das Mehrfamilienhaus Eschen 11 umfasst acht 4.5-Zimmer-Eigentumswohnungen, verteilt auf vier Geschosse. Die Wohnungen bieten Nettowohnflächen zwischen 117 und 119 m².
+                Das Mehrfamilienhaus Eschen 11 umfasst acht 4.5-Zimmer-Eigentumswohnungen, verteilt auf vier Geschosse. Die Wohnungen bieten Bruttowohnflächen zwischen 125.5 und 128 m².
               </p>
               <p style={{ color: 'var(--color-text-light)', lineHeight: 1.75, marginBottom: '1.25rem' }}>
                 Herzstück ist der 47.5 bis 48 m² grosse Wohn-, Ess- und Kochbereich. Drei Zimmer mit Flächen zwischen 15 und 18.5 m² lassen sich als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzen. Hinzu kommen ein Bad mit WC und Badewanne, eine separate Dusche mit WC sowie Waschmaschine/Tumbler, ein Reduit sowie ein zusätzlicher Vorraum.
@@ -98,7 +98,7 @@ export default function AngebotPage() {
               >
                 <div className="label-tag mb-3">Zwei private Sitzplätze</div>
                 <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Die beiden Erdgeschosswohnungen verfügen über zwei Sitzplätze auf unterschiedlichen Gebäudeseiten. Zusammen bieten sie je Wohnung 25 m² private Aussenfläche.
+                  Die beiden Erdgeschosswohnungen verfügen über zwei Sitzplätze auf unterschiedlichen Gebäudeseiten sowie einen eigenen Garten. Zusammen bieten sie je Wohnung 25 m² private Aussenfläche.
                 </p>
               </div>
               <div

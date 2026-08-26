@@ -170,14 +170,14 @@ export default function ContactForm() {
             }}
           >
             <option value="">Allgemeine Anfrage</option>
-            <option value="Whg A">Wohnung A, EG, 119 m²</option>
-            <option value="Whg B">Wohnung B, EG, 118 m²</option>
-            <option value="Whg C">Wohnung C, 1. OG, 119 m²</option>
-            <option value="Whg D">Wohnung D, 1. OG, 118 m²</option>
-            <option value="Whg E">Wohnung E, 2. OG, 119 m²</option>
-            <option value="Whg F">Wohnung F, 2. OG, 118 m²</option>
-            <option value="Whg G">Wohnung G, DG, 119 m²</option>
-            <option value="Whg H">Wohnung H, DG, 117 m²</option>
+            <option value="Whg A">Wohnung A, EG, 127 m²</option>
+            <option value="Whg B">Wohnung B, EG, 126 m²</option>
+            <option value="Whg C">Wohnung C, 1. OG, 128 m²</option>
+            <option value="Whg D">Wohnung D, 1. OG, 126.5 m²</option>
+            <option value="Whg E">Wohnung E, 2. OG, 128 m²</option>
+            <option value="Whg F">Wohnung F, 2. OG, 126.5 m²</option>
+            <option value="Whg G">Wohnung G, DG, 126.5 m²</option>
+            <option value="Whg H">Wohnung H, DG, 125.5 m²</option>
           </select>
         </div>
       </div>

@@ -87,7 +87,16 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="7. Datensicherheit">
+          <Section title="7. Cookies und externe Dienste">
+            <p>
+              Diese Website setzt keine Tracking- oder Marketing-Cookies ein. Schriftarten werden
+              lokal von unserem Server ausgeliefert, es erfolgt keine Verbindung zu Google-Servern.
+              Für die Wohnungsübersicht binden wir den Immobiliennavigator unseres
+              Marketingpartners liveTour Immobilienmarketing GmbH per iframe ein.
+            </p>
+          </Section>
+
+          <Section title="8. Datensicherheit">
             <p>
               Ihre Daten werden verschlüsselt übertragen (TLS/HTTPS) und in einer
               zugangsbeschränkten Datenbank (Supabase, EU-Region) gespeichert. Wir treffen
@@ -95,7 +104,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="8. Änderungen dieser Erklärung">
+          <Section title="9. Änderungen dieser Erklärung">
             <p>
               Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren. Die
               jeweils aktuelle Version ist auf dieser Website abrufbar.

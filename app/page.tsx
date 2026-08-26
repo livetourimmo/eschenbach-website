@@ -108,7 +108,7 @@ export default function HomePage() {
                 Im Zentrum jeder Wohnung steht der rund 48 m² grosse Wohn-, Ess- und Kochbereich. Drei weitere Zimmer, zwei separate Nasszellen, ein Reduit und ein zusätzlicher Vorraum sorgen für eine klare Raumaufteilung und ausreichend Platz im Alltag.
               </p>
               <p>
-                Die Erdgeschosswohnungen verfügen über zwei private Sitzplätze mit insgesamt 25 m² sowie einen eigenen Garten. In den Ober- und Dachgeschossen ergänzen zwei Balkonflächen mit insgesamt 23 bis 24 m² den Wohnraum. Eine in das Gebäude integrierte Photovoltaikanlage produziert Strom direkt vor Ort.
+                Die Erdgeschosswohnungen verfügen über zwei private Sitzplätze mit insgesamt 25 m² sowie zusätzlich über einen eigenen Garten. In den Ober- und Dachgeschossen ergänzen zwei Balkonflächen mit insgesamt 23 bis 24 m² den Wohnraum. Eine in das Gebäude integrierte Photovoltaikanlage produziert Strom direkt vor Ort.
               </p>
             </ScrollReveal>
 
@@ -302,7 +302,7 @@ export default function HomePage() {
                   <div
                     style={{
                       fontFamily: 'var(--font-serif)',
-                      fontSize: item.value.length > 5 ? 'clamp(1.8rem, 3.4vw, 2.75rem)' : 'clamp(3rem, 5vw, 4.5rem)',
+                      fontSize: 'clamp(2.2rem, 4vw, 3.4rem)',
                       color: 'var(--color-accent)',
                       lineHeight: 1,
                       letterSpacing: '-0.01em',

@@ -98,7 +98,7 @@ export default function AngebotPage() {
               >
                 <div className="label-tag mb-3">Zwei private Sitzplätze</div>
                 <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Die beiden Erdgeschosswohnungen verfügen über zwei Sitzplätze auf unterschiedlichen Gebäudeseiten sowie einen eigenen Garten. Zusammen bieten sie je Wohnung 25 m² private Aussenfläche.
+                  Die beiden Erdgeschosswohnungen verfügen über zwei Sitzplätze auf unterschiedlichen Gebäudeseiten mit zusammen 25 m² sowie zusätzlich über einen eigenen Garten.
                 </p>
               </div>
               <div

@@ -203,7 +203,7 @@ export default function AngebotPage() {
               <ul className="flex flex-col gap-3">
                 {[
                   ['Wohnen / Essen / Kochen', '47.5 bis 48 m², mit direktem Zugang zu beiden Aussenflächen'],
-                  ['Drei Zimmer',             '15 bis 18.5 m² — als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzbar'],
+                  ['Drei Zimmer',             '15 bis 18.5 m², als Schlaf-, Kinder-, Gäste- oder Arbeitszimmer nutzbar'],
                   ['Bad',                     'Mit WC und Badewanne'],
                   ['Dusche',                  'Mit WC sowie Waschmaschine/Tumbler'],
                   ['Entrée',                  'Zugang zum Wohnbereich und zum grossen Zimmer'],

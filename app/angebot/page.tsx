@@ -134,6 +134,8 @@ export default function AngebotPage() {
               </h2>
             </div>
           </ScrollReveal>
+        </div>
+        <div className="max-w-[90rem] mx-auto px-6 md:px-12">
           <div style={{ borderRadius: '0.75rem', overflow: 'hidden' }}>
             <iframe
               id="lvt-axo-rapperswilerstrasse-11"

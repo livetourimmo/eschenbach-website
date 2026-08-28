@@ -114,8 +114,7 @@ export default function HomePage() {
 
             <ScrollReveal delay={150} className="order-first lg:order-none">
               <div
-                className="relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0"
-                style={{ aspectRatio: '4/3' }}
+                className="relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0 aspect-[4/5] md:aspect-[4/3]"
               >
                 <Image
                   src="/bilder/4K_Aussen2.png"
@@ -222,10 +221,10 @@ export default function HomePage() {
               { value: '125.5–128', label: 'm² Wohnfläche' },
               { value: '4',      label: 'Geschosse' },
             ].map((item, i) => (
-              <ScrollReveal key={item.label} delay={i * 80}>
+              <ScrollReveal key={item.label} delay={i * 80} className="min-w-0">
                 <div
                   className={[
-                    'flex flex-col items-center justify-center text-center py-10 md:py-12 px-6',
+                    'flex flex-col items-center justify-center text-center py-10 md:py-12 px-6 min-w-0',
                     'border-[rgba(153,143,72,0.2)]',
                     i % 2 === 0 ? 'border-r' : '',
                     i < 2 ? 'border-b md:border-b-0' : '',
@@ -236,7 +235,7 @@ export default function HomePage() {
                   <div
                     style={{
                       fontFamily: 'var(--font-serif)',
-                      fontSize: 'clamp(2.2rem, 4vw, 3.4rem)',
+                      fontSize: 'clamp(1.5rem, 4vw, 3.4rem)',
                       color: 'var(--color-accent)',
                       lineHeight: 1,
                       letterSpacing: '-0.01em',

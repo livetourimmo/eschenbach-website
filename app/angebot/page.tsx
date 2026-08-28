@@ -17,7 +17,7 @@ const downloads = [
     title:    'Grundrisse Eschen 11',
     subtitle: 'Alle Wohnungsgrundrisse in einem Dokument',
     file:     '/downloads/Grundrisse_Eschen11.pdf',
-    size:     '11.0 MB',
+    size:     '3.2 MB',
     icon:     'plan',
   },
   {
@@ -32,6 +32,13 @@ const downloads = [
     subtitle: 'Kurzübersicht zu Ausbau und Materialisierung',
     file:     '/downloads/Kurzbaubeschrieb_Eschen11.pdf',
     size:     '72 KB',
+    icon:     'plan',
+  },
+  {
+    title:    'Verkaufsdokumentation',
+    subtitle: 'Vollständige Unterlagen zum Projekt',
+    file:     '/downloads/Dokumentation_Eschen11.pdf',
+    size:     '33.6 MB',
     icon:     'plan',
   },
 ]

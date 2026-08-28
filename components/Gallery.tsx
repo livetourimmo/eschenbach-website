@@ -37,7 +37,7 @@ export default function Gallery() {
   }, [lightbox, close, prev, next])
 
   return (
-    <section className="py-32" style={{ background: 'var(--color-page)' }}>
+    <section className="py-16 md:py-32" style={{ background: 'var(--color-page)' }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="mb-14">
           <span className="label-tag">Einblicke</span>

@@ -7,7 +7,7 @@ export default function ContactSection() {
     <section
       id="kontakt"
       style={{ background: 'var(--color-page)', borderTop: '1px solid rgba(82,68,52,0.08)' }}
-      className="py-32 relative overflow-hidden"
+      className="py-16 md:py-32 relative overflow-hidden"
     >
       {/* Watermark */}
       <svg
@@ -66,7 +66,7 @@ export default function ContactSection() {
               <div className="relative shrink-0">
                 <Image
                   src="/images/wiedemer-phillip.webp"
-                  alt="Phillip Wiedmer, MO Architektur GmbH"
+                  alt="Phillip Wiedmer, Dreiwert Immobilien GmbH"
                   width={80}
                   height={80}
                   className="rounded-full object-cover"
@@ -80,24 +80,24 @@ export default function ContactSection() {
                   Herr Phillip Wiedmer
                 </span>
                 <span className="text-sm" style={{ color: 'var(--color-accent)', fontWeight: 500 }}>
-                  MO Architektur GmbH
+                  Dreiwert Immobilien GmbH
                 </span>
                 <div className="flex flex-col gap-2 mt-3">
                   <a
-                    href="tel:+41555111100"
+                    href="tel:+41555117676"
                     className="flex items-center gap-2.5 text-sm transition-colors hover:text-[var(--color-accent)]"
                     style={{ color: 'var(--color-text-light)' }}
                   >
                     <Phone size={14} style={{ color: 'var(--color-accent)' }} />
-                    055 511 11 00
+                    055 511 76 76
                   </a>
                   <a
-                    href="mailto:pw@mo-architektur.ch"
+                    href="mailto:pw@dreiwert.ch"
                     className="flex items-center gap-2.5 text-sm transition-colors hover:text-[var(--color-accent)]"
                     style={{ color: 'var(--color-text-light)' }}
                   >
                     <Mail size={14} style={{ color: 'var(--color-accent)' }} />
-                    pw@mo-architektur.ch
+                    pw@dreiwert.ch
                   </a>
                   <div className="flex items-start gap-2.5 text-sm" style={{ color: 'var(--color-text-light)' }}>
                     <MapPin size={14} style={{ color: 'var(--color-accent)', marginTop: 2 }} />

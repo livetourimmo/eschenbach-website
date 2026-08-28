@@ -83,7 +83,7 @@ export default function HomePage() {
       </section>
 
       {/* ── EINLEITUNG ── */}
-      <section className="py-32" style={{ background: 'var(--color-page)' }}>
+      <section className="py-16 md:py-32" style={{ background: 'var(--color-page)' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <ScrollReveal>
@@ -112,9 +112,9 @@ export default function HomePage() {
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={150}>
+            <ScrollReveal delay={150} className="order-first lg:order-none">
               <div
-                className="relative overflow-hidden rounded-lg"
+                className="relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0"
                 style={{ aspectRatio: '4/3' }}
               >
                 <Image
@@ -132,13 +132,13 @@ export default function HomePage() {
       </section>
 
       {/* ── ÜBER DAS PROJEKT (Architektur) ── */}
-      <section className="py-32" style={{ background: '#ffffff' }}>
+      <section className="py-16 md:py-32" style={{ background: '#ffffff' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             {/* Image left */}
             <ScrollReveal>
               <div
-                className="relative overflow-hidden rounded-lg"
+                className="relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0"
                 style={{ aspectRatio: '3/4' }}
               >
                 <Image
@@ -182,9 +182,86 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── ANGEBOT TEASER ── */}
+      <section className="pt-16 md:pt-32" style={{ background: 'var(--color-page)' }}>
+        <div className="max-w-6xl mx-auto px-6 md:px-12">
+          <ScrollReveal>
+            <div className="max-w-2xl">
+              <span className="label-tag">Angebot</span>
+              <div className="accent-line" />
+              <h2
+                style={{
+                  fontFamily: 'var(--font-serif)',
+                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
+                  color: 'var(--color-text-core)',
+                  lineHeight: 1.15,
+                  letterSpacing: '0.02em',
+                  marginBottom: '1.5rem',
+                }}
+              >
+                Die Wohnungen im Überblick.
+              </h2>
+              <p style={{ marginBottom: '1.25rem' }}>
+                Acht Wohnungen, ein klar aufgebautes Raumkonzept: Sämtliche Einheiten verfügen über 4.5 Zimmer und Wohnflächen zwischen 125.5 und 128 m². Hinzu kommen zwei private Sitzplätze im Erdgeschoss beziehungsweise zwei Balkonflächen in den Ober- und Dachgeschossen.
+              </p>
+              <p style={{ marginBottom: '2rem' }}>
+                Entdecken Sie die einzelnen Wohnungen mit Grundrissen, Flächen und aktueller Verfügbarkeit.
+              </p>
+              <Link href="/angebot" className="btn-primary">
+                Alle Wohnungen entdecken
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </ScrollReveal>
+
+          {/* Summary stats -- editorial layout */}
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-4" style={{ borderTop: '1px solid rgba(153,143,72,0.2)', borderBottom: '1px solid rgba(153,143,72,0.2)' }}>
+            {[
+              { value: '8',      label: 'Eigentumswohnungen' },
+              { value: '4.5',    label: 'Zimmer' },
+              { value: '125.5–128', label: 'm² Wohnfläche' },
+              { value: '4',      label: 'Geschosse' },
+            ].map((item, i) => (
+              <ScrollReveal key={item.label} delay={i * 80}>
+                <div
+                  className={[
+                    'flex flex-col items-center justify-center text-center py-10 md:py-12 px-6',
+                    'border-[rgba(153,143,72,0.2)]',
+                    i % 2 === 0 ? 'border-r' : '',
+                    i < 2 ? 'border-b md:border-b-0' : '',
+                    i === 1 ? 'md:border-r' : '',
+                  ].join(' ')}
+                  style={{ minHeight: '10rem' }}
+                >
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-serif)',
+                      fontSize: 'clamp(2.2rem, 4vw, 3.4rem)',
+                      color: 'var(--color-accent)',
+                      lineHeight: 1,
+                      letterSpacing: '-0.01em',
+                      marginBottom: '0.6rem',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {item.value}
+                  </div>
+                  <div className="text-xs font-light uppercase tracking-widest" style={{ color: 'var(--color-text-light)' }}>
+                    {item.label}
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* -- GALERIE */}
+      <Gallery />
+
       {/* ── LAGE TEASER ── */}
       <section
-        className="py-32 relative overflow-hidden"
+        className="py-16 md:py-32 relative overflow-hidden"
         style={{ background: 'var(--color-text-core)' }}
       >
         <div className="max-w-6xl mx-auto px-6 md:px-12">
@@ -250,80 +327,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ── ANGEBOT TEASER ── */}
-      <section className="py-32" style={{ background: 'var(--color-page)' }}>
-        <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <ScrollReveal>
-            <div className="max-w-2xl">
-              <span className="label-tag">Angebot</span>
-              <div className="accent-line" />
-              <h2
-                style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontSize: 'clamp(1.8rem, 3.5vw, 2.8rem)',
-                  color: 'var(--color-text-core)',
-                  lineHeight: 1.15,
-                  letterSpacing: '0.02em',
-                  marginBottom: '1.5rem',
-                }}
-              >
-                Die Wohnungen im Überblick.
-              </h2>
-              <p style={{ marginBottom: '1.25rem' }}>
-                Acht Wohnungen, ein klar aufgebautes Raumkonzept: Sämtliche Einheiten verfügen über 4.5 Zimmer und Wohnflächen zwischen 125.5 und 128 m². Hinzu kommen zwei private Sitzplätze im Erdgeschoss beziehungsweise zwei Balkonflächen in den Ober- und Dachgeschossen.
-              </p>
-              <p style={{ marginBottom: '2rem' }}>
-                Entdecken Sie die einzelnen Wohnungen mit Grundrissen, Flächen und aktueller Verfügbarkeit.
-              </p>
-              <Link href="/angebot" className="btn-primary">
-                Alle Wohnungen entdecken
-                <ArrowRight size={16} />
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* Summary stats -- editorial layout */}
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-4" style={{ borderTop: '1px solid rgba(153,143,72,0.2)', borderBottom: '1px solid rgba(153,143,72,0.2)' }}>
-            {[
-              { value: '8',      label: 'Eigentumswohnungen' },
-              { value: '4.5',    label: 'Zimmer' },
-              { value: '125.5–128', label: 'm² Wohnfläche' },
-              { value: '4',      label: 'Geschosse' },
-            ].map((item, i) => (
-              <ScrollReveal key={item.label} delay={i * 80}>
-                <div
-                  className="flex flex-col items-center justify-center text-center py-12 px-6"
-                  style={{
-                    borderRight: i < 3 ? '1px solid rgba(153,143,72,0.2)' : 'none',
-                    minHeight: '10rem',
-                  }}
-                >
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-serif)',
-                      fontSize: 'clamp(2.2rem, 4vw, 3.4rem)',
-                      color: 'var(--color-accent)',
-                      lineHeight: 1,
-                      letterSpacing: '-0.01em',
-                      marginBottom: '0.6rem',
-                      whiteSpace: 'nowrap',
-                    }}
-                  >
-                    {item.value}
-                  </div>
-                  <div className="text-xs font-light uppercase tracking-widest" style={{ color: 'var(--color-text-light)' }}>
-                    {item.label}
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* -- GALERIE */}
-      <Gallery />
 
       {/* -- KONTAKT */}
       <ContactSection />

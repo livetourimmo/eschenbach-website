@@ -54,7 +54,7 @@ export default function LagePage() {
       </section>
 
       {/* ── EINLEITUNG ── */}
-      <section className="py-24" style={{ background: 'var(--color-page)' }}>
+      <section className="py-16 md:py-24" style={{ background: 'var(--color-page)' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <div className="max-w-3xl">
@@ -82,7 +82,7 @@ export default function LagePage() {
       </section>
 
       {/* ── MAKROEBENE (Region) ── */}
-      <section className="py-24" style={{ background: '#ffffff' }}>
+      <section className="py-16 md:py-24" style={{ background: '#ffffff' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal>

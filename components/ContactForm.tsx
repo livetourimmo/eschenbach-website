@@ -70,7 +70,7 @@ export default function ContactForm() {
           Vielen Dank für Ihre Nachricht.
         </h3>
         <p style={{ color: 'var(--color-text-light)', maxWidth: '36rem' }}>
-          Herr Wiedmer meldet sich in Kürze bei Ihnen. Wir freuen uns auf das Gespräch.
+          Wir werden uns in Kürze mit Ihnen in Verbindung setzen.
         </p>
       </div>
     )

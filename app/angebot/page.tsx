@@ -24,7 +24,14 @@ const downloads = [
     title:    'Situationsplan',
     subtitle: 'Lageplan und Umgebung',
     file:     '/downloads/Situationsplan.pdf',
-    size:     '1.6 MB',
+    size:     '3.2 MB',
+    icon:     'plan',
+  },
+  {
+    title:    'Kurzbaubeschrieb',
+    subtitle: 'Kurzübersicht zu Ausbau und Materialisierung',
+    file:     '/downloads/Kurzbaubeschrieb_Eschen11.pdf',
+    size:     '72 KB',
     icon:     'plan',
   },
 ]
@@ -72,7 +79,7 @@ export default function AngebotPage() {
       </section>
 
       {/* ── EINLEITUNG ── */}
-      <section className="py-24" style={{ background: 'var(--color-page)' }}>
+      <section className="py-16 md:py-24" style={{ background: 'var(--color-page)' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <div className="max-w-3xl">
@@ -141,8 +148,9 @@ export default function AngebotPage() {
               id="lvt-axo-rapperswilerstrasse-11"
               src="https://lvt-gamma.vercel.app/embed/immobilie/rapperswilerstrasse-11?source=embed&embedMode=responsive"
               title="Immobiliennavigator"
-              style={{ width: '100%', height: 'clamp(620px,86dvh,900px)', border: 0 }}
+              style={{ width: '100%', height: 'clamp(620px,120dvh,1600px)', border: 0 }}
               loading="lazy"
+              scrolling="no"
             />
           </div>
         </div>
@@ -153,38 +161,28 @@ export default function AngebotPage() {
           (function () {
             var iframe = document.getElementById("lvt-axo-rapperswilerstrasse-11");
             if (!iframe) return;
-            var isMobile = function () {
-              return window.matchMedia("(max-width: 767px)").matches;
-            };
-            var syncMobileHeight = function () {
-              iframe.style.height = isMobile()
-                ? iframe.dataset.lvtHeight || "760px"
-                : "clamp(620px,86dvh,900px)";
-            };
 
             window.addEventListener("message", function (event) {
               if (
                 event.source !== iframe.contentWindow ||
                 !event.data ||
                 event.data.type !== "lvt-axo-resize" ||
-                typeof event.data.height !== "number" ||
-                !isMobile()
+                typeof event.data.height !== "number"
               ) {
                 return;
               }
 
-              iframe.dataset.lvtHeight = Math.ceil(event.data.height) + "px";
-              syncMobileHeight();
+              var minHeight = 620;
+              iframe.style.height = Math.max(Math.ceil(event.data.height), minHeight) + "px";
             });
-            window.addEventListener("resize", syncMobileHeight);
           })();
         `}
       </Script>
 
       {/* ── RAUMAUFTEILUNG ── */}
-      <section className="py-24" style={{ background: 'var(--color-page)' }}>
+      <section className="py-16 md:py-24" style={{ background: 'var(--color-page)' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <span className="label-tag">Raumaufteilung</span>
               <div className="accent-line" />
@@ -230,7 +228,7 @@ export default function AngebotPage() {
               </ul>
             </ScrollReveal>
 
-            <ScrollReveal delay={150}>
+            <ScrollReveal delay={150} className="self-start lg:mt-16">
               <div
                 className="relative overflow-hidden rounded-lg"
                 style={{ aspectRatio: '4/5' }}
@@ -250,7 +248,7 @@ export default function AngebotPage() {
       </section>
 
       {/* ── DOWNLOADS ── */}
-      <section className="py-24" style={{ background: '#ffffff' }}>
+      <section className="py-16 md:py-24" style={{ background: '#ffffff' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <span className="label-tag">Downloads</span>
@@ -336,7 +334,7 @@ export default function AngebotPage() {
       </section>
 
       {/* ── MATERIALISIERUNG ── */}
-      <section className="py-24" style={{ background: 'var(--color-page)' }}>
+      <section className="py-16 md:py-24" style={{ background: 'var(--color-page)' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <ScrollReveal>
             <span className="label-tag">Materialisierung</span>

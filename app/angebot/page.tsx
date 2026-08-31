@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import Script from 'next/script'
 import { Download, FileText } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -155,7 +154,7 @@ export default function AngebotPage() {
               id="lvt-axo-rapperswilerstrasse-11"
               src="https://lvt-gamma.vercel.app/embed/immobilie/rapperswilerstrasse-11?source=embed&embedMode=responsive"
               title="Immobiliennavigator"
-              style={{ width: '100%', height: 'clamp(620px,120dvh,1600px)', border: 0 }}
+              style={{ width: '100%', height: 'clamp(620px,120dvh,1100px)', border: 0 }}
               loading="lazy"
               scrolling="no"
             />
@@ -180,7 +179,9 @@ export default function AngebotPage() {
               }
 
               var minHeight = 620;
-              iframe.style.height = Math.max(Math.ceil(event.data.height), minHeight) + "px";
+              var maxHeight = 1100;
+              var height = Math.min(Math.max(Math.ceil(event.data.height), minHeight), maxHeight);
+              iframe.style.height = height + "px";
             });
           })();
         `}
@@ -273,15 +274,15 @@ export default function AngebotPage() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {downloads.map((dl, i) => (
-              <ScrollReveal key={dl.file} delay={i * 80}>
+              <ScrollReveal key={dl.file} delay={i * 80} className="h-full">
                 <a
                   href={dl.file}
                   target="_blank"
                   rel="noopener noreferrer"
                   download
-                  className="group flex flex-col gap-4 p-6 rounded-lg transition-all duration-300 hover:-translate-y-1"
+                  className="group flex flex-col gap-4 p-6 rounded-lg h-full transition-all duration-300 hover:-translate-y-1"
                   style={{
                     background: 'var(--color-page)',
                     border: '1px solid rgba(82,68,52,0.10)',
@@ -313,29 +314,6 @@ export default function AngebotPage() {
                 </a>
               </ScrollReveal>
             ))}
-
-            {/* Note about missing downloads */}
-            <ScrollReveal delay={80}>
-              <div
-                className="flex flex-col gap-2 p-6 rounded-lg"
-                style={{
-                  background: 'rgba(153,143,72,0.04)',
-                  border: '1px dashed rgba(153,143,72,0.25)',
-                }}
-              >
-                <div className="label-tag">Weitere Unterlagen</div>
-                <p className="text-sm font-light" style={{ color: 'var(--color-text-light)' }}>
-                  Kurzbaubeschrieb und weitere Unterlagen erhalten Sie auf Anfrage.
-                </p>
-                <Link
-                  href="/#kontakt"
-                  className="text-xs font-medium mt-2 transition-colors hover:text-[var(--color-accent-hover)]"
-                  style={{ color: 'var(--color-accent)' }}
-                >
-                  Unterlagen anfragen →
-                </Link>
-              </div>
-            </ScrollReveal>
           </div>
         </div>
       </section>

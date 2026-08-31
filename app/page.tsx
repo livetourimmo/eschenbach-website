@@ -30,17 +30,16 @@ export default function HomePage() {
 
         {/* Subtle bottom gradient for text legibility */}
         <div
-          className="absolute inset-x-0 bottom-0"
+          className="absolute inset-x-0 bottom-0 h-[38%] md:h-[55%]"
           style={{
-            height: '55%',
             background: 'linear-gradient(to top, rgba(20,18,16,0.75) 0%, transparent 100%)',
           }}
         />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pb-20 md:pb-28 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pb-10 md:pb-28 w-full">
           <div className="max-w-3xl">
             <span
-              className="label-tag block mb-4"
+              className="label-tag block mb-2 md:mb-4"
               style={{ color: 'rgba(246,245,242,0.7)' }}
             >
               Eschenbach SG · Rapperswilerstrasse 11
@@ -48,11 +47,11 @@ export default function HomePage() {
             <h1
               style={{
                 fontFamily: 'var(--font-serif)',
-                fontSize: 'clamp(2.2rem, 5vw, 3.8rem)',
+                fontSize: 'clamp(1.9rem, 7vw, 3.8rem)',
                 lineHeight: 1.08,
                 letterSpacing: '0.02em',
                 color: '#f6f5f2',
-                marginBottom: '1.5rem',
+                marginBottom: 'clamp(0.9rem, 3vw, 1.5rem)',
               }}
             >
               Ihr Wohlfühlort im<br />Herzen von Eschenbach
@@ -64,12 +63,12 @@ export default function HomePage() {
                 fontWeight: 300,
                 lineHeight: 1.75,
                 maxWidth: '36rem',
-                marginBottom: '2.5rem',
+                marginBottom: 'clamp(1.25rem, 4vw, 2.5rem)',
               }}
             >
               Acht 4.5-Zimmer-Eigentumswohnungen mit 125.5 bis 128 m² Wohnfläche, grossen Wohnbereichen und zwei privaten Aussenflächen.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 md:gap-4">
               <Link href="/angebot" className="btn-primary">
                 Alle Wohnungen
                 <ArrowRight size={16} />

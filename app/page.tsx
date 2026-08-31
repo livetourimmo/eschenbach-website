@@ -28,19 +28,19 @@ export default function HomePage() {
           sizes="100vw"
         />
 
-        {/* Subtle bottom gradient for text legibility */}
+        {/* Bottom gradient for text legibility */}
         <div
-          className="absolute inset-x-0 bottom-0 h-[38%] md:h-[55%]"
+          className="absolute inset-x-0 bottom-0 h-[55%] md:h-[55%]"
           style={{
-            background: 'linear-gradient(to top, rgba(20,18,16,0.75) 0%, transparent 100%)',
+            background: 'linear-gradient(to top, rgba(20,18,16,0.88) 0%, transparent 100%)',
           }}
         />
 
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pb-10 md:pb-28 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 pb-6 md:pb-28 w-full">
           <div className="max-w-3xl">
             <span
               className="label-tag block mb-2 md:mb-4"
-              style={{ color: 'rgba(246,245,242,0.7)' }}
+              style={{ color: 'rgba(246,245,242,0.85)', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
             >
               Eschenbach SG · Rapperswilerstrasse 11
             </span>
@@ -52,6 +52,7 @@ export default function HomePage() {
                 letterSpacing: '0.02em',
                 color: '#f6f5f2',
                 marginBottom: 'clamp(0.9rem, 3vw, 1.5rem)',
+                textShadow: '0 2px 14px rgba(0,0,0,0.5)',
               }}
             >
               Ihr Wohlfühlort im<br />Herzen von Eschenbach
@@ -59,21 +60,34 @@ export default function HomePage() {
             <p
               style={{
                 fontSize: '1.05rem',
-                color: 'rgba(246,245,242,0.75)',
+                color: 'rgba(246,245,242,0.9)',
                 fontWeight: 300,
                 lineHeight: 1.75,
                 maxWidth: '36rem',
                 marginBottom: 'clamp(1.25rem, 4vw, 2.5rem)',
+                textShadow: '0 2px 10px rgba(0,0,0,0.5)',
               }}
             >
               Acht 4.5-Zimmer-Eigentumswohnungen mit 125.5 bis 128 m² Wohnfläche, grossen Wohnbereichen und zwei privaten Aussenflächen.
             </p>
-            <div className="flex flex-wrap gap-3 md:gap-4">
-              <Link href="/angebot" className="btn-primary">
+            <div className="flex gap-2 sm:gap-4">
+              <Link
+                href="/angebot"
+                className="btn-primary flex-1 justify-center sm:flex-none"
+                style={{ padding: 'clamp(0.65rem, 2.2vw, 0.75rem) clamp(0.9rem, 4vw, 1.5rem)' }}
+              >
                 Alle Wohnungen
                 <ArrowRight size={16} />
               </Link>
-              <Link href="/#kontakt" className="btn-secondary" style={{ borderColor: 'rgba(246,245,242,0.35)', color: '#f6f5f2' }}>
+              <Link
+                href="/#kontakt"
+                className="btn-secondary flex-1 justify-center sm:flex-none"
+                style={{
+                  borderColor: 'rgba(246,245,242,0.35)',
+                  color: '#f6f5f2',
+                  padding: 'clamp(0.65rem, 2.2vw, 0.75rem) clamp(0.9rem, 4vw, 1.5rem)',
+                }}
+              >
                 Kontakt aufnehmen
               </Link>
             </div>

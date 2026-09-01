@@ -28,18 +28,6 @@ export default function AtlistMap() {
           touchAction: 'pan-x pan-y',
         }}
       />
-
-      {/* Atlist branding overlay */}
-      <div
-        aria-hidden="true"
-        className="absolute bottom-0 right-0"
-        style={{
-          width: '120px',
-          height: '32px',
-          background: 'var(--color-page)',
-          borderTopLeftRadius: '4px',
-        }}
-      />
     </div>
   )
 }

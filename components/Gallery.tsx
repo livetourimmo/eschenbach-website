@@ -58,7 +58,7 @@ export default function Gallery() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {/* Feature image , spans 2 cols */}
           <button
-            className="md:col-span-2 relative overflow-hidden rounded-lg group cursor-pointer"
+            className="md:col-span-2 w-full relative overflow-hidden rounded-lg group cursor-pointer"
             style={{ aspectRatio: '16/10' }}
             onClick={() => setLightbox(0)}
             aria-label={images[0].alt}
@@ -80,7 +80,7 @@ export default function Gallery() {
             {images.slice(1, 3).map((img, i) => (
               <button
                 key={img.src}
-                className="relative overflow-hidden rounded-lg group cursor-pointer flex-1"
+                className="w-full relative overflow-hidden rounded-lg group cursor-pointer flex-1"
                 style={{ minHeight: '10rem' }}
                 onClick={() => setLightbox(i + 1)}
                 aria-label={img.alt}
@@ -103,7 +103,7 @@ export default function Gallery() {
           {images.slice(3, 6).map((img, i) => (
             <button
               key={img.src}
-              className="relative overflow-hidden rounded-lg group cursor-pointer"
+              className="w-full relative overflow-hidden rounded-lg group cursor-pointer"
               style={{ aspectRatio: '4/3', minHeight: '14rem' }}
               onClick={() => setLightbox(i + 3)}
               aria-label={img.alt}
@@ -123,7 +123,7 @@ export default function Gallery() {
 
           {/* Closing panoramic image — full width */}
           <button
-            className="md:col-span-3 relative overflow-hidden rounded-lg group cursor-pointer"
+            className="md:col-span-3 w-full relative overflow-hidden rounded-lg group cursor-pointer"
             style={{ aspectRatio: '21/9', minHeight: '12rem' }}
             onClick={() => setLightbox(6)}
             aria-label={images[6].alt}

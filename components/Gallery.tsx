@@ -67,7 +67,7 @@ export default function Gallery() {
               src={images[0].src}
               alt={images[0].alt}
               fill
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="object-cover img-zoom-target"
               sizes="(max-width: 768px) 100vw, 66vw"
               loading="lazy"
             />
@@ -89,7 +89,7 @@ export default function Gallery() {
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="object-cover img-zoom-target"
                   sizes="(max-width: 768px) 100vw, 33vw"
                   loading="lazy"
                 />
@@ -112,7 +112,7 @@ export default function Gallery() {
                 src={img.src}
                 alt={img.alt}
                 fill
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className="object-cover img-zoom-target"
                 sizes="(max-width: 768px) 100vw, 33vw"
                 loading="lazy"
               />
@@ -132,7 +132,7 @@ export default function Gallery() {
               src={images[6].src}
               alt={images[6].alt}
               fill
-              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              className="object-cover img-zoom-target"
               sizes="100vw"
               loading="lazy"
             />

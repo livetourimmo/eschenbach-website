@@ -16,7 +16,7 @@ const downloads = [
     title:    'Grundrisse Eschen 11',
     subtitle: 'Alle Wohnungsgrundrisse in einem Dokument',
     file:     '/downloads/Grundrisse_Eschen11.pdf',
-    size:     '3.2 MB',
+    size:     '9.2 MB',
     icon:     'plan',
   },
   {
@@ -363,7 +363,7 @@ export default function AngebotPage() {
                     src={m.photo}
                     alt={m.name}
                     fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                    className="object-cover img-zoom-target"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     loading="lazy"
                   />

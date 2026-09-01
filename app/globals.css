@@ -222,6 +222,14 @@ p {
   transform: scale(1.04);
 }
 
+/* ─── Image zoom on hover of an ancestor .group (plain transform, no reliance on the newer standalone `scale` CSS property) ─── */
+.img-zoom-target {
+  transition: transform 0.6s ease;
+}
+.group:hover .img-zoom-target {
+  transform: scale(1.08);
+}
+
 /* ─── Signature gold-left accent line ─── */
 .gold-left {
   border-left: 3px solid var(--color-accent);

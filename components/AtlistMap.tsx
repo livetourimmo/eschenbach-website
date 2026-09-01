@@ -10,7 +10,7 @@ export default function AtlistMap() {
       }}
     >
       <iframe
-        src="https://my.atlist.com/map/547d31ae-560c-4465-9043-0a52f9b6f6be?share=true"
+        src="https://my.atlist.com/map/547d31ae-560c-4465-9043-0a52f9b6f6be?share=true&marker_id=23e3397c-f4ef-4200-8bdb-074340568aa8&zoom=15&modal_open=false"
         allow="geolocation 'self' https://my.atlist.com"
         width="100%"
         height="100%"

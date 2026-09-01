@@ -154,7 +154,8 @@ export default function AngebotPage() {
               id="lvt-axo-rapperswilerstrasse-11"
               src="https://lvt-gamma.vercel.app/embed/immobilie/rapperswilerstrasse-11?source=embed&embedMode=responsive"
               title="Immobiliennavigator"
-              style={{ width: '100%', height: 'clamp(620px,120dvh,1100px)', border: 0 }}
+              className="w-full h-[70dvh] md:h-[clamp(620px,120dvh,1100px)]"
+              style={{ border: 0 }}
               loading="lazy"
             />
           </div>
@@ -177,9 +178,13 @@ export default function AngebotPage() {
                 return;
               }
 
+              // On mobile the iframe keeps a fixed viewport-relative height (see className)
+              // and scrolls internally, instead of growing the whole page to match content.
               var isMobile = window.matchMedia("(max-width: 767px)").matches;
+              if (isMobile) return;
+
               var minHeight = 620;
-              var maxHeight = isMobile ? 4000 : 1100;
+              var maxHeight = 1100;
               var height = Math.min(Math.max(Math.ceil(event.data.height), minHeight), maxHeight);
               iframe.style.height = height + "px";
             });

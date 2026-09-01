@@ -3,7 +3,7 @@
 export default function AtlistMap() {
   return (
     <div
-      className="relative w-full overflow-hidden rounded-lg h-[320px] md:h-[520px]"
+      className="relative w-full overflow-hidden rounded-lg h-[460px] md:h-[520px]"
       style={{
         border: '1px solid rgba(82,68,52,0.08)',
         boxShadow: 'var(--shadow-soft)',

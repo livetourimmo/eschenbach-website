@@ -37,7 +37,7 @@ const downloads = [
     title:    'Verkaufsdokumentation',
     subtitle: 'Vollständige Unterlagen zum Projekt',
     file:     '/downloads/Dokumentation_Eschen11.pdf',
-    size:     '33.6 MB',
+    size:     '24.6 MB',
     icon:     'plan',
   },
 ]
@@ -156,7 +156,6 @@ export default function AngebotPage() {
               title="Immobiliennavigator"
               style={{ width: '100%', height: 'clamp(620px,120dvh,1100px)', border: 0 }}
               loading="lazy"
-              scrolling="no"
             />
           </div>
         </div>
@@ -178,8 +177,9 @@ export default function AngebotPage() {
                 return;
               }
 
+              var isMobile = window.matchMedia("(max-width: 767px)").matches;
               var minHeight = 620;
-              var maxHeight = 1100;
+              var maxHeight = isMobile ? 4000 : 1100;
               var height = Math.min(Math.max(Math.ceil(event.data.height), minHeight), maxHeight);
               iframe.style.height = height + "px";
             });

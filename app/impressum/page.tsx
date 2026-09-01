@@ -29,7 +29,7 @@ export default function ImpressumPage() {
               Verantwortlich für den Inhalt
             </h2>
             <div className="text-sm font-light leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              <strong style={{ color: 'var(--color-text-core)', fontWeight: 500 }}>MO Architektur GmbH</strong><br />
+              <strong style={{ color: 'var(--color-text-core)', fontWeight: 500 }}>Dreiwert Immobilien GmbH</strong><br />
               Bahnhofstrasse 2<br />
               8730 Uznach<br />
               Schweiz
@@ -43,9 +43,9 @@ export default function ImpressumPage() {
             <div className="text-sm font-light leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               Herr Phillip Wiedmer<br />
               Telefon:{' '}
-              <a href="tel:+41555111100" style={{ color: 'var(--color-accent)' }}>055 511 11 00</a><br />
+              <a href="tel:+41555117676" style={{ color: 'var(--color-accent)' }}>055 511 76 76</a><br />
               E-Mail:{' '}
-              <a href="mailto:pw@mo-architektur.ch" style={{ color: 'var(--color-accent)' }}>pw@mo-architektur.ch</a>
+              <a href="mailto:pw@dreiwert.ch" style={{ color: 'var(--color-accent)' }}>pw@dreiwert.ch</a>
             </div>
           </section>
 
@@ -54,7 +54,7 @@ export default function ImpressumPage() {
               Haftungsausschluss
             </h2>
             <p className="text-sm font-light leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              Die MO Architektur GmbH übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit
+              Die Dreiwert Immobilien GmbH übernimmt keine Gewähr für die Richtigkeit, Vollständigkeit
               und Aktualität der auf dieser Website bereitgestellten Informationen. Alle Angaben
               zu Flächen, Preisen und Verfügbarkeiten sind unverbindlich und können sich ändern.
               Massgebend ist ausschliesslich der Kaufvertrag.
@@ -69,7 +69,7 @@ export default function ImpressumPage() {
               Die auf dieser Website veröffentlichten Inhalte (insbesondere Texte, Bilder,
               Visualisierungen und Pläne) sind urheberrechtlich geschützt. Jede Verwendung
               ausserhalb der engen Grenzen des Urheberrechtsgesetzes bedarf der vorherigen
-              schriftlichen Zustimmung der MO Architektur GmbH.
+              schriftlichen Zustimmung der Dreiwert Immobilien GmbH.
             </p>
           </section>
 

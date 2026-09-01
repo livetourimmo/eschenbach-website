@@ -230,6 +230,14 @@ p {
   transform: scale(1.08);
 }
 
+/* ─── Card lift on hover (plain transform, no reliance on the newer standalone `translate` CSS property) ─── */
+.card-lift {
+  transition: transform 0.3s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
 /* ─── Signature gold-left accent line ─── */
 .gold-left {
   border-left: 3px solid var(--color-accent);

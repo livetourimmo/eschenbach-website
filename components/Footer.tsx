@@ -28,7 +28,7 @@ export default function Footer() {
               style={{ color: 'rgba(246,245,242,0.5)', fontWeight: 300 }}
             >
               Rapperswilerstrasse 11 · 8733 Eschenbach<br />
-              Ein Projekt von MO Architektur GmbH, Uznach
+              Ein Projekt von Dreiwert Immobilien GmbH, Uznach
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
             color: 'rgba(246,245,242,0.35)',
           }}
         >
-          <span>© {new Date().getFullYear()} Eschen 11 | MO Architektur GmbH. Alle Rechte vorbehalten.</span>
+          <span>© {new Date().getFullYear()} Eschen 11 | Dreiwert Immobilien GmbH. Alle Rechte vorbehalten.</span>
           <span>Eschenbach SG</span>
         </div>
       </div>

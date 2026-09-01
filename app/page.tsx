@@ -127,13 +127,13 @@ export default function HomePage() {
 
             <ScrollReveal delay={150} className="order-first lg:order-none">
               <div
-                className="relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0 aspect-[4/5] md:aspect-[4/3]"
+                className="group relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0 aspect-[4/5] md:aspect-[4/3]"
               >
                 <Image
                   src="/bilder/4K_Aussen2.png"
                   alt="Eschen 11, Gebäude"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom-target"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   loading="lazy"
                 />
@@ -150,14 +150,14 @@ export default function HomePage() {
             {/* Image left */}
             <ScrollReveal>
               <div
-                className="relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0"
+                className="group relative overflow-hidden rounded-none md:rounded-lg -mx-6 md:mx-0"
                 style={{ aspectRatio: '3/4' }}
               >
                 <Image
                   src="/bilder/4K_Innen1.png"
                   alt="Eschen 11, Innenraum"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom-target"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   loading="lazy"
                 />

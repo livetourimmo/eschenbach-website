@@ -238,14 +238,14 @@ export default function AngebotPage() {
 
             <ScrollReveal delay={150} className="self-start lg:mt-16">
               <div
-                className="relative overflow-hidden rounded-lg"
+                className="group relative overflow-hidden rounded-lg"
                 style={{ aspectRatio: '4/5' }}
               >
                 <Image
                   src="/bilder/4K_Innen3.png"
                   alt="Eschen 11, Innenraum Detail"
                   fill
-                  className="object-cover"
+                  className="object-cover img-zoom-target"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   loading="lazy"
                 />
@@ -282,7 +282,7 @@ export default function AngebotPage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   download
-                  className="group flex flex-col gap-4 p-6 rounded-lg h-full transition-all duration-300 hover:-translate-y-1"
+                  className="group card-lift flex flex-col gap-4 p-6 rounded-lg h-full"
                   style={{
                     background: 'var(--color-page)',
                     border: '1px solid rgba(82,68,52,0.10)',

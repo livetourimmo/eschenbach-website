@@ -30,11 +30,11 @@ export default function DatenschutzPage() {
           <Section title="1. Verantwortliche Stelle">
             <p>
               Verantwortlich für die Datenbearbeitung auf dieser Website ist:<br />
-              <strong style={{ color: 'var(--color-text-core)', fontWeight: 500 }}>MO Architektur GmbH</strong><br />
+              <strong style={{ color: 'var(--color-text-core)', fontWeight: 500 }}>Dreiwert Immobilien GmbH</strong><br />
               Bahnhofstrasse 2, 8730 Uznach<br />
               E-Mail:{' '}
-              <a href="mailto:pw@mo-architektur.ch" style={{ color: 'var(--color-accent)' }}>
-                pw@mo-architektur.ch
+              <a href="mailto:pw@dreiwert.ch" style={{ color: 'var(--color-accent)' }}>
+                pw@dreiwert.ch
               </a>
             </p>
           </Section>
@@ -81,8 +81,8 @@ export default function DatenschutzPage() {
               Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und
               Einschränkung der Bearbeitung Ihrer Personendaten. Richten Sie Ihr Gesuch schriftlich
               an:{' '}
-              <a href="mailto:pw@mo-architektur.ch" style={{ color: 'var(--color-accent)' }}>
-                pw@mo-architektur.ch
+              <a href="mailto:pw@dreiwert.ch" style={{ color: 'var(--color-accent)' }}>
+                pw@dreiwert.ch
               </a>.
             </p>
           </Section>

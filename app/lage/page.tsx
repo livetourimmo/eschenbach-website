@@ -109,10 +109,10 @@ export default function LagePage() {
               {/* Transport grid */}
               <div className="mt-8 flex flex-col gap-3">
                 {[
-                  { Icon: Bus,   dest: 'Rapperswil-Jona',   time: 'direkt mit dem Bus' },
-                  { Icon: Bus,   dest: 'Uznach und Rüti ZH', time: 'direkt mit dem Bus' },
-                  { Icon: Train, dest: 'Zürich HB',         time: 'rund 40 Minuten ab Rapperswil-Jona' },
-                  { Icon: Route, dest: 'A15',               time: 'Anschlüsse Neuhaus und Jona' },
+                  { Icon: Bus,           dest: 'Rapperswil-Jona', time: 'direkt per Bus' },
+                  { Icon: Train,         dest: 'Zürich HB',       time: 'ca. 40 Min. ab Rapperswil-Jona' },
+                  { Icon: Route,         dest: 'Autobahn A15',    time: 'Anschlüsse Neuhaus & Jona' },
+                  { Icon: GraduationCap, dest: 'Schulen',         time: 'alle Stufen vor Ort' },
                 ].map(t => (
                   <div
                     key={t.dest}

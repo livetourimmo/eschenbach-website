@@ -156,7 +156,7 @@ export default function LagePage() {
                 Kindergarten, Primarschule und Oberstufe sind in der Gemeinde vorhanden. Auch Einkaufsmöglichkeiten und verschiedene Dienstleistungen stehen im Ort zur Verfügung.
               </p>
               <p>
-                Für die Freizeit bietet die Umgebung Wege durch die Landschaft rund um Eschenbach und das Goldingertal. Das Neuhüsler-Tobel und der Zürichsee sind Ziele für Spaziergänge und Ausflüge in der näheren Region.
+                Die Umgebung bietet verschiedene Möglichkeiten für Spaziergänge, Wanderungen und Velotouren. Mit dem Atzmännig, dem Neuhüsler-Tobel und der Nähe zum Zürichsee stehen unterschiedliche Naherholungsgebiete zur Verfügung.
               </p>
 
               <div className="mt-8 grid grid-cols-2 gap-3">
@@ -164,7 +164,7 @@ export default function LagePage() {
                   { Icon: GraduationCap, label: 'Schulen',            detail: 'Kindergarten bis Oberstufe' },
                   { Icon: ShoppingBag,   label: 'Einkaufen',         detail: 'Angebote im Ort' },
                   { Icon: TreePine,      label: 'Natur',             detail: 'Wege rund um Eschenbach' },
-                  { Icon: Leaf,          label: 'Goldingertal',      detail: 'Freizeit und Naherholung' },
+                  { Icon: Leaf,          label: 'Atzmännig',         detail: 'Freizeit und Naherholung' },
                   { Icon: MapPin,        label: 'Neuhüsler-Tobel',   detail: 'Ausflugsziel in der Umgebung' },
                   { Icon: Waves,         label: 'Zürichsee',         detail: 'Gut erreichbar' },
                 ].map(item => (

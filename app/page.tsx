@@ -19,7 +19,7 @@ export default function HomePage() {
         style={{ background: '#1e1c19' }}
       >
         <Image
-          src="/bilder/4K_Aussen1.png"
+          src="/bilder/4K_Aussen1_v2.png"
           alt="Eschen 11, Mehrfamilienhaus Rapperswilerstrasse 11"
           fill
           priority

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
-  { src: '/bilder/4K_Aussen1.png', alt: 'Eschen 11 , Aussenansicht',    aspect: 'landscape' },
+  { src: '/bilder/4K_Aussen1_v2.png', alt: 'Eschen 11 , Aussenansicht', aspect: 'landscape' },
   { src: '/bilder/4K_Aussen2.png', alt: 'Eschen 11 , Gebäudeansicht',   aspect: 'landscape' },
   { src: '/bilder/4K_Innen1.png',  alt: 'Eschen 11 , Innenraum',        aspect: 'landscape' },
   { src: '/bilder/4K_Innen2.png',  alt: 'Eschen 11 , Wohnbereich',      aspect: 'landscape' },

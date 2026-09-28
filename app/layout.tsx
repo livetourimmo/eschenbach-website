@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type:        'website',
     images: [
       {
-        url:    '/bilder/4K_Aussen1.png',
+        url:    '/bilder/4K_Aussen1_v2.png',
         width:  1200,
         height: 630,
         alt:    'Eschen 11 | Mehrfamilienhaus in Eschenbach',

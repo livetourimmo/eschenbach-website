@@ -72,12 +72,67 @@ export default function DatenschutzPage() {
             <p>
               Ihre Kontaktanfragen werden uns per E-Mail übermittelt und nicht in einer
               Datenbank dieser Website gespeichert. Wir bewahren sie auf und löschen sie nach
-              Abschluss des Projekts oder auf Ihre Anfrage hin gelöscht, spätestens jedoch nach
-              5 Jahren.
+              Abschluss des Projekts oder auf Ihre Anfrage hin, spätestens jedoch nach 5 Jahren.
             </p>
           </Section>
 
-          <Section title="6. Ihre Rechte">
+          <Section title="6. Hosting">
+            <p>
+              Diese Website wird bei Vercel Inc., San Francisco, USA, betrieben. Als Serverregion
+              ist Frankfurt am Main (fra1) eingestellt; eine Verarbeitung über die globale
+              Infrastruktur von Vercel, insbesondere auch in den USA, ist möglich. Zweck ist der
+              Betrieb und die Auslieferung der Website. Dabei fallen Serverprotokolle mit
+              IP-Adresse, Abrufzeit, aufgerufener Adresse und Browserangaben an.
+            </p>
+          </Section>
+
+          <Section title="7. Kontaktformular und E-Mail-Versand">
+            <p>
+              Ihre Angaben aus dem Kontaktformular werden über den E-Mail-Dienst Resend der
+              Resend Inc. (USA) an das Vermarktungsteam übermittelt. Sie werden nicht in einer
+              Datenbank dieser Website gespeichert.
+            </p>
+          </Section>
+
+          <Section title="8. Besucherstatistik (Vercel Web Analytics)">
+            <p>
+              Zur Verbesserung der Website nutzen wir Vercel Web Analytics der Vercel Inc. (USA).
+              Erfasst werden zusammengefasste Angaben zu Seitenaufrufen, etwa die aufgerufene
+              Seite, die verweisende Seite, Land, Browser, Betriebssystem und Gerätetyp. Es werden
+              keine Cookies gesetzt und keine Kennungen im Browser gespeichert. Besucher werden nur
+              über einen täglich wechselnden, nicht umkehrbaren Hashwert unterschieden; die
+              IP-Adresse wird dafür nicht gespeichert. Ein Rückschluss auf einzelne Personen ist
+              nicht vorgesehen.
+            </p>
+          </Section>
+
+          <Section title="9. Cookies und externe Dienste">
+            <p>
+              Diese Website setzt keine Tracking- oder Marketing-Cookies ein. Schriftarten werden
+              lokal von unserem Server ausgeliefert, es erfolgt keine Verbindung zu Google-Servern.
+              Für die Wohnungsübersicht binden wir den Immobiliennavigator unseres
+              Marketingpartners liveTour Immobilienmarketing GmbH per iframe ein.
+            </p>
+            <p className="mt-3">
+              Auf der Seite «Lage» zeigen wir eine interaktive Karte des Anbieters Atlist, die auf
+              Google Maps von Google basiert. Die Karte wird erst geladen, wenn Sie auf «Karte
+              laden» klicken. Erst dann werden Daten wie Ihre IP-Adresse und Browserangaben an
+              Atlist und Google übermittelt, auch in die USA. Damit die Karte bei späteren
+              Besuchen direkt angezeigt wird, speichern wir Ihre Auswahl im lokalen Speicher Ihres
+              Browsers (localStorage). Sie können diesen Eintrag jederzeit über die
+              Browsereinstellungen löschen.
+            </p>
+          </Section>
+
+          <Section title="10. Datenübermittlung ins Ausland">
+            <p>
+              Einige dieser Dienstleister haben ihren Sitz ausserhalb der Schweiz und des EWR,
+              namentlich in den USA. Wir stützen diese Bekanntgabe auf geeignete Garantien,
+              insbesondere die Standardvertragsklauseln der Europäischen Kommission.
+            </p>
+          </Section>
+
+          <Section title="11. Ihre Rechte">
             <p>
               Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und
               Einschränkung der Bearbeitung Ihrer Personendaten. Richten Sie Ihr Gesuch schriftlich
@@ -88,30 +143,20 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="7. Cookies und externe Dienste">
+          <Section title="12. Datensicherheit">
             <p>
-              Diese Website setzt keine Tracking- oder Marketing-Cookies ein. Schriftarten werden
-              lokal von unserem Server ausgeliefert, es erfolgt keine Verbindung zu Google-Servern.
-              Für die Wohnungsübersicht binden wir den Immobiliennavigator unseres
-              Marketingpartners liveTour Immobilienmarketing GmbH per iframe ein.
+              Ihre Daten werden verschlüsselt übertragen (TLS/HTTPS). Wir treffen angemessene
+              technische und organisatorische Massnahmen zum Schutz Ihrer Daten.
             </p>
           </Section>
 
-          <Section title="8. Datensicherheit">
-            <p>
-              Ihre Daten werden verschlüsselt übertragen (TLS/HTTPS). Für den Versand der
-              Kontaktanfrage per E-Mail nutzen wir den E-Mail-Dienst Resend. Wir treffen
-              angemessene technische und organisatorische Massnahmen zum Schutz Ihrer Daten.
-            </p>
-          </Section>
-
-          <Section title="9. Änderungen dieser Erklärung">
+          <Section title="13. Änderungen dieser Erklärung">
             <p>
               Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren. Die
               jeweils aktuelle Version ist auf dieser Website abrufbar.
             </p>
             <p className="mt-2 text-xs" style={{ color: 'var(--color-contrast)' }}>
-              Stand: Juni 2026
+              Stand: 27. Oktober 2026
             </p>
           </Section>
         </div>

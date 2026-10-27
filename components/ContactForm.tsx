@@ -1,13 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { supabase } from '@/lib/supabase'
 import { Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 type FormState = 'idle' | 'sending' | 'success' | 'error'
 
+const DEFAULT_ERROR =
+  'Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.'
+
 export default function ContactForm() {
   const [state, setState] = useState<FormState>('idle')
+  const [errorMessage, setErrorMessage] = useState(DEFAULT_ERROR)
   const [form, setForm] = useState({
     name: '',
     email: '',
@@ -28,38 +31,39 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (form.honeypot) return // spam
     if (!form.datenschutz) return
 
     setState('sending')
+    setErrorMessage(DEFAULT_ERROR)
 
-    // Supabase speichern
-    const { error } = await supabase.from('contact_requests').insert({
-      name:      form.name,
-      email:     form.email,
-      telefon:   form.telefon   || null,
-      nachricht: form.nachricht,
-      interesse: form.interesse || null,
-    })
+    try {
+      // Versand ausschliesslich per E-Mail über /api/contact (Resend)
+      const res = await fetch('/api/contact', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name:        form.name,
+          email:       form.email,
+          telefon:     form.telefon,
+          nachricht:   form.nachricht,
+          interesse:   form.interesse,
+          datenschutz: form.datenschutz,
+          honeypot:    form.honeypot,
+        }),
+      })
 
-    if (error) { setState('error'); return }
+      const data = await res.json().catch(() => null) as { ok?: boolean; error?: string } | null
 
-    // E-Mail via Resend
-    const res = await fetch('/api/contact', {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name:      form.name,
-        email:     form.email,
-        telefon:   form.telefon   || null,
-        nachricht: form.nachricht,
-        interesse: form.interesse || null,
-      }),
-    })
+      if (!res.ok || !data?.ok) {
+        if (data?.error) setErrorMessage(data.error)
+        setState('error')
+        return
+      }
 
-    if (!res.ok) { setState('error'); return }
-
-    setState('success')
+      setState('success')
+    } catch {
+      setState('error')
+    }
   }
 
   if (state === 'success') {
@@ -223,9 +227,9 @@ export default function ContactForm() {
       </label>
 
       {state === 'error' && (
-        <div className="flex items-center gap-2 p-4 rounded text-sm" style={{ background: '#fef2f2', color: '#991b1b' }}>
-          <AlertCircle size={16} />
-          <span>Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per E-Mail.</span>
+        <div role="alert" className="flex items-center gap-2 p-4 rounded text-sm" style={{ background: '#fef2f2', color: '#991b1b' }}>
+          <AlertCircle size={16} className="shrink-0" />
+          <span>{errorMessage}</span>
         </div>
       )}
 

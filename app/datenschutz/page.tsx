@@ -70,7 +70,8 @@ export default function DatenschutzPage() {
 
           <Section title="5. Speicherdauer">
             <p>
-              Ihre Kontaktanfragen werden in unserer gesicherten Datenbank gespeichert und nach
+              Ihre Kontaktanfragen werden uns per E-Mail übermittelt und nicht in einer
+              Datenbank dieser Website gespeichert. Wir bewahren sie auf und löschen sie nach
               Abschluss des Projekts oder auf Ihre Anfrage hin gelöscht, spätestens jedoch nach
               5 Jahren.
             </p>
@@ -98,8 +99,8 @@ export default function DatenschutzPage() {
 
           <Section title="8. Datensicherheit">
             <p>
-              Ihre Daten werden verschlüsselt übertragen (TLS/HTTPS) und in einer
-              zugangsbeschränkten Datenbank (Supabase, EU-Region) gespeichert. Wir treffen
+              Ihre Daten werden verschlüsselt übertragen (TLS/HTTPS). Für den Versand der
+              Kontaktanfrage per E-Mail nutzen wir den E-Mail-Dienst Resend. Wir treffen
               angemessene technische und organisatorische Massnahmen zum Schutz Ihrer Daten.
             </p>
           </Section>

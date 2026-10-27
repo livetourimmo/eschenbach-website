@@ -27,7 +27,7 @@ const playfairDisplay = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://eschen11.ch'),
+  metadataBase: new URL('https://www.eschen11.ch'),
   title: {
     template: '%s | Eschen 11 | Eschenbach',
     default:  'Eschen 11 | Eigentumswohnungen in Eschenbach',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title:       'Eschen 11 | Eigentumswohnungen in Eschenbach',
     description: 'Acht sorgfältig geplante 4.5-Zimmer-Eigentumswohnungen in Eschenbach SG.',
-    url:         'https://eschen11.ch',
+    url:         '/',
     siteName:    'Eschen 11',
     locale:      'de_CH',
     type:        'website',
@@ -49,9 +49,6 @@ export const metadata: Metadata = {
         alt:    'Eschen 11 | Mehrfamilienhaus in Eschenbach',
       },
     ],
-  },
-  alternates: {
-    canonical: 'https://eschen11.ch',
   },
   robots: {
     index:  true,

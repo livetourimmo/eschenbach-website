@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Impressum',
+  alternates: { canonical: '/impressum' },
   robots: { index: false },
 }
 

@@ -7,6 +7,7 @@ import ContactSection from '@/components/ContactSection'
 
 export const metadata: Metadata = {
   title: 'Angebot',
+  alternates: { canonical: '/angebot' },
   description:
     'Acht 4.5-Zimmer-Eigentumswohnungen mit Flächen zwischen 125.5 und 128 m². Grundrisse, Verfügbarkeiten und Downloads.',
 }

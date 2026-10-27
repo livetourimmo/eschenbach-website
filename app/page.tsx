@@ -8,6 +8,7 @@ import ContactSection from '@/components/ContactSection'
 
 export const metadata: Metadata = {
   title: 'Eschen 11 | Eigentumswohnungen in Eschenbach',
+  alternates: { canonical: '/' },
 }
 
 export default function HomePage() {

@@ -6,6 +6,7 @@ import ContactSection from '@/components/ContactSection'
 
 export const metadata: Metadata = {
   title: 'Lage',
+  alternates: { canonical: '/lage' },
   description:
     'Eschenbach liegt zwischen Voralpen und Zürichsee, mit direkter Busverbindung nach Rapperswil-Jona und S-Bahn-Anschluss nach Zürich.',
 }

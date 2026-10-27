@@ -1,20 +1,29 @@
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import GoogleTag from '@/components/GoogleTag'
+import Statistik from '@/components/Statistik'
+import StatistikBanner from '@/components/StatistikBanner'
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+// Schriften lokal aus @fontsource-variable statt next/font/google: Der Abruf
+// bei Google ist im Vercel-Build (Turbopack) gelegentlich gescheitert.
+const inter = localFont({
+  src: '../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2',
+  weight: '100 900',
+  style: 'normal',
   variable: '--font-inter',
+  display: 'swap',
 })
 
-const playfairDisplay = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+const playfairDisplay = localFont({
+  src: '../node_modules/@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2',
+  weight: '400 900',
+  style: 'normal',
   variable: '--font-playfair',
+  display: 'swap',
 })
 
 export const metadata: Metadata = {
@@ -56,11 +65,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="de" className={`h-full ${inter.variable} ${playfairDisplay.variable}`}>
+    <html lang="de-CH" className={`h-full ${inter.variable} ${playfairDisplay.variable}`}>
+      <head>
+        <GoogleTag />
+      </head>
       <body className="min-h-full flex flex-col" style={{ background: 'var(--color-page)' }}>
         <Navigation />
         <main className="flex-1">{children}</main>
         <Footer />
+        <StatistikBanner />
+        <Statistik />
         <Analytics />
       </body>
     </html>

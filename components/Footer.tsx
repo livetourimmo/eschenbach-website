@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import DatenschutzEinstellungen from '@/components/DatenschutzEinstellungen'
 
 export default function Footer() {
   return (
@@ -49,6 +50,10 @@ export default function Footer() {
             <Link href="/datenschutz" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
               Datenschutz
             </Link>
+            <DatenschutzEinstellungen
+              className="nav-link text-left transition-colors duration-200 hover:text-[var(--color-goldsand)]"
+              style={{ color: 'rgba(246,245,242,0.6)' }}
+            />
           </nav>
         </div>
 

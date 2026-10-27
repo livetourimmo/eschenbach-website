@@ -50,12 +50,18 @@ export default function DatenschutzPage() {
                 </li>
               ))}
             </ul>
+            <p className="mt-3">
+              Beim Besuch der Website fallen zudem technische Daten an, etwa IP-Adresse, Browser
+              und aufgerufene Seiten (siehe Abschnitte 6, 8 und 9).
+            </p>
           </Section>
 
           <Section title="3. Zweck der Datenbearbeitung">
             <p>
-              Wir bearbeiten Ihre Daten ausschliesslich, um Ihre Anfrage zu beantworten und Sie im
-              Zusammenhang mit dem Neubauprojekt Eschen 11 zu kontaktieren. Es erfolgt keine
+              Daten aus dem Kontaktformular bearbeiten wir ausschliesslich, um Ihre Anfrage zu
+              beantworten und Sie im Zusammenhang mit dem Neubauprojekt Eschen 11 zu kontaktieren.
+              Technische Daten aus dem Besuch der Website verwenden wir für Betrieb und Sicherheit
+              der Website sowie für die Besucherstatistik (Abschnitte 8 und 9). Es erfolgt keine
               Weitergabe an Dritte zu Werbezwecken.
             </p>
           </Section>
@@ -106,9 +112,36 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="9. Cookies und externe Dienste">
+          <Section title="9. Google Analytics (Einwilligungsmodus)">
             <p>
-              Diese Website setzt keine Tracking- oder Marketing-Cookies ein. Schriftarten werden
+              Wir nutzen Google Analytics 4 der Google Ireland Limited, Gordon House, Barrow
+              Street, Dublin 4, Irland, im Einwilligungsmodus (Consent Mode). Das Google-Tag wird
+              bei jedem Seitenaufruf geladen; dabei erhält Google Ihre IP-Adresse sowie Angaben zu
+              Browser, Gerät und aufgerufener Seite.
+            </p>
+            <p className="mt-3">
+              Solange Sie der Statistik nicht zugestimmt haben, setzt Google keine Cookies und
+              speichert keine Kennungen in Ihrem Browser. Es werden dann nur cookielose Signale
+              übermittelt, aus denen Google die Nutzung der Website statistisch hochrechnet. Erst
+              wenn Sie «Statistik erlauben» wählen, setzt Google Analytics-Cookies (_ga,
+              _ga_&lt;ID&gt;) und erfasst Seitenaufrufe einzelnen Besuchen zugeordnet.
+              Werbefunktionen sind ausgeschaltet.
+            </p>
+            <p className="mt-3">
+              Ihre Wahl speichern wir im lokalen Speicher Ihres Browsers (localStorage). Sie können
+              sie jederzeit über «Datenschutz-Einstellungen» in der Fusszeile ändern; bei einem
+              Widerruf werden die Analytics-Cookies gelöscht. Google kann Daten in die USA
+              übermitteln (siehe Abschnitt 11). Weitere Informationen:{' '}
+              <a href="https://policies.google.com/privacy?hl=de" className="underline underline-offset-4">
+                Datenschutzerklärung von Google
+              </a>
+              .
+            </p>
+          </Section>
+
+          <Section title="10. Cookies und externe Dienste">
+            <p>
+              Ohne Ihre Zustimmung setzt diese Website keine Tracking- oder Marketing-Cookies. Google Analytics setzt Cookies erst, wenn Sie der Statistik zustimmen (Abschnitt 9). Schriftarten werden
               lokal von unserem Server ausgeliefert, es erfolgt keine Verbindung zu Google-Servern.
               Für die Wohnungsübersicht binden wir den Immobiliennavigator unseres
               Marketingpartners liveTour Immobilienmarketing GmbH per iframe ein.
@@ -124,7 +157,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="10. Datenübermittlung ins Ausland">
+          <Section title="11. Datenübermittlung ins Ausland">
             <p>
               Einige dieser Dienstleister haben ihren Sitz ausserhalb der Schweiz und des EWR,
               namentlich in den USA. Wir stützen diese Bekanntgabe auf geeignete Garantien,
@@ -132,7 +165,7 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="11. Ihre Rechte">
+          <Section title="12. Ihre Rechte">
             <p>
               Sie haben jederzeit das Recht auf Auskunft, Berichtigung, Löschung und
               Einschränkung der Bearbeitung Ihrer Personendaten. Richten Sie Ihr Gesuch schriftlich
@@ -143,14 +176,14 @@ export default function DatenschutzPage() {
             </p>
           </Section>
 
-          <Section title="12. Datensicherheit">
+          <Section title="13. Datensicherheit">
             <p>
               Ihre Daten werden verschlüsselt übertragen (TLS/HTTPS). Wir treffen angemessene
               technische und organisatorische Massnahmen zum Schutz Ihrer Daten.
             </p>
           </Section>
 
-          <Section title="13. Änderungen dieser Erklärung">
+          <Section title="14. Änderungen dieser Erklärung">
             <p>
               Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu aktualisieren. Die
               jeweils aktuelle Version ist auf dieser Website abrufbar.

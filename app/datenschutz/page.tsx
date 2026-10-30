@@ -126,7 +126,7 @@ export default function DatenschutzPage() {
               übermittelt, aus denen Google die Nutzung der Website statistisch hochrechnet. Erst
               wenn Sie «Statistik erlauben» wählen, setzt Google Analytics-Cookies (_ga,
               _ga_&lt;ID&gt;) und erfasst Seitenaufrufe einzelnen Besuchen zugeordnet.
-              Werbefunktionen sind ausgeschaltet.
+              Ausserdem erfassen wir, ob eine Kontaktanfrage erfolgreich übermittelt wurde; bei dieser Erfolgsmessung übertragen wir nur die Herkunftsseite des Formulars, keine Namen, E-Mail-Adressen, Telefonnummern oder Nachrichten. Werbefunktionen sind ausgeschaltet.
             </p>
             <p className="mt-3">
               Ihre Wahl speichern wir im lokalen Speicher Ihres Browsers (localStorage). Sie können

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { messeKontaktanfrage } from '@/lib/analytics'
 
 type FormState = 'idle' | 'sending' | 'success' | 'error'
 
@@ -61,6 +62,10 @@ export default function ContactForm() {
       }
 
       setState('success')
+      if (!form.honeypot) {
+        // Ein Messfehler darf eine erfolgreiche Anfrage nie als Fehler anzeigen.
+        try { messeKontaktanfrage(window.location.pathname); } catch { /* Messung ist optional. */ }
+      }
     } catch {
       setState('error')
     }

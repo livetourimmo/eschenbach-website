@@ -29,32 +29,52 @@ export default function Footer() {
               style={{ color: 'rgba(246,245,242,0.5)', fontWeight: 300 }}
             >
               Rapperswilerstrasse 11 · 8733 Eschenbach<br />
-              Ein Projekt von Dreiwert Immobilien GmbH, Uznach
+              Ein Projekt der MO Architektur, Uznach
             </p>
           </div>
 
-          {/* Links */}
-          <nav className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm">
-            <Link href="/angebot" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
-              Angebot
-            </Link>
-            <Link href="/lage" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
-              Lage
-            </Link>
-            <Link href="/#kontakt" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
-              Kontakt
-            </Link>
-            <Link href="/impressum" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
-              Impressum
-            </Link>
-            <Link href="/datenschutz" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
-              Datenschutz
-            </Link>
-            <DatenschutzEinstellungen
-              className="nav-link text-left transition-colors duration-200 hover:text-[var(--color-goldsand)]"
-              style={{ color: 'rgba(246,245,242,0.6)' }}
-            />
-          </nav>
+          <div className="flex flex-col gap-8 md:items-end">
+            {/* Links */}
+            <nav className="flex flex-col sm:flex-row gap-4 sm:gap-8 text-sm">
+              <Link href="/angebot" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
+                Angebot
+              </Link>
+              <Link href="/lage" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
+                Lage
+              </Link>
+              <Link href="/#kontakt" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
+                Kontakt
+              </Link>
+              <Link href="/impressum" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
+                Impressum
+              </Link>
+              <Link href="/datenschutz" className="nav-link transition-colors duration-200 hover:text-[var(--color-goldsand)]" style={{ color: 'rgba(246,245,242,0.6)' }}>
+                Datenschutz
+              </Link>
+              <DatenschutzEinstellungen
+                className="nav-link text-left transition-colors duration-200 hover:text-[var(--color-goldsand)]"
+                style={{ color: 'rgba(246,245,242,0.6)' }}
+              />
+            </nav>
+
+            {/* Partner logos */}
+            <div className="flex flex-wrap items-center gap-x-10 gap-y-6">
+              <Image
+                src="/logos/mo-architektur-grau.png"
+                alt="MO Architektur"
+                width={480}
+                height={149}
+                className="h-9 w-auto opacity-60"
+              />
+              <Image
+                src="/logos/dreiwert-immobilien-grau.png"
+                alt="Dreiwert Immobilien"
+                width={720}
+                height={169}
+                className="h-9 w-auto opacity-60"
+              />
+            </div>
+          </div>
         </div>
 
         <div

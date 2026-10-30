@@ -28,13 +28,6 @@ const downloads = [
     icon:     'plan',
   },
   {
-    title:    'Kurzbaubeschrieb',
-    subtitle: 'Kurzübersicht zu Ausbau und Materialisierung',
-    file:     '/downloads/Kurzbaubeschrieb_Eschen11.pdf',
-    size:     '72 KB',
-    icon:     'plan',
-  },
-  {
     title:    'Verkaufsdokumentation',
     subtitle: 'Vollständige Unterlagen zum Projekt',
     file:     '/downloads/Dokumentation_Eschen11.pdf',
@@ -280,7 +273,7 @@ export default function AngebotPage() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {downloads.map((dl, i) => (
               <ScrollReveal key={dl.file} delay={i * 80} className="h-full">
                 <a

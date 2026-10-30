@@ -55,57 +55,75 @@ export default function ContactSection() {
             </p>
 
             {/* Contact card */}
-            <div
-              className="flex items-start gap-6 p-6 rounded-lg"
-              style={{
-                background: '#ffffff',
-                border: '1px solid rgba(82,68,52,0.08)',
-                boxShadow: 'var(--shadow-soft)',
-              }}
-            >
-              <div className="relative shrink-0">
-                <Image
-                  src="/images/wiedemer-phillip.webp"
-                  alt="Phillip Wiedmer, Dreiwert Immobilien GmbH"
-                  width={80}
-                  height={80}
-                  className="rounded-full object-cover"
-                  style={{ width: 80, height: 80 }}
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <span
-                  style={{ fontFamily: 'var(--font-serif)', fontSize: '1.15rem', color: 'var(--color-text-core)' }}
-                >
-                  Herr Phillip Wiedmer
-                </span>
-                <span className="text-sm" style={{ color: 'var(--color-accent)', fontWeight: 500 }}>
-                  Dreiwert Immobilien GmbH
-                </span>
-                <div className="flex flex-col gap-2 mt-3">
-                  <a
-                    href="tel:+41555117676"
-                    className="flex items-center gap-2.5 text-sm transition-colors hover:text-[var(--color-accent)]"
-                    style={{ color: 'var(--color-text-light)' }}
-                  >
-                    <Phone size={14} style={{ color: 'var(--color-accent)' }} />
-                    055 511 76 76
-                  </a>
-                  <a
-                    href="mailto:pw@dreiwert.ch"
-                    className="flex items-center gap-2.5 text-sm transition-colors hover:text-[var(--color-accent)]"
-                    style={{ color: 'var(--color-text-light)' }}
-                  >
-                    <Mail size={14} style={{ color: 'var(--color-accent)' }} />
-                    pw@dreiwert.ch
-                  </a>
-                  <div className="flex items-start gap-2.5 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                    <MapPin size={14} style={{ color: 'var(--color-accent)', marginTop: 2 }} />
-                    <span>
-                      Bahnhofstrasse 2<br />
-                      8730 Uznach
-                    </span>
+            <div className="@container">
+              <div
+                className="flex flex-col @md:flex-row gap-6 p-6 rounded-lg"
+                style={{
+                  background: '#ffffff',
+                  border: '1px solid rgba(82,68,52,0.08)',
+                  boxShadow: 'var(--shadow-soft)',
+                }}
+              >
+                <div className="flex flex-1 items-start gap-6">
+                  <div className="relative shrink-0">
+                    <Image
+                      src="/images/wiedemer-phillip.webp"
+                      alt="Phillip Wiedmer, Dreiwert Immobilien GmbH"
+                      width={80}
+                      height={80}
+                      className="rounded-full object-cover"
+                      style={{ width: 80, height: 80 }}
+                    />
                   </div>
+                  <div className="flex flex-col gap-1">
+                    <span
+                      style={{ fontFamily: 'var(--font-serif)', fontSize: '1.15rem', color: 'var(--color-text-core)' }}
+                    >
+                      Herr Phillip Wiedmer
+                    </span>
+                    <span className="text-sm" style={{ color: 'var(--color-accent)', fontWeight: 500 }}>
+                      Dreiwert Immobilien GmbH
+                    </span>
+                    <div className="flex flex-col gap-2 mt-3">
+                      <a
+                        href="tel:+41555117676"
+                        className="flex items-center gap-2.5 text-sm transition-colors hover:text-[var(--color-accent)]"
+                        style={{ color: 'var(--color-text-light)' }}
+                      >
+                        <Phone size={14} style={{ color: 'var(--color-accent)' }} />
+                        055 511 76 76
+                      </a>
+                      <a
+                        href="mailto:pw@dreiwert.ch"
+                        className="flex items-center gap-2.5 text-sm transition-colors hover:text-[var(--color-accent)]"
+                        style={{ color: 'var(--color-text-light)' }}
+                      >
+                        <Mail size={14} style={{ color: 'var(--color-accent)' }} />
+                        pw@dreiwert.ch
+                      </a>
+                      <div className="flex items-start gap-2.5 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                        <MapPin size={14} style={{ color: 'var(--color-accent)', marginTop: 2 }} />
+                        <span>
+                          Bahnhofstrasse 2<br />
+                          8730 Uznach
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Dreiwert logo */}
+                <div
+                  className="flex shrink-0 items-center pt-6 border-t @md:pt-0 @md:pl-6 @md:border-t-0 @md:border-l"
+                  style={{ borderColor: 'rgba(82,68,52,0.10)' }}
+                >
+                  <Image
+                    src="/logos/dreiwert-immobilien.png"
+                    alt="Dreiwert Immobilien"
+                    width={480}
+                    height={569}
+                    className="w-[96px] h-auto"
+                  />
                 </div>
               </div>
             </div>

@@ -104,14 +104,14 @@ export default function LagePage() {
                 Von Eschenbach bestehen direkte Busverbindungen nach Rapperswil-Jona, Uznach und Rüti ZH. Damit sind wichtige Arbeits-, Einkaufs- und Bildungsstandorte der Region ohne Umweg erreichbar.
               </p>
               <p>
-                Ab Rapperswil-Jona dauert die Fahrt mit der S-Bahn nach Zürich HB rund 40 Minuten. Mit dem Auto erfolgt der Anschluss an die A15 über Neuhaus oder Jona.
+                Ab Rapperswil ist der Zürich HB mit der S-Bahn in rund 40 Minuten erreichbar. Mit dem Auto erfolgt der Anschluss an die A15 über Neuhaus oder Jona.
               </p>
 
               {/* Transport grid */}
               <div className="mt-8 flex flex-col gap-3">
                 {[
                   { Icon: Bus,           dest: 'Rapperswil-Jona', time: 'direkt per Bus' },
-                  { Icon: Train,         dest: 'Zürich HB',       time: 'ca. 40 Min. ab Rapperswil-Jona' },
+                  { Icon: Train,         dest: 'Zürich HB',       time: 'ca. 40 Min. ab Rapperswil' },
                   { Icon: Route,         dest: 'Autobahn A15',    time: 'Anschlüsse Neuhaus & Jona' },
                   { Icon: GraduationCap, dest: 'Schulen',         time: 'alle Stufen vor Ort' },
                 ].map(t => (

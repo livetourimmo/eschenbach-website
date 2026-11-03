@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { BILDQUALITAET } from '@/lib/bilder'
 import Script from 'next/script'
 import { Download, FileText } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -52,6 +53,7 @@ export default function AngebotPage() {
           className="object-cover"
           style={{ opacity: 0.65 }}
           sizes="100vw"
+          quality={BILDQUALITAET}
         />
         <div
           className="absolute inset-x-0 bottom-0"
@@ -246,6 +248,7 @@ export default function AngebotPage() {
                   fill
                   className="object-cover img-zoom-target"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={BILDQUALITAET}
                   loading="lazy"
                 />
               </div>

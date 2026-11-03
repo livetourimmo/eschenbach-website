@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import { BILDQUALITAET } from '@/lib/bilder'
 import Link from 'next/link'
 import { ArrowRight, MapPin, Bus, Train, Route, GraduationCap } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
@@ -27,6 +28,7 @@ export default function HomePage() {
           className="object-cover"
           style={{ opacity: 0.75 }}
           sizes="100vw"
+          quality={BILDQUALITAET}
         />
 
         {/* Bottom gradient for text legibility */}
@@ -136,6 +138,7 @@ export default function HomePage() {
                   fill
                   className="object-cover img-zoom-target"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={BILDQUALITAET}
                   loading="lazy"
                 />
               </div>
@@ -160,6 +163,7 @@ export default function HomePage() {
                   fill
                   className="object-cover img-zoom-target"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={BILDQUALITAET}
                   loading="lazy"
                 />
               </div>

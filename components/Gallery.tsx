@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
+import { BILDQUALITAET } from '@/lib/bilder'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
@@ -69,6 +70,7 @@ export default function Gallery() {
               fill
               className="object-cover img-zoom-target"
               sizes="(max-width: 768px) 100vw, 66vw"
+              quality={BILDQUALITAET}
               loading="lazy"
             />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -91,6 +93,7 @@ export default function Gallery() {
                   fill
                   className="object-cover img-zoom-target"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={BILDQUALITAET}
                   loading="lazy"
                 />
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -114,6 +117,7 @@ export default function Gallery() {
                 fill
                 className="object-cover img-zoom-target"
                 sizes="(max-width: 768px) 100vw, 33vw"
+                quality={BILDQUALITAET}
                 loading="lazy"
               />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -134,6 +138,7 @@ export default function Gallery() {
               fill
               className="object-cover img-zoom-target"
               sizes="100vw"
+              quality={BILDQUALITAET}
               loading="lazy"
             />
             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
@@ -177,6 +182,7 @@ export default function Gallery() {
               fill
               className="object-contain"
               sizes="100vw"
+              quality={BILDQUALITAET}
               priority
             />
           </div>

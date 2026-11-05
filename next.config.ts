@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Einbetten nur durch die Seite selbst und das liveTour-Kundenportal (Rückmeldung der Bauherrschaft
+  // zur Webseite). Schützt zugleich vor Clickjacking durch fremde Seiten.
+  async headers() {
+    return [{ source: '/:path*', headers: [{ key: 'Content-Security-Policy', value: "frame-ancestors 'self' https://kundenportal.livetour.ch" }] }];
+  },
 }
 
 export default nextConfig

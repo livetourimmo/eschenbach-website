@@ -101,19 +101,20 @@ export default function LagePage() {
                 Direkte Verbindungen in drei Richtungen.
               </h2>
               <p style={{ marginBottom: '1.25rem' }}>
-                Von Eschenbach bestehen direkte Busverbindungen nach Rapperswil-Jona, Uznach und Rüti ZH. Damit sind wichtige Arbeits-, Einkaufs- und Bildungsstandorte der Region ohne Umweg erreichbar.
+                Eschenbach ist mit dem öffentlichen Verkehr gut an die umliegenden Gemeinden angebunden. Direkte Busverbindungen führen im 15-Minuten-Takt nach Rapperswil-Jona, Uznach und Rüti ZH. Damit sind wichtige Arbeits-, Einkaufs- und Bildungsstandorte der Region ohne Umweg erreichbar.
               </p>
               <p>
-                Ab Rapperswil ist der Zürich HB mit der S-Bahn in rund 40 Minuten erreichbar. Mit dem Auto erfolgt der Anschluss an die A15 über Neuhaus oder Jona.
+                Ab Rapperswil-Jona ist der Zürich HB mit der S-Bahn in rund 40 Minuten erreichbar. Für den Individualverkehr ist die A15 über die Anschlüsse Neuhaus und Jona erreichbar.
               </p>
 
               {/* Transport grid */}
               <div className="mt-8 flex flex-col gap-3">
                 {[
-                  { Icon: Bus,           dest: 'Rapperswil-Jona', time: 'direkt per Bus' },
-                  { Icon: Train,         dest: 'Zürich HB',       time: 'ca. 40 Min. ab Rapperswil' },
-                  { Icon: Route,         dest: 'Autobahn A15',    time: 'Anschlüsse Neuhaus & Jona' },
+                  { Icon: Bus,           dest: 'Rapperswil-Jona', time: 'in ca. 15 Min. erreichbar' },
+                  { Icon: Train,         dest: 'Zürich HB',       time: 'in ca. 60 Min. erreichbar' },
+                  { Icon: MapPin,        dest: 'St. Gallen',      time: 'in ca. 60 Min. erreichbar' },
                   { Icon: GraduationCap, dest: 'Schulen',         time: 'alle Stufen vor Ort' },
+                  { Icon: Route,         dest: 'Autobahn A15',    time: 'Anschlüsse Neuhaus & Jona' },
                 ].map(t => (
                   <div
                     key={t.dest}

@@ -299,7 +299,7 @@ export default function HomePage() {
                 Im Dorf zu Hause, in der Region gut verbunden.
               </h2>
               <p className="gold-left" style={{ color: 'rgba(246,245,242,0.7)', marginBottom: '2rem', borderColor: 'var(--color-goldsand)' }}>
-                Eschenbach bietet einen gut organisierten Alltag in ländlicher Umgebung. Einkaufsmöglichkeiten und Schulen befinden sich im Ort, während direkte Busverbindungen nach Rapperswil-Jona, Uznach und Rüti ZH führen. Ab Rapperswil ist der Zürich HB mit der S-Bahn in rund 40 Minuten erreichbar. Für den Individualverkehr liegen die Anschlüsse an die A15 in Neuhaus und Jona.
+                Eschenbach bietet einen gut organisierten Alltag in ländlicher Umgebung. Einkaufsmöglichkeiten und Schulen befinden sich im Ort, während direkte Busverbindungen im 15-Minuten-Takt nach Rapperswil-Jona, Uznach und Rüti ZH führen. Ab Rapperswil-Jona ist der Zürich HB mit der S-Bahn in rund 40 Minuten erreichbar. Für den Individualverkehr ist die A15 über die Anschlüsse Neuhaus und Jona erreichbar.
               </p>
               <Link
                 href="/lage"
@@ -314,10 +314,11 @@ export default function HomePage() {
             <ScrollReveal delay={150}>
               <div className="flex flex-col gap-4">
                 {[
-                  { Icon: Bus,           label: 'Rapperswil-Jona', detail: 'direkt per Bus' },
-                  { Icon: Train,         label: 'Zürich HB',       detail: 'ca. 40 Min. ab Rapperswil' },
-                  { Icon: Route,         label: 'Autobahn A15',    detail: 'Anschlüsse Neuhaus & Jona' },
+                  { Icon: Bus,           label: 'Rapperswil-Jona', detail: 'in ca. 15 Min. erreichbar' },
+                  { Icon: Train,         label: 'Zürich HB',       detail: 'in ca. 60 Min. erreichbar' },
+                  { Icon: MapPin,        label: 'St. Gallen',      detail: 'in ca. 60 Min. erreichbar' },
                   { Icon: GraduationCap, label: 'Schulen',          detail: 'alle Stufen vor Ort' },
+                  { Icon: Route,         label: 'Autobahn A15',    detail: 'Anschlüsse Neuhaus & Jona' },
                 ].map(item => (
                   <div
                     key={item.label}

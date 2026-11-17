@@ -12,7 +12,9 @@ const LIMITS = {
   nachricht: 5000,
 } as const
 
-const EMAIL_RE = /^[^\s@<>"]+@[^\s@<>"]+\.[^\s@<>"]+$/
+// Streng: nur Buchstaben (inkl. Umlaute), Ziffern und . _ + ' -. Zeichen wie ? & # = kommen
+// so nie in den mailto-Link der Benachrichtigung (Sicherheitsprüfung 2026-11-17).
+const EMAIL_RE = /^[A-Za-z0-9À-ÖØ-öø-ÿ._+'-]+@[A-Za-z0-9À-ÖØ-öø-ÿ-]+(?:\.[A-Za-z0-9À-ÖØ-öø-ÿ-]+)*\.[A-Za-z]{2,}$/
 const TEL_RE = /^[0-9+()\/.\s-]*$/
 
 function escapeHtml(value: string): string {

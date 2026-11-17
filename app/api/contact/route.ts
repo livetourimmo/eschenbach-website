@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { anfragePruefen, jsonLesen } from '@/lib/anfrage-schutz'
 
 const GENERIC_ERROR =
   'Ihre Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es später erneut oder kontaktieren Sie uns direkt per E-Mail.'
@@ -33,9 +34,12 @@ function readString(body: Record<string, unknown>, key: string): string {
 }
 
 export async function POST(request: Request) {
+  const sperre = anfragePruefen(request);
+  if (sperre) return error(sperre.fehler, sperre.status);
+
   let body: Record<string, unknown>
   try {
-    const parsed: unknown = await request.json()
+    const parsed: unknown = await jsonLesen(request)
     if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
       return error('Ungültige Anfrage.', 400)
     }

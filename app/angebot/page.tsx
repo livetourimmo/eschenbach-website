@@ -5,12 +5,15 @@ import Script from 'next/script'
 import { Download, FileText } from 'lucide-react'
 import ScrollReveal from '@/components/ScrollReveal'
 import ContactSection from '@/components/ContactSection'
+import { seitenMetadaten } from '@/lib/seo'
+
+const beschreibung =
+  'Acht 4.5-Zimmer-Eigentumswohnungen mit Flächen zwischen 125.5 und 128 m². Grundrisse, Verfügbarkeiten und Downloads.'
 
 export const metadata: Metadata = {
   title: 'Angebot',
-  alternates: { canonical: '/angebot' },
-  description:
-    'Acht 4.5-Zimmer-Eigentumswohnungen mit Flächen zwischen 125.5 und 128 m². Grundrisse, Verfügbarkeiten und Downloads.',
+  description: beschreibung,
+  ...seitenMetadaten('/angebot', 'Angebot | Eschen 11 | Eschenbach', beschreibung),
 }
 
 const downloads = [

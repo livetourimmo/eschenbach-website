@@ -3,12 +3,15 @@ import { Bus, Train, Route, GraduationCap, TreePine, Waves, ShoppingBag, Leaf, M
 import ScrollReveal from '@/components/ScrollReveal'
 import AtlistMap from '@/components/AtlistMap'
 import ContactSection from '@/components/ContactSection'
+import { seitenMetadaten } from '@/lib/seo'
+
+const beschreibung =
+  'Eschenbach liegt zwischen Voralpen und Zürichsee, mit direkter Busverbindung nach Rapperswil-Jona und S-Bahn-Anschluss nach Zürich.'
 
 export const metadata: Metadata = {
   title: 'Lage',
-  alternates: { canonical: '/lage' },
-  description:
-    'Eschenbach liegt zwischen Voralpen und Zürichsee, mit direkter Busverbindung nach Rapperswil-Jona und S-Bahn-Anschluss nach Zürich.',
+  description: beschreibung,
+  ...seitenMetadaten('/lage', 'Lage | Eschen 11 | Eschenbach', beschreibung),
 }
 
 export default function LagePage() {

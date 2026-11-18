@@ -6,6 +6,7 @@ import { ArrowRight, MapPin, Bus, Train, Route, GraduationCap } from 'lucide-rea
 import ScrollReveal from '@/components/ScrollReveal'
 import Gallery from '@/components/Gallery'
 import ContactSection from '@/components/ContactSection'
+import { alsJsonLd, strukturierteDaten } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Eschen 11 | Eigentumswohnungen in Eschenbach',
@@ -15,6 +16,9 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      {/* Strukturierte Daten (JSON-LD), serverseitig im initialen HTML; siehe lib/seo.ts */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: alsJsonLd(strukturierteDaten()) }} />
+
       {/* ── HERO ── */}
       <section
         className="relative flex items-end min-h-screen"

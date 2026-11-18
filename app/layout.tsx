@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import GoogleTag from '@/components/GoogleTag'
 import Statistik from '@/components/Statistik'
 import StatistikBanner from '@/components/StatistikBanner'
+import { BESCHREIBUNG, OG_BESCHREIBUNG, SEITE_URL, SEITENNAME, VORSCHAUBILD } from '@/lib/seo'
 
 // Schriften lokal aus @fontsource-variable statt next/font/google: Der Abruf
 // bei Google ist im Vercel-Build (Turbopack) gelegentlich gescheitert.
@@ -27,28 +28,24 @@ const playfairDisplay = localFont({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.eschen11.ch'),
+  metadataBase: new URL(SEITE_URL),
   title: {
     template: '%s | Eschen 11 | Eschenbach',
     default:  'Eschen 11 | Eigentumswohnungen in Eschenbach',
   },
-  description:
-    'Acht sorgfältig geplante 4.5-Zimmer-Eigentumswohnungen an der Rapperswilerstrasse 11 in Eschenbach SG. Zwischen Voralpen und Zürichsee.',
+  description: BESCHREIBUNG,
+  // Startseite und Rückfallwerte; Unterseiten setzen ihre Werte über seitenMetadaten() (lib/seo.ts).
   openGraph: {
     title:       'Eschen 11 | Eigentumswohnungen in Eschenbach',
-    description: 'Acht sorgfältig geplante 4.5-Zimmer-Eigentumswohnungen in Eschenbach SG.',
+    description: OG_BESCHREIBUNG,
     url:         '/',
-    siteName:    'Eschen 11',
+    siteName:    SEITENNAME,
     locale:      'de_CH',
     type:        'website',
-    images: [
-      {
-        url:    '/bilder/4K_Aussen1_v2.png',
-        width:  1200,
-        height: 630,
-        alt:    'Eschen 11 | Mehrfamilienhaus in Eschenbach',
-      },
-    ],
+    images:      [VORSCHAUBILD],
+  },
+  twitter: {
+    card: 'summary_large_image',
   },
   robots: {
     index:  true,

@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { seitenMetadaten } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Impressum',
-  alternates: { canonical: '/impressum' },
-  robots: { index: false },
+  ...seitenMetadaten('/impressum', 'Impressum | Eschen 11 | Eschenbach'),
+  // Nie im Suchindex und nicht in der Sitemap; Links dürfen verfolgt werden.
+  robots: { index: false, follow: true },
 }
 
 export default function ImpressumPage() {

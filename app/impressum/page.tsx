@@ -3,7 +3,7 @@ import { seitenMetadaten } from '@/lib/seo'
 
 export const metadata: Metadata = {
   title: 'Impressum',
-  ...seitenMetadaten('/impressum', 'Impressum | Eschen 11 | Eschenbach'),
+  ...seitenMetadaten('/impressum', 'Impressum | Eschen 11, Eschenbach SG'),
   // Nie im Suchindex und nicht in der Sitemap; Links dürfen verfolgt werden.
   robots: { index: false, follow: true },
 }

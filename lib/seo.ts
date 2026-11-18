@@ -72,7 +72,7 @@ export function strukturierteDaten() {
         '@type': 'WebPage',
         '@id': `${start}#webpage`,
         url: start,
-        name: 'Eschen 11 | Eigentumswohnungen in Eschenbach',
+        name: 'Eschen 11 | 4.5-Zimmer-Eigentumswohnungen in Eschenbach SG',
         description: BESCHREIBUNG,
         inLanguage: 'de-CH',
         isPartOf: { '@id': `${start}#website` },

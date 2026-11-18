@@ -30,13 +30,13 @@ const playfairDisplay = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(SEITE_URL),
   title: {
-    template: '%s | Eschen 11 | Eschenbach',
-    default:  'Eschen 11 | Eigentumswohnungen in Eschenbach',
+    template: '%s | Eschen 11, Eschenbach SG',
+    default:  'Eschen 11 | 4.5-Zimmer-Eigentumswohnungen in Eschenbach SG',
   },
   description: BESCHREIBUNG,
   // Startseite und Rückfallwerte; Unterseiten setzen ihre Werte über seitenMetadaten() (lib/seo.ts).
   openGraph: {
-    title:       'Eschen 11 | Eigentumswohnungen in Eschenbach',
+    title:       'Eschen 11 | 4.5-Zimmer-Eigentumswohnungen in Eschenbach SG',
     description: OG_BESCHREIBUNG,
     url:         '/',
     siteName:    SEITENNAME,

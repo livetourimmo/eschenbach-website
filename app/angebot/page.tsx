@@ -11,9 +11,9 @@ const beschreibung =
   'Acht 4.5-Zimmer-Eigentumswohnungen mit Flächen zwischen 125.5 und 128 m². Grundrisse, Verfügbarkeiten und Downloads.'
 
 export const metadata: Metadata = {
-  title: 'Angebot',
+  title: 'Grundrisse & Verfügbarkeit',
   description: beschreibung,
-  ...seitenMetadaten('/angebot', 'Angebot | Eschen 11 | Eschenbach', beschreibung),
+  ...seitenMetadaten('/angebot', 'Grundrisse & Verfügbarkeit | Eschen 11, Eschenbach SG', beschreibung),
 }
 
 const downloads = [

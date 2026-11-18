@@ -9,9 +9,9 @@ const beschreibung =
   'Eschenbach liegt zwischen Voralpen und Zürichsee, mit direkter Busverbindung nach Rapperswil-Jona und S-Bahn-Anschluss nach Zürich.'
 
 export const metadata: Metadata = {
-  title: 'Lage',
+  title: { absolute: 'Wohnen in Eschenbach SG – Lage & Anbindung | Eschen 11' },
   description: beschreibung,
-  ...seitenMetadaten('/lage', 'Lage | Eschen 11 | Eschenbach', beschreibung),
+  ...seitenMetadaten('/lage', 'Wohnen in Eschenbach SG – Lage & Anbindung | Eschen 11', beschreibung),
 }
 
 export default function LagePage() {

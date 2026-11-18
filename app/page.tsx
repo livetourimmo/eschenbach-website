@@ -9,7 +9,7 @@ import ContactSection from '@/components/ContactSection'
 import { alsJsonLd, strukturierteDaten } from '@/lib/seo'
 
 export const metadata: Metadata = {
-  title: 'Eschen 11 | Eigentumswohnungen in Eschenbach',
+  title: 'Eschen 11 | 4.5-Zimmer-Eigentumswohnungen in Eschenbach SG',
   alternates: { canonical: '/' },
 }
 

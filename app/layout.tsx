@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import GoogleTag from '@/components/GoogleTag'
 import Statistik from '@/components/Statistik'
 import StatistikBanner from '@/components/StatistikBanner'
+import WebVitals from '@/components/WebVitals'
 import { BESCHREIBUNG, OG_BESCHREIBUNG, SEITE_URL, SEITENNAME, VORSCHAUBILD } from '@/lib/seo'
 
 // Schriften lokal aus @fontsource-variable statt next/font/google: Der Abruf
@@ -69,6 +70,7 @@ export default function RootLayout({
         <Footer />
         <StatistikBanner />
         <Statistik />
+        <WebVitals />
         <Analytics />
       </body>
     </html>

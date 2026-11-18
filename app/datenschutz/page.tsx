@@ -128,7 +128,10 @@ export default function DatenschutzPage() {
               übermittelt, aus denen Google die Nutzung der Website statistisch hochrechnet. Erst
               wenn Sie «Statistik erlauben» wählen, setzt Google Analytics-Cookies (_ga,
               _ga_&lt;ID&gt;) und erfasst Seitenaufrufe einzelnen Besuchen zugeordnet.
-              Ausserdem erfassen wir, ob eine Kontaktanfrage erfolgreich übermittelt wurde; bei dieser Erfolgsmessung übertragen wir nur die Herkunftsseite des Formulars, keine Namen, E-Mail-Adressen, Telefonnummern oder Nachrichten. Werbefunktionen sind ausgeschaltet.
+              Ausserdem erfassen wir, ob eine Kontaktanfrage erfolgreich übermittelt wurde; bei dieser Erfolgsmessung übertragen wir nur die Herkunftsseite des Formulars, keine Namen, E-Mail-Adressen, Telefonnummern oder Nachrichten.
+              Zusätzlich erfasst Google Analytics Messwerte zur Ladezeit und Reaktionsgeschwindigkeit
+              der Seiten (Core Web Vitals), damit wir die Geschwindigkeit der Website verbessern
+              können; dafür gelten dieselben Einstellungen wie oben. Werbefunktionen sind ausgeschaltet.
             </p>
             <p className="mt-3">
               Ihre Wahl speichern wir im lokalen Speicher Ihres Browsers (localStorage). Sie können
@@ -192,7 +195,7 @@ export default function DatenschutzPage() {
               jeweils aktuelle Version ist auf dieser Website abrufbar.
             </p>
             <p className="mt-2 text-xs" style={{ color: 'var(--color-contrast)' }}>
-              Stand: 27. Oktober 2026
+              Stand: 18. November 2026
             </p>
           </Section>
         </div>
